@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        package="com.creativity.dev.formsimple">
+
+    <application>
+        <activity
+                android:name=".compose.EaseFormComposeActivity"
+                android:exported="false"
+                android:label="@string/title_activity_ease_form_compose"
+                android:theme="@style/Theme.FormSimpleIGB" />
+        <activity
+                android:name=".ui.SelectActivity"
+                android:theme="@style/AppTheme.NoActionBar"
+                tools:ignore="Instantiatable"></activity>
+        <activity
+                android:name=".ui.CalendarActivity"
+                android:theme="@style/AppTheme.NoActionBar"
+                tools:ignore="Instantiatable"></activity>
+        <activity
+                android:name=".ui.Calendar_H_Activity"
+                android:theme="@style/AppTheme.NoActionBar"></activity>
+    </application>
+
+</manifest>
