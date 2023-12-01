@@ -8,14 +8,8 @@ import androidx.compose.material3.Button
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.creativity.dev.formsimple.interfaces.FormsListenerIGB
-import com.creativity.dev.formsimple.model.Select
-import com.creativity.dev.formsimple.Row
 import com.creativity.dev.formsimple.model.ResponseFormsIGB
-import com.creativity.dev.formsimple.model.SetRow
-import com.creativity.dev.formsimple.option
-import com.creativity.dev.formsimple.types.*
 import com.example.dreamteach.listselectdinamic.IGBDynamicList.EasyForm
-import com.example.dreamteach.listselectdinamic.utils.AlertDialogManager
 
 const val tagSex:String = "c098975e-f6ce-4e44-bdc7-b11ecdb0d234"
 const val tagFoodList:String = "2403020e-82dc-4e31-8008-67263069ec1e"
