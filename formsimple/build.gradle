@@ -94,7 +94,7 @@ def githubProperties = new Properties()
 githubProperties.load(new FileInputStream(rootProject.file("github.properties")))
 
 def getVersionName = { ->
-    return "v0.0.7"  // Replace with version Name
+    return "v0.0.8"  // Replace with version Name
 }
 
 def getArtificatId = { ->
@@ -106,17 +106,44 @@ task sourceJar(type: Jar) {
     archiveClassifier.set("sources")
 }
 
-afterEvaluate {
-    publishing {
-        publications {
-// Creates a Maven publication called "release".
-            release(MavenPublication) {
-                // Applies the component for the release build variant.
-                from components. release
-//You can then customize attributes of the publication as shown below.
-                groupId 'com.form.jigb' // Replace with group ID
-                artifactId getArtificatId()
-                version getVersionName()
+publishing {
+    publications {
+        release(MavenPublication) {
+
+            groupId 'com.form.jigb' // Replace with group ID
+            artifactId getArtificatId()
+            version getVersionName()
+            artifact sourceJar
+            artifact("$buildDir/outputs/aar/${getArtificatId()}-release.aar")
+            pom {
+                withXml {
+                    def dependenciesNode = asNode().appendNode('dependencies')
+
+                    project.configurations.implementation.allDependencies.each {
+                        if (it.group != null || it.name != null || it.version != null || it.name == "unspecified") return
+
+                        def dependencyNode = dependenciesNode.appendNode('dependency')
+                        dependencyNode.appendNode('groupId', it.group)
+                        dependencyNode.appendNode('artifactId', it.name)
+                        dependencyNode.appendNode('version', it.version)
+                    }
+                }
+            }
+        }
+    }
+
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            /** Configure path of your package repository on Github
+             *  Replace GITHUB_USERID with your/organisation Github userID and REPOSITORY with the repository name on GitHub
+             */
+            url = uri("https://maven.pkg.github.com/LordSaac/FormSimpleIGB")
+
+            credentials {
+                /**Create github.properties in root project folder file with gpr.usr=GITHUB_USER_ID  & gpr.key=PERSONAL_ACCESS_TOKEN**/
+                username = githubProperties['gpr.usr'] ?: System.getenv("GPR_USER")
+                password = githubProperties['gpr.key'] ?: System.getenv("GPR_API_KEY")
             }
         }
     }
