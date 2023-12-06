@@ -9,7 +9,7 @@ public final class Size {
     private float letter = 18.0F;
     private float edit = 14.0F;
     private float icon = 14.0F;
-    @org.jetbrains.annotations.NotNull
+    @org.jetbrains.annotations.NotNull()
     private com.creativity.dev.formsimple.model.Utils.RowS row;
     
     public Size() {
@@ -51,12 +51,12 @@ public final class Size {
     public final void setIcon(float p0) {
     }
     
-    @org.jetbrains.annotations.NotNull
+    @org.jetbrains.annotations.NotNull()
     public final com.creativity.dev.formsimple.model.Utils.RowS getRow() {
         return null;
     }
     
-    public final void setRow(@org.jetbrains.annotations.NotNull
+    public final void setRow(@org.jetbrains.annotations.NotNull()
     com.creativity.dev.formsimple.model.Utils.RowS p0) {
     }
 }

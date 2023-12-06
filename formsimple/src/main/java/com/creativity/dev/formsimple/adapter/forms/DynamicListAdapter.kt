@@ -126,7 +126,7 @@ abstract class DynamicListAdapter (model: List<ListDynamic>, mContext: Context,r
             contentImg = view.findViewById(R.id.conten_img_selected)
             seperatorContent = view.findViewById(R.id.ly_separator)
             editText = view.findViewById(R.id.edt_text)
-            styleEditText = view.findViewById(R.id.style)
+            styleEditText = view.findViewById(R.id.style2)
             img = view.findViewById(R.id.img_selected);
             img2 = view.findViewById(R.id.img_selected2);
             errorMessage = view.findViewById(R.id.tv_message_error);

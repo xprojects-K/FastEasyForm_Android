@@ -7,8 +7,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.material3.Button
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.creativity.dev.formsimple.Row
 import com.creativity.dev.formsimple.interfaces.FormsListenerIGB
 import com.creativity.dev.formsimple.model.ResponseFormsIGB
+import com.creativity.dev.formsimple.types.ROW_ACTIVITY
+import com.creativity.dev.formsimple.types.ROW_TITLE
 import com.example.dreamteach.listselectdinamic.IGBDynamicList.EasyForm
 
 const val tagSex:String = "c098975e-f6ce-4e44-bdc7-b11ecdb0d234"
@@ -39,6 +42,29 @@ class MainActivity : AppCompatActivity(), FormsListenerIGB {
       Construye tu formulario aqui...
      */
 
+        Row(ROW_TITLE) { // <--- Add Title
+
+            setText.title = "Encuesta" //<--- add your title name
+
+
+        }
+
+        Row(ROW_ACTIVITY) { // <--- Add Title
+
+            setText.title = "Compose Activity" //<--- add your title name
+
+            activity = ComposeActivity::class.java
+
+        }
+
+        Row(ROW_TITLE) { // <--- Add Title
+
+            setText.title = "Encuesta" //<--- add your title name
+
+
+        }
+
+        easyForm.start(rv_main)
     }
 
 

@@ -16,7 +16,8 @@
             android:background="@android:color/background_light"
             android:gravity="center"
             android:orientation="horizontal"
-            android:padding="5dp">
+            android:padding="5dp"
+            android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar">
 
         <RelativeLayout
                 android:id="@+id/rl_letter_content"
@@ -66,7 +67,7 @@
                     android:visibility="gone" />
 
             <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/style"
+                    android:id="@+id/style2"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
                     android:clickable="true"

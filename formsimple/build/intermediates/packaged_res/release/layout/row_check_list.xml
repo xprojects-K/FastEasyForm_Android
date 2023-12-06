@@ -66,21 +66,21 @@
                     android:visibility="gone" />
 
             <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/style"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:clickable="true"
-                    android:textColorHint="@android:color/black"
-                    android:visibility="gone">
+                android:id="@+id/style2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:textColorHint="@android:color/black"
+                >
 
                 <EditText
-                        android:id="@+id/edt_text"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@android:color/background_light"
-                        android:ems="10"
-                        android:inputType="textPersonName"
-                        android:textSize="16sp" />
+                    android:id="@+id/edt_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/background_light"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:textSize="16sp" />
 
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>

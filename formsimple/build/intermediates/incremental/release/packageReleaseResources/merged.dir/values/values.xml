@@ -21,9 +21,8 @@
     <string name="Error_001">View not present windows </string>
     <string name="Error_tag">Error</string>
     <string name="title_activity_ease_form_compose">EaseFormComposeActivity</string>
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat">
         
-        <item name="colorPrimary">@color/colorPrimary_aar</item>
     </style>
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
@@ -33,5 +32,4 @@
     <style name="DialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
         <item name="android:windowBackground">@color/transparent</item>
     </style>
-    <style name="Theme.FormSimpleIGB" parent="android:Theme.Material.Light.NoActionBar"/>
 </resources>

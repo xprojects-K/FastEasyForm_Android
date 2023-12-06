@@ -3,8 +3,8 @@
   <groupId>com.form.jigb</groupId>
   <artifactId>formsimple</artifactId>
   <versioning>
-    <latest>v0.0.8</latest>
-    <release>v0.0.8</release>
+    <latest>v0.3.1</latest>
+    <release>v0.3.1</release>
     <versions>
       <version>0.0.2</version>
       <version>v0.0.3</version>
@@ -13,7 +13,29 @@
       <version>v0.0.5</version>
       <version>v0.0.7</version>
       <version>v0.0.8</version>
+      <version>v0.0.9</version>
+      <version>v0.1.1</version>
+      <version>v0.1.2</version>
+      <version>v0.1.3</version>
+      <version>v0.1.4</version>
+      <version>v0.1.5</version>
+      <version>v0.1.6</version>
+      <version>v0.1.7</version>
+      <version>v0.1.8</version>
+      <version>v0.1.9</version>
+      <version>v0.2.0</version>
+      <version>v0.2.1</version>
+      <version>v0.2.2</version>
+      <version>v0.2.3</version>
+      <version>v0.2.4</version>
+      <version>v0.2.5</version>
+      <version>v0.2.6</version>
+      <version>v0.2.7</version>
+      <version>v0.2.8</version>
+      <version>v0.2.9</version>
+      <version>v0.3.0</version>
+      <version>v0.3.1</version>
     </versions>
-    <lastUpdated>20231205135808</lastUpdated>
+    <lastUpdated>20231206204258</lastUpdated>
   </versioning>
 </metadata>
