@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        
-    </style>
     <style name="picker_clock" parent="@android:style/Widget.Material.Light.TimePicker">
         <item name="colorPrimary">#AF0000</item>
         <item name="colorPrimaryDark">#3C1414</item>

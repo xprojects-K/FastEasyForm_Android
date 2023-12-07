@@ -26,7 +26,7 @@ class EditTextB {
 
             holder.styleEditText.visibility = generalList.setVisibility.styleEdit
 
-            holder.editText.textSize = generalList.setSize.edit
+            holder.editText.textSize = generalList.setSize.editText
 
             holder.editText.setText(generalList.setText.text)
 

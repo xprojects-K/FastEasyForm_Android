@@ -20,6 +20,10 @@ class ImageViewB {
 
             holder.img2.setImageResource(generalList.setImage.selected)
 
+            holder.img2.layoutParams.height = generalList.setSize.iconLeft.hight
+
+            holder.img2.layoutParams.width =  generalList.setSize.iconLeft.width
+
         }
     }
 }

@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.form.jigb</groupId>
   <artifactId>formsimple</artifactId>
-  <version>v0.3.1</version>
+  <version>v0.3.4</version>
   <packaging>aar</packaging>
   <dependencies>
     <dependency>
@@ -117,7 +117,7 @@
       <version>7.4.2</version>
     </dependency>
   </dependencies>
-  <description>Simple List IGB is a dynamic template for creating easy forms for the Android Kotlin developer. Combine any design and adapte Simple List IGN in your final user interface.</description>
+  <description>Create forms easy &amp; fast use this library for Android.</description>
   <name>simpleformigb</name>
   <url>https://github.com/LordSaac/FormSimpleIGB</url>
   <licenses>
@@ -130,11 +130,11 @@
   <developers>
     <developer>
       <id>lordsaac</id>
-      <name>Isaac Banda</name>
-      <email>jose19.26@hotmail.com</email>
+      <name>José I. Gutiérrez B.</name>
+      <email>jose19.26@outlook.com</email>
     </developer>
   </developers>
   <scm>
-    <url>https://github.com/LordSaac</url>
+    <url>https://blog-jgutierrez.web.app/</url>
   </scm>
 </project>

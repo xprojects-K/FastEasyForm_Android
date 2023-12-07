@@ -27,7 +27,7 @@ class Select : Serializable{
 
         this.check = check
 
-        this.setImage.icon = icon
+        this.setImage.customIconResId = icon
 
     }
 
@@ -35,7 +35,7 @@ class Select : Serializable{
 
         this.text = text
 
-        this.setImage.icon = icon
+        this.setImage.customIconResId = icon
 
     }
 
@@ -62,11 +62,11 @@ class Select : Serializable{
 
 class ImageCheck: Serializable{
 
-    var selected: Int = R.drawable.check_2
+    var selectedIconResId: Int = R.drawable.check_2
 
-    var didSelected: Int = R.drawable.stop
+    var didSelectedIconResId: Int = R.drawable.stop
 
-    var icon: Int = 0
+    var customIconResId: Int = 0
 
     var size:SizeB = SizeB()
 

@@ -10,7 +10,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.creativity.dev.formsimple.Row
 import com.creativity.dev.formsimple.interfaces.FormsListenerIGB
 import com.creativity.dev.formsimple.model.ResponseFormsIGB
+import com.creativity.dev.formsimple.option
 import com.creativity.dev.formsimple.types.ROW_ACTIVITY
+import com.creativity.dev.formsimple.types.ROW_MULTIPLE_CHECK_LIST
+import com.creativity.dev.formsimple.types.ROW_SINGLE_CHECK_LIST
 import com.creativity.dev.formsimple.types.ROW_TITLE
 import com.example.dreamteach.listselectdinamic.IGBDynamicList.EasyForm
 
@@ -46,7 +49,7 @@ class MainActivity : AppCompatActivity(), FormsListenerIGB {
 
             setText.title = "Encuesta" //<--- add your title name
 
-
+            setColor.title = R.color.colorBlack
         }
 
         Row(ROW_ACTIVITY) { // <--- Add Title
@@ -61,8 +64,43 @@ class MainActivity : AppCompatActivity(), FormsListenerIGB {
 
             setText.title = "Encuesta" //<--- add your title name
 
+            setColor.title = R.color.colorBlack
 
         }
+
+        Row(ROW_MULTIPLE_CHECK_LIST){
+
+            setText.tag = tagSex
+            setText.title = "Tipo de pelicula"
+            setColor.backgroundToolbar = R.color.colorBlack
+
+            checkList{
+
+                option(){
+                    text = "Acción"
+                    setImage.selectedIconResId = R.drawable.jdjs
+                    setImage.didSelectedIconResId = R.drawable.empty_box
+                }
+
+                option(){
+                    text = "Drama"
+                }
+
+                option(){
+                    text = "Comedia"
+                }
+
+                option(){
+                    text = "Fantasia"
+
+                }
+
+            }
+
+            validation = true
+
+        }
+
 
         easyForm.start(rv_main)
     }

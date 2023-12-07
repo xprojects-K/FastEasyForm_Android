@@ -57,7 +57,7 @@ class SelectAdapter (): RecyclerView.Adapter<SelectAdapter.MyViewHolder>() {
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val generalList = list[position]
         val check: Boolean = generalList.check
-        val icon: Int = generalList.setImage.icon
+        val icon: Int = generalList.setImage.customIconResId
 
         holder.title.text = generalList.text
 
@@ -69,9 +69,9 @@ class SelectAdapter (): RecyclerView.Adapter<SelectAdapter.MyViewHolder>() {
         holder.icon.layoutParams.width = generalList.setImage.size.iconWidth;
 
         if(check)
-            holder.contentImg.setBackgroundResource(generalList.setImage.selected)
+            holder.contentImg.setBackgroundResource(generalList.setImage.selectedIconResId)
         else
-            holder.contentImg.setBackgroundResource(generalList.setImage.didSelected)
+            holder.contentImg.setBackgroundResource(generalList.setImage.didSelectedIconResId)
 
         if(icon > 0)
             holder.icon.setBackgroundResource(icon)
@@ -111,22 +111,24 @@ class SelectAdapter (): RecyclerView.Adapter<SelectAdapter.MyViewHolder>() {
         override fun eventChecked(isSelected: Boolean): Int {
             val position: Int = adapterPosition
             var imageSelected: Int = 0
+            val modelList = list[position]
 
-            list.get(position).check = isSelected
+            list[position].check = isSelected
 
             if(isSelected)
-                imageSelected = imagePositive
+                imageSelected = modelList.setImage.selectedIconResId
             else
-                imageSelected = imageNegative
+                imageSelected = modelList.setImage.didSelectedIconResId
 
             imageCheck = imageSelected
 
             if(isSingleSelection && mContext is EventList){
+
                 val event: EventList = mContext as EventList
 
                 list.forEach { it.check = false }
 
-                list.get(position).check = isSelected
+                list[position].check = isSelected
 
                 event.eventSetList(list)
             }

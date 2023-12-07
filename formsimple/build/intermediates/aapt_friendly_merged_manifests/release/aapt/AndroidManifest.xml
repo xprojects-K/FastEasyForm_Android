@@ -6,25 +6,23 @@
 
     <uses-sdk android:minSdkVersion="26" />
 
-    <application
-        android:theme="@style/Theme.AppCompat"
-        tools:replace="android:theme" >
+    <application android:theme="@style/AppThemed_FormJIGB" >
         <activity
             android:name="com.creativity.dev.formsimple.compose.EaseFormComposeActivity"
             android:exported="false"
             android:label="@string/title_activity_ease_form_compose"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppThemed_FormJIGB" />
         <activity
             android:name="com.creativity.dev.formsimple.ui.SelectActivity"
-            android:theme="@style/AppTheme.NoActionBar"
+            android:theme="@style/AppThemed_FormJIGB.NoActionBar"
             tools:ignore="Instantiatable" />
         <activity
             android:name="com.creativity.dev.formsimple.ui.CalendarActivity"
-            android:theme="@style/AppTheme.NoActionBar"
+            android:theme="@style/AppThemed_FormJIGB.NoActionBar"
             tools:ignore="Instantiatable" />
         <activity
             android:name="com.creativity.dev.formsimple.ui.Calendar_H_Activity"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppThemed_FormJIGB.NoActionBar" />
     </application>
 
 </manifest>

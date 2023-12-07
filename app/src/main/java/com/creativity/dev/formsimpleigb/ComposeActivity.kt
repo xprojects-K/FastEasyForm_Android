@@ -111,46 +111,7 @@ fun ComposeScreen(context:Context,customForm: EasyForm) {
                 inputTypeEditText = InputType.TYPE_CLASS_PHONE //  To choose type EDITTEXT (https://developer.android.com/reference/android/widget/EditText)
             }
 
-            Row(ROW_EDIT){
 
-                setText.tag =  tagEditAge
-                setText.title = "Edad"
-                maxLength = 2
-                inputTypeEditText = InputType.TYPE_CLASS_NUMBER
-                setText.emptyMessages = "Please insert your ages"
-                validation = true
-
-            }
-
-            Row(ROW_MULTIPLE_CHECK_LIST){
-
-                setText.tag = tagSex
-                setText.title = "Tipo de pelicula"
-
-                checkList{
-
-                    option(){
-                        text = "Acción"
-                    }
-
-                    option(){
-                        text = "Drama"
-                    }
-
-                    option(){
-                        text = "Comedia"
-                    }
-
-                    option(){
-                        text = "Fantasia"
-
-                    }
-
-                }
-
-                validation = true
-
-            }
 
 
         }

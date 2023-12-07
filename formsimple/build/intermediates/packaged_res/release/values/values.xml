@@ -10,7 +10,7 @@
     <color name="colorBlack">#f3000000</color>
     <color name="colorGray">#d4bfa8</color>
     <color name="colorOrange">#ff6f00</color>
-    <color name="colorPrimary_aar">#4bad4c</color>
+    <color name="colorPrimary_aar">#FF000000</color>
     <color name="colorRed">#fa000b</color>
     <color name="colorTextGray">#959595</color>
     <color name="colorYellow">#ffee00</color>
@@ -21,14 +21,16 @@
     <string name="Error_001">View not present windows </string>
     <string name="Error_tag">Error</string>
     <string name="title_activity_ease_form_compose">EaseFormComposeActivity</string>
-    <style name="AppTheme" parent="Theme.AppCompat">
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+    <style name="AppThemed_FormJIGB" parent="Theme.AppCompat.Light.NoActionBar">
         
+        <item name="colorPrimary">@color/colorBlack</item>
+
     </style>
-    <style name="AppTheme.NoActionBar">
+    <style name="AppThemed_FormJIGB.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
     <style name="DialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
         <item name="android:windowBackground">@color/transparent</item>
     </style>

@@ -1,8 +1,10 @@
 package com.creativity.dev.formsimple.adapter.forms.builders
 
 import android.app.Activity
+import android.view.WindowMetrics
 import com.creativity.dev.formsimple.adapter.forms.DynamicListAdapter
 import com.creativity.dev.formsimple.model.ListDynamic
+
 
 class LinearLayoutB {
 
@@ -22,9 +24,9 @@ class LinearLayoutB {
 
             val contentPaddingBottom = generalList.setPadding.content.bottom
 
-            val height = (holder.content.context as Activity).windowManager.defaultDisplay.height + 80
+            // val height = (holder.content.context as Activity).windowManager.defaultDisplay.height + 80
 
-            val sizeHeigthLny: Int = (height * generalList.setSize.row.heigth).toInt()
+            // val sizeHeigthLny: Int = (height * generalList.setSize.row.heigth).toInt()
 
             holder.UnvContent.gravity = generalList.universalContentGravity
 
@@ -34,7 +36,7 @@ class LinearLayoutB {
 
             holder.content.setPadding(contentPaddingLeft,contentPaddingTop,contentPaddingRigth,contentPaddingBottom)
 
-            holder.content.layoutParams.height = sizeHeigthLny
+            holder.content.layoutParams.height = generalList.setSize.layout.hight
 
         }
 

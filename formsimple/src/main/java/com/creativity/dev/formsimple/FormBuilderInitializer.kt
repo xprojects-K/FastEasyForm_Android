@@ -1,17 +1,20 @@
 package com.example.dreamteach.listselectdinamic.IGBDynamicList
 
 import android.content.Context
+import android.view.ContextThemeWrapper
+import android.view.View
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.creativity.dev.formsimple.BuilderForms
+import com.creativity.dev.formsimple.R
 import com.creativity.dev.formsimple.adapter.forms.EasyDynamicForm
 import com.creativity.dev.formsimple.adapter.forms.DynamicListAdapter
 import com.creativity.dev.formsimple.compose.EasyFormWrapper
 import com.creativity.dev.formsimple.model.CollectionControlsList
 import com.creativity.dev.formsimple.model.ListDynamic
 
-class EasyForm(context: Context){
+class EasyForm(context: Context) {
 
     private var list:ArrayList<ListDynamic> = BuilderForms.list
 
