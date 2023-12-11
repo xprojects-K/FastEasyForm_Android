@@ -66,6 +66,7 @@ class ComposeActivity : ComponentActivity() {
             }
         }
     }
+
 }
 
 @Composable
@@ -78,7 +79,7 @@ fun ComposeScreen(context:Context,customForm: EasyForm) {
 
             Row(ROW_TITLE) { // <--- Add Title
 
-                setText.title = "Encuesta" //<--- add your title name
+                setText.title = "Easy Form" //<--- add your title name
                 setColor.title = ContextCompat.getColor(
                     context,
                     R.color.colorPrimaryDark
@@ -94,12 +95,12 @@ fun ComposeScreen(context:Context,customForm: EasyForm) {
             }
 
             Row(ROW_EDIT) {
-                setText.title = "Nombre completo" // Add only text, but the text edit type is default
+                setText.title = "Full name" // Add only text, but the text edit type is default
             }
 
             Row(ROW_EDIT) {
 
-                setText.title = "Dirreción" // Add only text, but the text edit type is default
+                setText.title = "Address" // Add only text, but the text edit type is default
                 ///  emptyMessages = "Please insert lastname"
                 validation = true  // Add it is you want validate this row
 
@@ -107,19 +108,27 @@ fun ComposeScreen(context:Context,customForm: EasyForm) {
 
             Row(ROW_EDIT){
 
-                setText.title = "Telefono"// title row.
+                setText.title = "Cell Phone"// title row.
                 inputTypeEditText = InputType.TYPE_CLASS_PHONE //  To choose type EDITTEXT (https://developer.android.com/reference/android/widget/EditText)
             }
 
+            Row(ROW_CHECK){
 
+                setText.text= "Do you like job?" // Add text for the text
+                setText.tag = tagCheck //tag for identification of the row
+                checked = true // Initialize check in false or true
 
+            }
+
+            Row(ROW_INFO){
+                setText.title = "Licence"// title row.
+                setText.text= "Copyright 2018 José I. Gutiérrez B."
+            }
 
         }
     )
 
 }
-
-
 
 @Preview(showBackground = true)
 @Composable

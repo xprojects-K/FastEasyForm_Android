@@ -11,8 +11,10 @@ import com.creativity.dev.formsimple.Row
 import com.creativity.dev.formsimple.interfaces.FormsListenerIGB
 import com.creativity.dev.formsimple.model.ResponseFormsIGB
 import com.creativity.dev.formsimple.option
-import com.creativity.dev.formsimple.types.ROW_ACTIVITY
-import com.creativity.dev.formsimple.types.ROW_MULTIPLE_CHECK_LIST
+import com.creativity.dev.formsimple.types.ROW_CALENDAR
+import com.creativity.dev.formsimple.types.ROW_CHECK
+import com.creativity.dev.formsimple.types.ROW_EDIT
+import com.creativity.dev.formsimple.types.ROW_INFO
 import com.creativity.dev.formsimple.types.ROW_SINGLE_CHECK_LIST
 import com.creativity.dev.formsimple.types.ROW_TITLE
 import com.example.dreamteach.listselectdinamic.IGBDynamicList.EasyForm
@@ -24,7 +26,7 @@ const val tagCheck:String = "494a468f-286e-492b-897f-e238c37fd8f3"
 
 class MainActivity : AppCompatActivity(), FormsListenerIGB {
 
-    private lateinit var rv_main: RecyclerView
+    private lateinit var rv_main: RecyclerView // Add RecyclerView into xml
 
     private lateinit var easyForm: EasyForm
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,68 +43,50 @@ class MainActivity : AppCompatActivity(), FormsListenerIGB {
 
     private fun init(){
 
-    /*
-      Construye tu formulario aqui...
-     */
+        easyForm.apply {
 
-        Row(ROW_TITLE) { // <--- Add Title
 
-            setText.title = "Encuesta" //<--- add your title name
-
-            setColor.title = R.color.colorBlack
-        }
-
-        Row(ROW_ACTIVITY) { // <--- Add Title
-
-            setText.title = "Compose Activity" //<--- add your title name
-
-            activity = ComposeActivity::class.java
-
-        }
-
-        Row(ROW_TITLE) { // <--- Add Title
-
-            setText.title = "Encuesta" //<--- add your title name
-
-            setColor.title = R.color.colorBlack
-
-        }
-
-        Row(ROW_MULTIPLE_CHECK_LIST){
-
-            setText.tag = tagSex
-            setText.title = "Tipo de pelicula"
-            setColor.backgroundToolbar = R.color.colorBlack
-
-            checkList{
-
-                option(){
-                    text = "Acción"
-                    setImage.selectedIconResId = R.drawable.jdjs
-                    setImage.didSelectedIconResId = R.drawable.empty_box
-                }
-
-                option(){
-                    text = "Drama"
-                }
-
-                option(){
-                    text = "Comedia"
-                }
-
-                option(){
-                    text = "Fantasia"
-
-                }
-
+            // Nombre del cliente
+            Row(ROW_EDIT) {
+                setText.title = "Nombre"
+                setText.edtHint = "Ingrese su nombre"
+                setText.tag = "nombreCliente"
+                validation = true
             }
 
-            validation = true
+            // Calificación de la película
+            Row(ROW_SINGLE_CHECK_LIST) {
+                setText.title = "Calificación de la película"
+                setText.tag = "calificacionPelicula"
 
+                checkList {
+                    option { text = "Excelente" }
+                    option { text = "Buena" }
+                    option { text = "Regular" }
+                    option { text = "Mala" }
+                }
+
+                validation = true
+            }
+
+            // Comentario
+            Row(ROW_EDIT) {
+                setText.title = "Comentario"
+                setText.edtHint = "Ingrese su comentario"
+                setText.tag = "comentario"
+                validation = true
+            }
+
+            // Correo electrónico (opcional)
+            Row(ROW_EDIT) {
+                setText.title = "Correo Electrónico (Opcional)"
+                setText.edtHint = "Ingrese su correo electrónico"
+                setText.tag = "correoElectronico"
+            }
+
+            start(rv_main)
         }
 
-
-        easyForm.start(rv_main)
     }
 
 

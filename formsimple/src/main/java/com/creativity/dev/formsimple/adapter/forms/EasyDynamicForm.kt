@@ -306,7 +306,7 @@ class EasyDynamicForm(model: List<ListDynamic>, mContext: Context,recyclerView: 
         return obj
 
     }
-    override fun getResultAll(tag: String):ArrayList<ResponseFormsIGB> {
+    override fun getResultAll():ArrayList<ResponseFormsIGB> {
 
         val result = ArrayList<ResponseFormsIGB>()
 

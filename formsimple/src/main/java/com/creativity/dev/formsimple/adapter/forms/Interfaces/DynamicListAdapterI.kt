@@ -10,6 +10,6 @@ interface DynamicListAdapterI {
   fun getResults(tag: String): List<ResponseFormsIGB>
   fun updateRow(tagOrTitle: String,objRespIGB: ResponseFormsIGB): Boolean
   fun eventChecked(isSelected: Boolean , position: Int):Int
-  fun getResultAll(tag: String):ArrayList<ResponseFormsIGB>
+  fun getResultAll():ArrayList<ResponseFormsIGB>
 
 }
