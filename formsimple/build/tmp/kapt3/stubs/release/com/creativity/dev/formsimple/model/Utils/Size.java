@@ -9,11 +9,11 @@ public final class Size {
     private float letter = 18.0F;
     private float editText = 14.0F;
     private float icon = 14.0F;
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     private com.creativity.dev.formsimple.model.Utils.RowS row;
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     private com.creativity.dev.formsimple.model.Utils.Layouts layout;
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     private com.creativity.dev.formsimple.model.Utils.IconLeft iconLeft;
     
     public Size() {
@@ -55,30 +55,30 @@ public final class Size {
     public final void setIcon(float p0) {
     }
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final com.creativity.dev.formsimple.model.Utils.RowS getRow() {
         return null;
     }
     
-    public final void setRow(@org.jetbrains.annotations.NotNull()
+    public final void setRow(@org.jetbrains.annotations.NotNull
     com.creativity.dev.formsimple.model.Utils.RowS p0) {
     }
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final com.creativity.dev.formsimple.model.Utils.Layouts getLayout() {
         return null;
     }
     
-    public final void setLayout(@org.jetbrains.annotations.NotNull()
+    public final void setLayout(@org.jetbrains.annotations.NotNull
     com.creativity.dev.formsimple.model.Utils.Layouts p0) {
     }
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final com.creativity.dev.formsimple.model.Utils.IconLeft getIconLeft() {
         return null;
     }
     
-    public final void setIconLeft(@org.jetbrains.annotations.NotNull()
+    public final void setIconLeft(@org.jetbrains.annotations.NotNull
     com.creativity.dev.formsimple.model.Utils.IconLeft p0) {
     }
 }

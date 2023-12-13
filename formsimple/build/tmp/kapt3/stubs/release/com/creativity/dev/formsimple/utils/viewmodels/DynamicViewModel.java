@@ -10,7 +10,7 @@ public final class DynamicViewModel extends androidx.lifecycle.ViewModel {
         super();
     }
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final androidx.lifecycle.LiveData<java.util.List<com.creativity.dev.formsimple.model.ListDynamic>> getData() {
         return null;
     }

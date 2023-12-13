@@ -9,28 +9,28 @@ public final class EasyForm {
     private android.content.Context context;
     private androidx.recyclerview.widget.RecyclerView recyclerView;
     private final java.util.ArrayList<com.creativity.dev.formsimple.model.CollectionControlsList> validationList = null;
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     private com.creativity.dev.formsimple.adapter.forms.EasyDynamicForm tool;
     
-    public EasyForm(@org.jetbrains.annotations.NotNull()
+    public EasyForm(@org.jetbrains.annotations.NotNull
     android.content.Context context) {
         super();
     }
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final com.creativity.dev.formsimple.adapter.forms.EasyDynamicForm getTool() {
         return null;
     }
     
-    public final void setTool(@org.jetbrains.annotations.NotNull()
+    public final void setTool(@org.jetbrains.annotations.NotNull
     com.creativity.dev.formsimple.adapter.forms.EasyDynamicForm p0) {
     }
     
-    public final void start(@org.jetbrains.annotations.NotNull()
+    public final void start(@org.jetbrains.annotations.NotNull
     androidx.recyclerview.widget.RecyclerView recyclerView) {
     }
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final com.creativity.dev.formsimple.compose.EasyFormWrapper getEasyWrapper() {
         return null;
     }

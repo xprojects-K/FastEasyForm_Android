@@ -6,17 +6,17 @@ import java.lang.System;
 public class EasyFormCompose {
     private final android.view.View rootView = null;
     
-    public EasyFormCompose(@org.jetbrains.annotations.NotNull()
+    public EasyFormCompose(@org.jetbrains.annotations.NotNull
     android.content.Context context) {
         super();
     }
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final androidx.recyclerview.widget.RecyclerView rv() {
         return null;
     }
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final android.view.View view() {
         return null;
     }

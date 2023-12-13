@@ -18,25 +18,25 @@ public final class SelectActivity extends androidx.appcompat.app.AppCompatActivi
         super();
     }
     
-    @java.lang.Override()
-    protected void onCreate(@org.jetbrains.annotations.Nullable()
+    @java.lang.Override
+    protected void onCreate(@org.jetbrains.annotations.Nullable
     android.os.Bundle savedInstanceState) {
     }
     
-    @java.lang.Override()
-    public boolean onCreateOptionsMenu(@org.jetbrains.annotations.NotNull()
+    @java.lang.Override
+    public boolean onCreateOptionsMenu(@org.jetbrains.annotations.NotNull
     android.view.Menu menu) {
         return false;
     }
     
-    @java.lang.Override()
-    public boolean onOptionsItemSelected(@org.jetbrains.annotations.NotNull()
+    @java.lang.Override
+    public boolean onOptionsItemSelected(@org.jetbrains.annotations.NotNull
     android.view.MenuItem item) {
         return false;
     }
     
-    @java.lang.Override()
-    public void eventSetList(@org.jetbrains.annotations.NotNull()
+    @java.lang.Override
+    public void eventSetList(@org.jetbrains.annotations.NotNull
     java.util.List<? extends java.lang.Object> inputList) {
     }
     
@@ -46,8 +46,8 @@ public final class SelectActivity extends androidx.appcompat.app.AppCompatActivi
     private final void view() {
     }
     
-    @java.lang.Override()
-    public void evenSetSimpleString(@org.jetbrains.annotations.NotNull()
+    @java.lang.Override
+    public void evenSetSimpleString(@org.jetbrains.annotations.NotNull
     java.lang.String str) {
     }
     

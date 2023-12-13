@@ -7,7 +7,7 @@ import java.lang.System;
  */
 @kotlin.Metadata(mv = {1, 8, 0}, k = 1, d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0003\b\u0007\u0018\u0000 \u00032\u00020\u0001:\u0001\u0003B\u0005\u00a2\u0006\u0002\u0010\u0002\u00a8\u0006\u0004"}, d2 = {"Lcom/creativity/dev/formsimple/utils/FontManager;", "", "()V", "Companion", "formsimple_release"})
 public final class FontManager {
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public static final com.creativity.dev.formsimple.utils.FontManager.Companion Companion = null;
     private static final java.lang.String ruteFont = "fonts/";
     private static final java.lang.String typeFont = ".ttf";
@@ -15,65 +15,65 @@ public final class FontManager {
     private static final java.lang.String fontAwesomeRegular = "fa-regular-400";
     private static final java.lang.String fontAwesomeSolid = "fa-solid-900";
     private static final java.lang.String fontAwesomeBrands = "fa-brands-400";
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     private static final java.lang.String fontList = "\uf46d";
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     private static final java.lang.String fontDownload = "\uf381";
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     private static final java.lang.String fontEndDay = "\uf0c7";
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     private static final java.lang.String fontLogOut = "\uf2f5";
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     private static final java.lang.String fontInventory = "\uf466";
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     private static final java.lang.String fontSettings = "\uf085";
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     private static final java.lang.String fontSupport = "\uf0ad";
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     private static final java.lang.String fontChevronRight = "\uf054";
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     private static final java.lang.String fontChange = "\uf362";
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     private static final java.lang.String fontWarning = "\uf071";
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     private static final java.lang.String fontBack = "\uf359";
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     private static final java.lang.String fontInstal = "\uf0ad";
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     private static final java.lang.String fontListConstans = "\uf46d";
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     private static final java.lang.String fontChain = "\uf0c1";
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     private static final java.lang.String fontNotch = "\uf1ce";
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     private static final java.lang.String fontPlus = "\uf055";
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     private static final java.lang.String fontBriefCase = "\uf0b1";
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     private static final java.lang.String fontCamera = "\uf030";
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     private static final java.lang.String fontsend = "\uf1d8";
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     private static final java.lang.String fontExclametion = "\uf06a";
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     private static final java.lang.String fontCheckReady = "\uf058";
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     private static final java.lang.String fontMine = "\uf056";
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     private static final java.lang.String fontFolder = "\uf07c";
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     private static final java.lang.String fontDownloadRow = "\uf019";
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     private static final java.lang.String fontEdit = "\uf044";
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     private static final java.lang.String fontErase = "\uf2ed";
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     private static final java.lang.String fontDelete = "\uf057";
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     private static final java.lang.String fontLocation = "\uf3c5";
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     private static final java.lang.String fontIdCard = "\uf2c2";
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     private static final java.lang.String fontBasicCheck = "\uf00c";
     
     public FontManager() {
@@ -87,157 +87,157 @@ public final class FontManager {
             super();
         }
         
-        @org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.NotNull
         public final java.lang.String getFontList() {
             return null;
         }
         
-        @org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.NotNull
         public final java.lang.String getFontDownload() {
             return null;
         }
         
-        @org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.NotNull
         public final java.lang.String getFontEndDay() {
             return null;
         }
         
-        @org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.NotNull
         public final java.lang.String getFontLogOut() {
             return null;
         }
         
-        @org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.NotNull
         public final java.lang.String getFontInventory() {
             return null;
         }
         
-        @org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.NotNull
         public final java.lang.String getFontSettings() {
             return null;
         }
         
-        @org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.NotNull
         public final java.lang.String getFontSupport() {
             return null;
         }
         
-        @org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.NotNull
         public final java.lang.String getFontChevronRight() {
             return null;
         }
         
-        @org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.NotNull
         public final java.lang.String getFontChange() {
             return null;
         }
         
-        @org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.NotNull
         public final java.lang.String getFontWarning() {
             return null;
         }
         
-        @org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.NotNull
         public final java.lang.String getFontBack() {
             return null;
         }
         
-        @org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.NotNull
         public final java.lang.String getFontInstal() {
             return null;
         }
         
-        @org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.NotNull
         public final java.lang.String getFontListConstans() {
             return null;
         }
         
-        @org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.NotNull
         public final java.lang.String getFontChain() {
             return null;
         }
         
-        @org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.NotNull
         public final java.lang.String getFontNotch() {
             return null;
         }
         
-        @org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.NotNull
         public final java.lang.String getFontPlus() {
             return null;
         }
         
-        @org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.NotNull
         public final java.lang.String getFontBriefCase() {
             return null;
         }
         
-        @org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.NotNull
         public final java.lang.String getFontCamera() {
             return null;
         }
         
-        @org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.NotNull
         public final java.lang.String getFontsend() {
             return null;
         }
         
-        @org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.NotNull
         public final java.lang.String getFontExclametion() {
             return null;
         }
         
-        @org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.NotNull
         public final java.lang.String getFontCheckReady() {
             return null;
         }
         
-        @org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.NotNull
         public final java.lang.String getFontMine() {
             return null;
         }
         
-        @org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.NotNull
         public final java.lang.String getFontFolder() {
             return null;
         }
         
-        @org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.NotNull
         public final java.lang.String getFontDownloadRow() {
             return null;
         }
         
-        @org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.NotNull
         public final java.lang.String getFontEdit() {
             return null;
         }
         
-        @org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.NotNull
         public final java.lang.String getFontErase() {
             return null;
         }
         
-        @org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.NotNull
         public final java.lang.String getFontDelete() {
             return null;
         }
         
-        @org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.NotNull
         public final java.lang.String getFontLocation() {
             return null;
         }
         
-        @org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.NotNull
         public final java.lang.String getFontIdCard() {
             return null;
         }
         
-        @org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.NotNull
         public final java.lang.String getFontBasicCheck() {
             return null;
         }
         
-        @org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.NotNull
         public final java.lang.String getRuteFASolid() {
             return null;
         }

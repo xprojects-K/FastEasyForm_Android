@@ -7,7 +7,7 @@ import java.lang.System;
  */
 @kotlin.Metadata(mv = {1, 8, 0}, k = 1, d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0003\b\u0007\u0018\u0000 \u00032\u00020\u0001:\u0001\u0003B\u0005\u00a2\u0006\u0002\u0010\u0002\u00a8\u0006\u0004"}, d2 = {"Lcom/jgb/lordsaac/igb/supportanimation/AnimationTextView;", "", "()V", "Companion", "formsimple_release"})
 public final class AnimationTextView {
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public static final com.jgb.lordsaac.igb.supportanimation.AnimationTextView.Companion Companion = null;
     private static final int vibrate = 0;
     
@@ -22,18 +22,18 @@ public final class AnimationTextView {
             super();
         }
         
-        public final void animateVibrationET(@org.jetbrains.annotations.NotNull()
-        android.widget.EditText edt, @org.jetbrains.annotations.NotNull()
+        public final void animateVibrationET(@org.jetbrains.annotations.NotNull
+        android.widget.EditText edt, @org.jetbrains.annotations.NotNull
         android.content.Context context) {
         }
         
-        public final void animateVibrationPersonalizeTV(@org.jetbrains.annotations.NotNull()
-        android.widget.TextView edt, @org.jetbrains.annotations.NotNull()
+        public final void animateVibrationPersonalizeTV(@org.jetbrains.annotations.NotNull
+        android.widget.TextView edt, @org.jetbrains.annotations.NotNull
         android.content.Context context, long duration, int colorVibrate, int colorFinal) {
         }
         
-        public final void animateVibrationTV(@org.jetbrains.annotations.NotNull()
-        android.widget.TextView edt, @org.jetbrains.annotations.NotNull()
+        public final void animateVibrationTV(@org.jetbrains.annotations.NotNull
+        android.widget.TextView edt, @org.jetbrains.annotations.NotNull
         android.content.Context context) {
         }
     }

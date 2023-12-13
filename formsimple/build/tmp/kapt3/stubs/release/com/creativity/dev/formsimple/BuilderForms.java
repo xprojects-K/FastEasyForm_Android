@@ -4,11 +4,11 @@ import java.lang.System;
 
 @kotlin.Metadata(mv = {1, 8, 0}, k = 1, d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\b\u0007\u0018\u0000 \u00032\u00020\u0001:\u0001\u0003B\u0005\u00a2\u0006\u0002\u0010\u0002\u00a8\u0006\u0004"}, d2 = {"Lcom/creativity/dev/formsimple/BuilderForms;", "Ljava/io/Serializable;", "()V", "Companion", "formsimple_release"})
 public final class BuilderForms implements java.io.Serializable {
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public static final com.creativity.dev.formsimple.BuilderForms.Companion Companion = null;
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     private static java.util.ArrayList<com.creativity.dev.formsimple.model.ListDynamic> list;
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     private static java.util.ArrayList<com.creativity.dev.formsimple.model.Select> options;
     
     public BuilderForms() {
@@ -22,21 +22,21 @@ public final class BuilderForms implements java.io.Serializable {
             super();
         }
         
-        @org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.NotNull
         public final java.util.ArrayList<com.creativity.dev.formsimple.model.ListDynamic> getList() {
             return null;
         }
         
-        public final void setList(@org.jetbrains.annotations.NotNull()
+        public final void setList(@org.jetbrains.annotations.NotNull
         java.util.ArrayList<com.creativity.dev.formsimple.model.ListDynamic> p0) {
         }
         
-        @org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.NotNull
         public final java.util.ArrayList<com.creativity.dev.formsimple.model.Select> getOptions() {
             return null;
         }
         
-        public final void setOptions(@org.jetbrains.annotations.NotNull()
+        public final void setOptions(@org.jetbrains.annotations.NotNull
         java.util.ArrayList<com.creativity.dev.formsimple.model.Select> p0) {
         }
     }
