@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "com.creativity.dev.formsimple-merged_res-60:/layout-sw600dp-v13/row_check_list.xml",
+        "source": "com.creativity.dev.formsimple-main-61:/layout-sw600dp/row_check_list.xml"
+    },
+    {
+        "merged": "com.creativity.dev.formsimple-merged_res-60:/layout-sw600dp-v13/design_layout_snackbar.xml",
+        "source": "com.creativity.dev.formsimple-material-1.10.0-27:/layout-sw600dp-v13/design_layout_snackbar.xml"
+    },
+    {
+        "merged": "com.creativity.dev.formsimple-merged_res-60:/layout-sw600dp-v13/mtrl_layout_snackbar.xml",
+        "source": "com.creativity.dev.formsimple-material-1.10.0-27:/layout-sw600dp-v13/mtrl_layout_snackbar.xml"
+    },
+    {
+        "merged": "com.creativity.dev.formsimple-mergeReleaseResources-59:/layout-sw600dp-v13/row_check_list.xml",
+        "source": "com.creativity.dev.formsimple-main-61:/layout-sw600dp/row_check_list.xml"
+    }
+]
