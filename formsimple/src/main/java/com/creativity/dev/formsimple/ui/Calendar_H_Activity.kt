@@ -1,5 +1,6 @@
 package com.creativity.dev.formsimple.ui
 
+import android.app.DatePickerDialog
 import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
@@ -41,6 +42,13 @@ class Calendar_H_Activity : AppCompatActivity() {
         activityCreateToolbar()
         setRangeDate(listCalendarDay)
 
+        binding.cvDate.setOnDateChangeListener { _, year, month, dayOfMonth ->
+
+            // Open a DatePickerDialog to allow the user to select a specific year
+            showYearPickerDialog(year)
+
+        }
+
     }
 
 
@@ -69,6 +77,44 @@ class Calendar_H_Activity : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
 
+    private fun showYearPickerDialog(initialYear: Int) {
+
+        val calendar = Calendar.getInstance()
+        val currentYear = calendar.get(Calendar.YEAR)
+
+        val datePickerDialog = DatePickerDialog(
+            this,
+            { _, year, month, dayOfMonth ->
+                // Handle the selected year, month, and day here
+                val selectedDate = formatDate(year, month, dayOfMonth)
+
+                val time = GeneralHelper.parseDate(selectedDate,formatDate).time
+
+                binding.cvDate.setDate(GeneralHelper.parseDate(selectedDate,formatDate).time)
+
+                binding.tvDate1.text = timerHelper.setTextCalendar(GeneralHelper.parseDate(selectedDate,formatDate),formatDate)
+
+                println("Selected Date: $selectedDate")
+                println("Selected Date: $time")
+            },
+            initialYear,
+            0,
+            1
+        )
+
+        // Set the maximum and minimum allowed years
+        //datePickerDialog.datePicker.maxDate = calendar.timeInMillis
+        //datePickerDialog.datePicker.minDate = calendar.apply { set(Calendar.YEAR, currentYear - 100) }.timeInMillis
+
+        datePickerDialog.show()
+    }
+
+    private fun formatDate(year: Int, month: Int, dayOfMonth: Int): String {
+        val calendar = Calendar.getInstance()
+        calendar.set(year, month, dayOfMonth)
+        val dateFormat = SimpleDateFormat(formatDate, Locale.getDefault())
+        return dateFormat.format(calendar.time)
+    }
     // title: getPutExtra
     // description: recoge los datos enviados desde la actividad que hace llamada.
     // Programmer: jGutierrez.

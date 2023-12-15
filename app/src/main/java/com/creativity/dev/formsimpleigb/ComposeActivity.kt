@@ -87,6 +87,12 @@ fun ComposeScreen(context:Context,customForm: EasyForm) {
 
             }
 
+            Row(ROW_CALENDAR) {
+                setText.title = "Date of Birth"
+                tag = "dateOfBirth"
+                validation = true
+            }
+
             Row(ROW_EDIT) {
 
                 setText.title = "Email"// title row.
@@ -115,7 +121,7 @@ fun ComposeScreen(context:Context,customForm: EasyForm) {
             Row(ROW_CHECK){
 
                 setText.text= "Do you like job?" // Add text for the text
-                setText.tag = tagCheck //tag for identification of the row
+                tag = tagCheck //tag for identification of the row
                 checked = true // Initialize check in false or true
 
             }

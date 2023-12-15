@@ -41,6 +41,7 @@ class CalendarActivity : AppCompatActivity() {
         getBundleData()
         setRangeDate()
         activityCreateToolbar()
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

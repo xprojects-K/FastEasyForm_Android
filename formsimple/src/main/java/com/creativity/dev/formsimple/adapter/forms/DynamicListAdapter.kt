@@ -419,7 +419,7 @@ abstract class DynamicListAdapter (model: List<ListDynamic>, mContext: Context,r
 
                 val isaac = ResponseFormsIGB() //<--a little reference for here
 
-                isaac.tag = list[pos].setText.tag
+                isaac.tag = list[pos].tag
                 isaac.position = pos
                 isaac.options = list[pos].setList.options
                 isaac.text = list[pos].setText.text

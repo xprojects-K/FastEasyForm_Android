@@ -50,14 +50,21 @@ class MainActivity : AppCompatActivity(), FormsListenerIGB {
             Row(ROW_EDIT) {
                 setText.title = "Nombre"
                 setText.edtHint = "Ingrese su nombre"
-                setText.tag = "nombreCliente"
+                tag = "nombreCliente"
                 validation = true
             }
+
+            Row(ROW_CALENDAR) {
+                setText.title = "Date of Birth"
+                tag = "dateOfBirth"
+                validation = true
+            }
+
 
             // Calificación de la película
             Row(ROW_SINGLE_CHECK_LIST) {
                 setText.title = "Calificación de la película"
-                setText.tag = "calificacionPelicula"
+                tag = "calificacionPelicula"
 
                 checkList {
                     option { text = "Excelente" }
@@ -73,7 +80,7 @@ class MainActivity : AppCompatActivity(), FormsListenerIGB {
             Row(ROW_EDIT) {
                 setText.title = "Comentario"
                 setText.edtHint = "Ingrese su comentario"
-                setText.tag = "comentario"
+                tag = "comentario"
                 validation = true
             }
 
@@ -81,7 +88,7 @@ class MainActivity : AppCompatActivity(), FormsListenerIGB {
             Row(ROW_EDIT) {
                 setText.title = "Correo Electrónico (Opcional)"
                 setText.edtHint = "Ingrese su correo electrónico"
-                setText.tag = "correoElectronico"
+                tag = "correoElectronico"
             }
 
             start(rv_main)

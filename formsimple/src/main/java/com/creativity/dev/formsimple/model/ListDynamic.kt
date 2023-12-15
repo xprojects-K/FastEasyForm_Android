@@ -29,6 +29,8 @@ import java.util.Date
 
 class ListDynamic:Serializable{
 
+    var tag: String = ""
+
     //<Text>
     var setText: Text = Text()
     //</>

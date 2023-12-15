@@ -163,7 +163,7 @@ class EasyDynamicForm(model: List<ListDynamic>, mContext: Context,recyclerView: 
 
                 positionRow.forEach {
 
-                    val setTag = this.list[it.post].setText.tag
+                    val setTag = this.list[it.post].tag
 
                     if(setTag == tag){
 
@@ -284,9 +284,9 @@ class EasyDynamicForm(model: List<ListDynamic>, mContext: Context,recyclerView: 
 
         list.forEachIndexed { index, listDynamic ->
 
-            if(listDynamic.type != ListDynamic.typeRow.ROW_TITLE && listDynamic.setText.tag == tag){
+            if(listDynamic.type != ListDynamic.typeRow.ROW_TITLE && listDynamic.tag == tag){
 
-                obj.tag = listDynamic.setText.tag
+                obj.tag = listDynamic.tag
 
                 obj.text = listDynamic.setText.text
 
@@ -314,7 +314,7 @@ class EasyDynamicForm(model: List<ListDynamic>, mContext: Context,recyclerView: 
 
             val obj = ResponseFormsIGB()
 
-            obj.tag = listDynamic.setText.tag
+            obj.tag = listDynamic.tag
 
             obj.text = listDynamic.setText.text
 
@@ -341,7 +341,7 @@ class EasyDynamicForm(model: List<ListDynamic>, mContext: Context,recyclerView: 
 
             val obj: ResponseFormsIGB = ResponseFormsIGB()
 
-            obj.tag = listDynamic.setText.tag
+            obj.tag = listDynamic.tag
 
             obj.text = listDynamic.setText.text
 
@@ -372,7 +372,7 @@ class EasyDynamicForm(model: List<ListDynamic>, mContext: Context,recyclerView: 
 
            list.forEachIndexed { index, listDynamic ->
 
-               if(listDynamic.type != ListDynamic.typeRow.ROW_TITLE && listDynamic.setText.tag == tagOrTitle){
+               if(listDynamic.type != ListDynamic.typeRow.ROW_TITLE && listDynamic.tag == tagOrTitle){
 
                    list[index].setImage.selected = eventChecked(objRespIGB.checked,index )
 
