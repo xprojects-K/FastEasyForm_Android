@@ -45,6 +45,34 @@ class MainActivity : AppCompatActivity(), FormsListenerIGB {
 
         easyForm.apply {
 
+            Row(ROW_SINGLE_CHECK_LIST) {
+                tag = "FRECUENCIA_VISITA"
+                setText.title = "¿Con qué frecuencia suele visitar el cine Ya?"
+                setSize.title = 14f
+                checkList {
+                    option { text = "Una vez al mes" }
+                    option { text = "Un par de veces al año" }
+                    option { text = "Solo ocasionalmente" }
+                    option { text = "Primera visita" }
+                }
+                setting.rowSingleCheck.activeIconSuccess = true
+                validation = true // Habilitar validación
+            }
+
+            // Calidad de las proyecciones
+            Row(ROW_SINGLE_CHECK_LIST) {
+                tag = "CALIDAD_PROYECCIONES"
+                setText.title = "En una escala del 1 al 5, ¿cómo calificaría la calidad de las proyecciones en Cine Ya?"
+                setSize.title = 14f
+                checkList {
+                    option { text = "1 - Mala calidad" }
+                    option { text = "2 - Regular" }
+                    option { text = "3 - Aceptable" }
+                    option { text = "4 - Buena" }
+                    option { text = "5 - Excelente calidad" }
+                }
+                validation = true // Habilitar validación
+            }
 
             // Nombre del cliente
             Row(ROW_EDIT) {
@@ -100,8 +128,20 @@ class MainActivity : AppCompatActivity(), FormsListenerIGB {
 
     override fun actionFormResponse(result: ResponseFormsIGB) {
 
+        // Manejar la respuesta del formulario si es necesario
+        // Por ejemplo, puedes obtener los resultados aquí
+        val frecuenciaVisita = easyForm.tool.getResultByTag("FRECUENCIA_VISITA")
 
+        if(frecuenciaVisita.options.count { select -> select.check } > 0){
 
+            // result.iconArrow = com.creativity.dev.formsimple.R.drawable.success
+
+            result.text = ""
+            result.title = ""
+          //  easyForm.tool.updateRow("FRECUENCIA_VISITA",result)
+
+        }
+        // Puedes procesar los resultados aquí según tus necesidades
     }
 
 }

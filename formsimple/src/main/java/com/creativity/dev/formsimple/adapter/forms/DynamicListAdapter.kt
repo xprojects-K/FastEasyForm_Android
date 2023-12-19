@@ -30,6 +30,7 @@ import com.creativity.dev.formsimple.ext.limitAndAppendEllipsis
 import com.creativity.dev.formsimple.ui.LIST_IGB_CA
 import com.creativity.dev.formsimple.interfaces.FormsListenerIGB
 import com.creativity.dev.formsimple.model.*
+import com.creativity.dev.formsimple.types.ROW_SINGLE_CHECK_LIST
 import com.creativity.dev.formsimple.utils.GeneralHelper
 
 import com.google.android.material.textfield.TextInputLayout
@@ -353,6 +354,8 @@ abstract class DynamicListAdapter (model: List<ListDynamic>, mContext: Context,r
 
             val imageError: ImageView = view.findViewById(R.id.img_selected2)
 
+            val imageSelected: ImageView = view.findViewById(R.id.img_selected)
+
             val tv: TextView = view.findViewById(R.id.tv_desc_insp)
 
             val tittle: TextView = view.findViewById(R.id.tv_title_insp)
@@ -408,6 +411,36 @@ abstract class DynamicListAdapter (model: List<ListDynamic>, mContext: Context,r
                 imageError.setImageResource(list[position].setImage.selected)
             }
 
+            if(list[position].setting.rowMultipleCheck.activeIconSuccess ||list[position].setting.rowSingleCheck.activeIconSuccess ){
+
+                if(list[position].type == ListDynamic.typeRow.ROW_SINGLE_CHECK_LIST || list[position].type == ListDynamic.typeRow.ROW_MULTIPLE_CHECK_LIST) {
+
+
+                    if( list[position].setList.options.count { select -> select.check } > 0){
+
+                        list[position].checked = true
+
+                        list[position].setImage.selected =  list[position].setImage.success
+
+                    }else{
+
+                        list[position].checked = false
+
+                        list[position].setImage.selected =  list[position].setImage.arrow
+
+                    }
+
+                    list[position].setText.text = ""
+
+                    imageSelected.setImageResource(list[position].setImage.selected)
+
+                    recyclerView.adapter!!.notifyItemChanged(position)
+
+                }
+
+
+            }
+
             response(position) // <-- Response in the mein activity
         }
 
@@ -423,7 +456,20 @@ abstract class DynamicListAdapter (model: List<ListDynamic>, mContext: Context,r
                 isaac.position = pos
                 isaac.options = list[pos].setList.options
                 isaac.text = list[pos].setText.text
+                isaac.title = list[pos].setText.title
                 isaac.checked = list[pos].checked
+                isaac.iconArrow = list[pos].setImage.arrow
+                isaac.type =  list[pos].type
+
+                if(isaac.type == ListDynamic.typeRow.ROW_SINGLE_CHECK_LIST || isaac.type == ListDynamic.typeRow.ROW_MULTIPLE_CHECK_LIST){
+
+                    if(isaac.options.count { select -> select.check } > 0){
+
+                        isaac.checked = true
+
+                    }
+
+                }
 
                 delegateMain.actionFormResponse(isaac)
 

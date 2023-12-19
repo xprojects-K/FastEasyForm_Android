@@ -10,6 +10,8 @@ class Images {
     var warning: Int = R.drawable.sign
 
     var arrow = R.drawable.right_arrow
+
+    var success = R.drawable.success
     //</>
 
     //<Img Checked>

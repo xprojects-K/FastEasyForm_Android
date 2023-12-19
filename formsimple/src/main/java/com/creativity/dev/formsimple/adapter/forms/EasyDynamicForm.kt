@@ -298,6 +298,20 @@ class EasyDynamicForm(model: List<ListDynamic>, mContext: Context,recyclerView: 
 
                 obj.type = listDynamic.type
 
+                obj.title = listDynamic.setText.title
+
+                obj.iconArrow = listDynamic.setImage.selected
+
+                if(obj.type == ListDynamic.typeRow.ROW_SINGLE_CHECK_LIST || obj.type == ListDynamic.typeRow.ROW_MULTIPLE_CHECK_LIST){
+
+                    if(obj.options.count { select -> select.check } > 0){
+
+                        obj.checked = true
+
+                    }
+
+                }
+
                 return@forEachIndexed
             }
 
@@ -325,6 +339,10 @@ class EasyDynamicForm(model: List<ListDynamic>, mContext: Context,recyclerView: 
             obj.options = listDynamic.setList.options
 
             obj.type = listDynamic.type
+
+            obj.iconArrow = listDynamic.setImage.selected
+
+            obj.title = listDynamic.setText.title
 
             result.add(obj)
 
@@ -364,6 +382,7 @@ class EasyDynamicForm(model: List<ListDynamic>, mContext: Context,recyclerView: 
 
         var view: View
         var tv: TextView
+        var title: TextView
         var image: ImageView
         var editText: EditText
         var success = false
@@ -384,11 +403,20 @@ class EasyDynamicForm(model: List<ListDynamic>, mContext: Context,recyclerView: 
 
                    view = recyclerView.findViewHolderForAdapterPosition(index)!!.itemView
                    tv = view.findViewById(R.id.tv_desc_insp)
+                   title = view.findViewById(R.id.tv_title_insp)
                    image = view.findViewById(R.id.img_selected)
                    editText = view.findViewById(R.id.edt_text)
 
+
                    tv.text = list[index].setText.text
+
                    editText.setText(list[index].setText.text)
+
+                   list[index].setText.title = objRespIGB.title
+
+                   list[index].setText.text = objRespIGB.text
+
+                   list[index].setImage.selected = objRespIGB.iconArrow
 
                    if(listDynamic.type == ListDynamic.typeRow.ROW_CHECK){
 
@@ -406,6 +434,8 @@ class EasyDynamicForm(model: List<ListDynamic>, mContext: Context,recyclerView: 
                }
 
            }
+
+           this.recyclerView.adapter?.notifyItemChanged(objRespIGB.position)
 
        } catch (_: Exception){
 

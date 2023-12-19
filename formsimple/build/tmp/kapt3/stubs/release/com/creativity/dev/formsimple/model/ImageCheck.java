@@ -7,7 +7,7 @@ public final class ImageCheck implements java.io.Serializable {
     private int selectedIconResId;
     private int didSelectedIconResId;
     private int customIconResId = 0;
-    @org.jetbrains.annotations.NotNull
+    @org.jetbrains.annotations.NotNull()
     private com.creativity.dev.formsimple.model.SizeB size;
     
     public ImageCheck() {
@@ -35,12 +35,12 @@ public final class ImageCheck implements java.io.Serializable {
     public final void setCustomIconResId(int p0) {
     }
     
-    @org.jetbrains.annotations.NotNull
+    @org.jetbrains.annotations.NotNull()
     public final com.creativity.dev.formsimple.model.SizeB getSize() {
         return null;
     }
     
-    public final void setSize(@org.jetbrains.annotations.NotNull
+    public final void setSize(@org.jetbrains.annotations.NotNull()
     com.creativity.dev.formsimple.model.SizeB p0) {
     }
 }

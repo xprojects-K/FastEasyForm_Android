@@ -94,7 +94,7 @@ def githubProperties = new Properties()
 githubProperties.load(new FileInputStream(rootProject.file("github.properties")))
 
 def getVersionName = { ->
-    return "v1.0.0"  // Replace with version Name
+    return "v1.0.9"  // Replace with version Name
 }
 
 def getArtificatId = { ->
@@ -163,7 +163,7 @@ afterEvaluate {
                         def root = asNode()
                         root.appendNode('description', 'Create forms easy & fast use this library for Android.')
                         root.appendNode('name', 'simpleformigb')
-                        root.appendNode('url', 'https://github.com/LordSaac/FormSimpleIGB')
+                        root.appendNode('url', 'https://github.com/LordSaac/FastEasyForm')
                         root.children().last() + pomConfig
                         // Iterate over the implementation dependencies (we don't want the test ones), adding a <dependency> node for each
                         //android gradle 3.0 use implementation

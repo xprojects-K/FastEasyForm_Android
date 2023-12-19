@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.form.jigb</groupId>
   <artifactId>formsimple</artifactId>
-  <version>v1.0.0</version>
+  <version>v1.0.9</version>
   <packaging>aar</packaging>
   <dependencies>
     <dependency>
@@ -119,7 +119,7 @@
   </dependencies>
   <description>Create forms easy &amp; fast use this library for Android.</description>
   <name>simpleformigb</name>
-  <url>https://github.com/LordSaac/FormSimpleIGB</url>
+  <url>https://github.com/LordSaac/FastEasyForm</url>
   <licenses>
     <license>
       <name>The Apache Software License, Version 2.0</name>

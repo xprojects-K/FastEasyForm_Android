@@ -1,5 +1,6 @@
 package com.creativity.dev.formsimple.model
 
+import com.creativity.dev.formsimple.R
 import com.creativity.dev.formsimple.types.ROW_CHECK
 import java.io.Serializable
 import java.util.Date
@@ -15,7 +16,9 @@ class ResponseFormsIGB:Serializable{
 
     //<Content>
     var text: String = ""
+    var title: String = ""
     var checked: Boolean = false
+    var iconArrow: Int = R.drawable.right_arrow
     var options: ArrayList<Select> = ArrayList()
     lateinit  var type: ListDynamic.typeRow
     //</>

@@ -7,23 +7,23 @@ public abstract interface DynamicListAdapterI {
     
     public abstract boolean validateAll();
     
-    public abstract boolean validateByTag(@org.jetbrains.annotations.NotNull
+    public abstract boolean validateByTag(@org.jetbrains.annotations.NotNull()
     java.lang.String tag);
     
-    @org.jetbrains.annotations.NotNull
-    public abstract com.creativity.dev.formsimple.model.ResponseFormsIGB getResultByTag(@org.jetbrains.annotations.NotNull
+    @org.jetbrains.annotations.NotNull()
+    public abstract com.creativity.dev.formsimple.model.ResponseFormsIGB getResultByTag(@org.jetbrains.annotations.NotNull()
     java.lang.String tag);
     
-    @org.jetbrains.annotations.NotNull
-    public abstract java.util.List<com.creativity.dev.formsimple.model.ResponseFormsIGB> getResults(@org.jetbrains.annotations.NotNull
+    @org.jetbrains.annotations.NotNull()
+    public abstract java.util.List<com.creativity.dev.formsimple.model.ResponseFormsIGB> getResults(@org.jetbrains.annotations.NotNull()
     java.lang.String tag);
     
-    public abstract boolean updateRow(@org.jetbrains.annotations.NotNull
-    java.lang.String tagOrTitle, @org.jetbrains.annotations.NotNull
+    public abstract boolean updateRow(@org.jetbrains.annotations.NotNull()
+    java.lang.String tagOrTitle, @org.jetbrains.annotations.NotNull()
     com.creativity.dev.formsimple.model.ResponseFormsIGB objRespIGB);
     
     public abstract int eventChecked(boolean isSelected, int position);
     
-    @org.jetbrains.annotations.NotNull
+    @org.jetbrains.annotations.NotNull()
     public abstract java.util.ArrayList<com.creativity.dev.formsimple.model.ResponseFormsIGB> getResultAll();
 }

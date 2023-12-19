@@ -17,6 +17,7 @@ import com.creativity.dev.formsimple.model.Utils.Images
 import com.creativity.dev.formsimple.model.Utils.Lists
 import com.creativity.dev.formsimple.model.Utils.Margin
 import com.creativity.dev.formsimple.model.Utils.Padding
+import com.creativity.dev.formsimple.model.Utils.Setting
 import com.creativity.dev.formsimple.model.Utils.Size
 import com.creativity.dev.formsimple.model.Utils.Text
 import com.creativity.dev.formsimple.model.Utils.Visibility
@@ -52,6 +53,12 @@ class ListDynamic:Serializable{
 
     //<Types>
     var type: typeRow = typeRow.ROW_BASIC
+    //</>
+
+    //<Setting config>
+
+    var setting: Setting = Setting()
+
     //</>
 
     //<Asset Activity>
