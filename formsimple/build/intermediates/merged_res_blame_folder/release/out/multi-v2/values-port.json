@@ -4,7 +4,7 @@
             "outputFile": "com.creativity.dev.formsimple-mergeReleaseResources-58:/values-port/values-port.xml",
             "map": [
                 {
-                    "source": "/Users/jose/.gradle/caches/transforms-3/8d9343f569df63b726615d18b45679d4/transformed/appcompat-1.6.1/res/values-port/values-port.xml",
+                    "source": "/Users/tropigasdeveloper/.gradle/caches/transforms-3/8d9343f569df63b726615d18b45679d4/transformed/appcompat-1.6.1/res/values-port/values-port.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -19,7 +19,7 @@
             "outputFile": "com.creativity.dev.formsimple-merged_res-60:/values-port/values-port.xml",
             "map": [
                 {
-                    "source": "/Users/jose/.gradle/caches/transforms-3/8d9343f569df63b726615d18b45679d4/transformed/appcompat-1.6.1/res/values-port/values-port.xml",
+                    "source": "/Users/tropigasdeveloper/.gradle/caches/transforms-3/8d9343f569df63b726615d18b45679d4/transformed/appcompat-1.6.1/res/values-port/values-port.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
