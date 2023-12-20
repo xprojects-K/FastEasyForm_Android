@@ -143,7 +143,7 @@ def pomConfig = {
     }
 }
 
-afterEvaluate {
+
 
     publishing {
         publications {
@@ -189,4 +189,3 @@ afterEvaluate {
 
     }
 
-}
