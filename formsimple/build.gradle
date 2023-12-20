@@ -94,7 +94,7 @@ def githubProperties = new Properties()
 githubProperties.load(new FileInputStream(rootProject.file("github.properties")))
 
 def getVersionName = { ->
-    return "v1.1.3"  // Replace with version Name
+    return "v1.1.4"  // Replace with version Name
 }
 
 def getArtificatId = { ->
@@ -152,8 +152,8 @@ def pomConfig = {
                 artifact sourcesJar
 
                 groupId 'com.form.jigb' // Replace with group ID
-                artifactId getArtificatId()
-                version getVersionName()
+                artifactId 'formsimple'
+                version 'v1.1.5'
 
                 artifact("$buildDir/outputs/aar/${getArtificatId()}-release.aar")
 
@@ -186,3 +186,6 @@ def pomConfig = {
 
     }
 
+repositories {
+    mavenCentral()
+}
