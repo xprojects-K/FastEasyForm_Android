@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.form.jigb</groupId>
     <artifactId>formsimple</artifactId>
-    <version>v1.2.7</version>
+    <version>v1.2.9</version>
     <packaging>pom</packaging>
     <url>https://github.com/xprojects-K/FastEasyForm_Android</url>
     <description>Create forms easy &amp; fast use this library for Android.</description>
