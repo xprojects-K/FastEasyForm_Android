@@ -5,6 +5,7 @@
     <artifactId>formsimple</artifactId>
     <version>v1.2.7</version>
     <packaging>pom</packaging>
+    <url>https://github.com/xprojects-K/FastEasyForm_Android</url>
     <dependencies>
         <dependency>
             <groupId>androidx.legacy</groupId>
