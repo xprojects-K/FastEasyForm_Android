@@ -6,6 +6,17 @@
     <version>v1.2.7</version>
     <packaging>pom</packaging>
     <url>https://github.com/xprojects-K/FastEasyForm_Android</url>
+    <description>Create forms easy &amp; fast use this library for Android.</description>
+    <name>simpleformigb</name>
+    <!-- Distribution Management -->
+    <distributionManagement>
+        <repository>
+            <id>FastEasyForm_Android</id>
+            <name>Fast Easy Form</name>
+            <url>https://github.com/xprojects-K/FastEasyForm_Android</url>
+        </repository>
+
+    </distributionManagement>
     <dependencies>
         <dependency>
             <groupId>androidx.legacy</groupId>
@@ -118,9 +129,6 @@
             <version>7.4.2</version>
         </dependency>
     </dependencies>
-    <description>Create forms easy &amp; fast use this library for Android.</description>
-    <name>simpleformigb</name>
-
     <licenses>
         <license>
             <name>The Apache Software License, Version 2.0</name>
