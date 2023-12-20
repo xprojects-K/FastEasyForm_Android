@@ -1,0 +1,34 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.creativity.dev.formsimple-merged_res-60:/values-small-v4/values-small-v4.xml",
+            "map": [
+                {
+                    "source": "/Users/jose/.gradle/caches/transforms-3/8183fc709b9b4a671fa3eda614e666ba/transformed/material-1.10.0/res/values-small-v4/values-small-v4.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,128,198,270",
+                        "endColumns": "72,69,71,69",
+                        "endOffsets": "123,193,265,335"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "com.creativity.dev.formsimple-mergeReleaseResources-58:/values-small-v4/values-small-v4.xml",
+            "map": [
+                {
+                    "source": "/Users/jose/.gradle/caches/transforms-3/8183fc709b9b4a671fa3eda614e666ba/transformed/material-1.10.0/res/values-small-v4/values-small-v4.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,128,198,270",
+                        "endColumns": "72,69,71,69",
+                        "endOffsets": "123,193,265,335"
+                    }
+                }
+            ]
+        }
+    ]
+}

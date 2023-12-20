@@ -1,0 +1,47 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    xmlns:tools="http://schemas.android.com/tools"
+4    package="com.creativity.dev.formsimple"
+5    android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" >
+6
+7    <uses-sdk android:minSdkVersion="26" />
+7-->/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml
+8
+9    <application android:theme="@style/AppThemed_FormJIGB" >
+9-->/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:7:5-26:19
+9-->/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:8:9-50
+10        <activity
+10-->/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:10:9-14:61
+11            android:name="com.creativity.dev.formsimple.compose.EaseFormComposeActivity"
+11-->/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:11:17-64
+12            android:exported="false"
+12-->/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:12:17-41
+13            android:label="@string/title_activity_ease_form_compose"
+13-->/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:13:17-73
+14            android:theme="@style/AppThemed_FormJIGB" />
+14-->/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:14:17-58
+15        <activity
+15-->/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:15:9-18:45
+16            android:name="com.creativity.dev.formsimple.ui.SelectActivity"
+16-->/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:16:13-46
+17            android:theme="@style/AppThemed_FormJIGB.NoActionBar"
+17-->/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:17:13-66
+18            tools:ignore="Instantiatable" />
+18-->/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:18:13-42
+19        <activity
+19-->/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:19:9-22:45
+20            android:name="com.creativity.dev.formsimple.ui.CalendarActivity"
+20-->/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:20:13-48
+21            android:theme="@style/AppThemed_FormJIGB.NoActionBar"
+21-->/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:21:13-66
+22            tools:ignore="Instantiatable" />
+22-->/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:22:13-42
+23        <activity
+23-->/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:23:9-25:69
+24            android:name="com.creativity.dev.formsimple.ui.Calendar_H_Activity"
+24-->/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:24:13-51
+25            android:theme="@style/AppThemed_FormJIGB.NoActionBar" />
+25-->/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:25:13-66
+26    </application>
+27
+28</manifest>
