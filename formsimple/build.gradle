@@ -134,13 +134,13 @@ def pomConfig = {
 
 publishing {
         publications {
-            release(MavenPublication) {
+            MyPublication(MavenPublication) {
 
                 artifact sourcesJar
 
-                groupId 'com.form.jigb' // Replace with group ID
+                groupId 'com.fastforms.jigb' // Replace with group ID
                 artifactId 'formsimple'
-                version 'v1.2.5'
+                version 'v1.2.6'
 
                 artifact("$buildDir/outputs/aar/formsimple-release.aar")
 
@@ -187,6 +187,10 @@ publishing {
             }
         }
     }
+
+repositories {
+    mavenCentral()
+}
 
 
 
