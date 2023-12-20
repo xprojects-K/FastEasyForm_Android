@@ -132,10 +132,10 @@ def pomConfig = {
 }
 
 
-afterEvaluate {
+
     publishing {
         publications {
-            release(MavenPublication) {
+            MyPublication(MavenPublication) {
 
                 artifact sourcesJar
 
@@ -174,5 +174,8 @@ afterEvaluate {
 
     }
 
+repositories {
+    mavenCentral()
 }
+
 
