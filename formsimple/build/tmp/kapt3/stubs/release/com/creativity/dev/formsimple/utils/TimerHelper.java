@@ -6,16 +6,16 @@ import java.lang.System;
 public final class TimerHelper {
     private java.lang.String strRespons = "";
     private java.lang.String srtFormat = "";
-    @org.jetbrains.annotations.NotNull
+    @org.jetbrains.annotations.NotNull()
     public static final com.creativity.dev.formsimple.utils.TimerHelper.Companion Companion = null;
-    @org.jetbrains.annotations.NotNull
+    @org.jetbrains.annotations.NotNull()
     private static java.lang.String longDate = "MMMM dd yyyy";
     
     public TimerHelper() {
         super();
     }
     
-    @org.jetbrains.annotations.NotNull
+    @org.jetbrains.annotations.NotNull()
     @android.annotation.SuppressLint(value = {"SimpleDateFormat"})
     public final java.lang.String getFormateHour() {
         return null;
@@ -29,15 +29,15 @@ public final class TimerHelper {
         return 0;
     }
     
-    @org.jetbrains.annotations.NotNull
+    @org.jetbrains.annotations.NotNull()
     @android.annotation.SuppressLint(value = {"SimpleDateFormat"})
-    public final java.lang.String setTextCalendar(@org.jetbrains.annotations.NotNull
-    java.util.Date date, @org.jetbrains.annotations.NotNull
+    public final java.lang.String setTextCalendar(@org.jetbrains.annotations.NotNull()
+    java.util.Date date, @org.jetbrains.annotations.NotNull()
     java.lang.String format) {
         return null;
     }
     
-    @org.jetbrains.annotations.NotNull
+    @org.jetbrains.annotations.NotNull()
     public final java.lang.String getTrasformHour(int hour, int minute, boolean isMilitary) {
         return null;
     }
@@ -49,12 +49,12 @@ public final class TimerHelper {
             super();
         }
         
-        @org.jetbrains.annotations.NotNull
+        @org.jetbrains.annotations.NotNull()
         public final java.lang.String getLongDate() {
             return null;
         }
         
-        public final void setLongDate(@org.jetbrains.annotations.NotNull
+        public final void setLongDate(@org.jetbrains.annotations.NotNull()
         java.lang.String p0) {
         }
     }

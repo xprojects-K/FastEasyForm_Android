@@ -1,61 +1,61 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Volumes/Multimedia/Users/josegutierrez/Desktop/Projects/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:2:1-25:12
-INJECTED from /Volumes/Multimedia/Users/josegutierrez/Desktop/Projects/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:2:1-25:12
-INJECTED from /Volumes/Multimedia/Users/josegutierrez/Desktop/Projects/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:2:1-25:12
+ADDED from /Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:2:1-25:12
+INJECTED from /Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:2:1-25:12
+INJECTED from /Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:2:1-25:12
 	package
-		ADDED from /Volumes/Multimedia/Users/josegutierrez/Desktop/Projects/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:4:9-48
-		INJECTED from /Volumes/Multimedia/Users/josegutierrez/Desktop/Projects/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml
-		INJECTED from /Volumes/Multimedia/Users/josegutierrez/Desktop/Projects/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml
+		ADDED from /Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:4:9-48
+		INJECTED from /Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml
+		INJECTED from /Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml
 	xmlns:tools
-		ADDED from /Volumes/Multimedia/Users/josegutierrez/Desktop/Projects/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:3:9-55
+		ADDED from /Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:3:9-55
 	xmlns:android
-		ADDED from /Volumes/Multimedia/Users/josegutierrez/Desktop/Projects/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:2:11-69
+		ADDED from /Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:2:11-69
 application
-ADDED from /Volumes/Multimedia/Users/josegutierrez/Desktop/Projects/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:6:5-23:19
+ADDED from /Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:6:5-23:19
 activity#com.creativity.dev.formsimple.compose.EaseFormComposeActivity
-ADDED from /Volumes/Multimedia/Users/josegutierrez/Desktop/Projects/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:7:9-11:62
+ADDED from /Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:7:9-11:62
 	android:label
-		ADDED from /Volumes/Multimedia/Users/josegutierrez/Desktop/Projects/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:10:17-73
+		ADDED from /Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:10:17-73
 	android:exported
-		ADDED from /Volumes/Multimedia/Users/josegutierrez/Desktop/Projects/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:9:17-41
+		ADDED from /Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:9:17-41
 	android:theme
-		ADDED from /Volumes/Multimedia/Users/josegutierrez/Desktop/Projects/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:11:17-59
+		ADDED from /Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:11:17-59
 	android:name
-		ADDED from /Volumes/Multimedia/Users/josegutierrez/Desktop/Projects/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:8:17-64
+		ADDED from /Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:8:17-64
 activity#com.creativity.dev.formsimple.ui.SelectActivity
-ADDED from /Volumes/Multimedia/Users/josegutierrez/Desktop/Projects/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:12:9-15:58
+ADDED from /Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:12:9-15:58
 	tools:ignore
-		ADDED from /Volumes/Multimedia/Users/josegutierrez/Desktop/Projects/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:15:17-46
+		ADDED from /Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:15:17-46
 	android:theme
-		ADDED from /Volumes/Multimedia/Users/josegutierrez/Desktop/Projects/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:14:17-60
+		ADDED from /Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:14:17-60
 	android:name
-		ADDED from /Volumes/Multimedia/Users/josegutierrez/Desktop/Projects/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:13:17-50
+		ADDED from /Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:13:17-50
 activity#com.creativity.dev.formsimple.ui.CalendarActivity
-ADDED from /Volumes/Multimedia/Users/josegutierrez/Desktop/Projects/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:16:9-19:58
+ADDED from /Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:16:9-19:58
 	tools:ignore
-		ADDED from /Volumes/Multimedia/Users/josegutierrez/Desktop/Projects/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:19:17-46
+		ADDED from /Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:19:17-46
 	android:theme
-		ADDED from /Volumes/Multimedia/Users/josegutierrez/Desktop/Projects/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:18:17-60
+		ADDED from /Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:18:17-60
 	android:name
-		ADDED from /Volumes/Multimedia/Users/josegutierrez/Desktop/Projects/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:17:17-52
+		ADDED from /Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:17:17-52
 activity#com.creativity.dev.formsimple.ui.Calendar_H_Activity
-ADDED from /Volumes/Multimedia/Users/josegutierrez/Desktop/Projects/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:20:9-22:72
+ADDED from /Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:20:9-22:72
 	android:theme
-		ADDED from /Volumes/Multimedia/Users/josegutierrez/Desktop/Projects/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:22:17-60
+		ADDED from /Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:22:17-60
 	android:name
-		ADDED from /Volumes/Multimedia/Users/josegutierrez/Desktop/Projects/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:21:17-55
+		ADDED from /Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:21:17-55
 uses-sdk
-INJECTED from /Volumes/Multimedia/Users/josegutierrez/Desktop/Projects/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /Volumes/Multimedia/Users/josegutierrez/Desktop/Projects/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml
-INJECTED from /Volumes/Multimedia/Users/josegutierrez/Desktop/Projects/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml
-INJECTED from /Volumes/Multimedia/Users/josegutierrez/Desktop/Projects/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml
-INJECTED from /Volumes/Multimedia/Users/josegutierrez/Desktop/Projects/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml
+INJECTED from /Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml
+INJECTED from /Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml
+INJECTED from /Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml
+INJECTED from /Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from /Volumes/Multimedia/Users/josegutierrez/Desktop/Projects/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml
-		ADDED from /Volumes/Multimedia/Users/josegutierrez/Desktop/Projects/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml
-		INJECTED from /Volumes/Multimedia/Users/josegutierrez/Desktop/Projects/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml
+		INJECTED from /Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml
+		ADDED from /Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml
+		INJECTED from /Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /Volumes/Multimedia/Users/josegutierrez/Desktop/Projects/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml
-		ADDED from /Volumes/Multimedia/Users/josegutierrez/Desktop/Projects/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml
-		INJECTED from /Volumes/Multimedia/Users/josegutierrez/Desktop/Projects/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml
+		INJECTED from /Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml
+		ADDED from /Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml
+		INJECTED from /Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml

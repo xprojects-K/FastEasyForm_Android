@@ -94,30 +94,100 @@ def githubProperties = new Properties()
 githubProperties.load(new FileInputStream(rootProject.file("github.properties")))
 
 def getVersionName = { ->
-    return "v0.0.7"  // Replace with version Name
+    return "v1.1.4"  // Replace with version Name
 }
 
 def getArtificatId = { ->
     return "formsimple" // Replace with library name ID
 }
 
-task sourceJar(type: Jar) {
-    from android.sourceSets.main.java.srcDirs
-    archiveClassifier.set("sources")
+
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.kotlin.srcDirs
+    classifier = 'sources'
 }
+artifacts {
+    archives sourcesJar
+}
+
+def pomConfig = {
+    licenses {
+        license {
+            name "The Apache Software License, Version 2.0"
+            url "https://www.apache.org/licenses/LICENSE-2.0.txt"
+            distribution "repo"
+        }
+    }
+    developers {
+        developer {
+            id "lordsaac"
+            name "José I. Gutiérrez B."
+            email "jose19.26@outlook.com"
+        }
+    }
+
+    scm {
+        url "https://blog-jgutierrez.web.app/"
+    }
+}
+
 
 afterEvaluate {
     publishing {
         publications {
-// Creates a Maven publication called "release".
             release(MavenPublication) {
-                // Applies the component for the release build variant.
-                from components. release
-//You can then customize attributes of the publication as shown below.
+
+                artifact sourcesJar
+
                 groupId 'com.form.jigb' // Replace with group ID
-                artifactId getArtificatId()
-                version getVersionName()
+                artifactId 'formsimple'
+                version 'v1.2.4'
+
+                artifact("$buildDir/outputs/aar/formsimple-release.aar")
+
+                pom {
+                    withXml {
+                        def dependenciesNode = asNode().appendNode('dependencies')
+                        def root = asNode()
+                        root.appendNode('description', 'Create forms easy & fast use this library for Android.')
+                        root.appendNode('name', 'simpleformigb')
+                        root.appendNode('url', 'https://github.com/xprojects-K/FastEasyForm_Android')
+                        root.children().last() + pomConfig
+                        // Iterate over the implementation dependencies (we don't want the test ones), adding a <dependency> node for each
+                        //android gradle 3.0 use implementation
+                        configurations.implementation.allDependencies.each {
+                            // Ensure dependencies such as fileTree are not included.
+                            logger.log(LogLevel.ERROR,"allDependencies.each:====>"+it.toString()+"\n")
+
+                            if (it.name != 'unspecified') {
+                                logger.log(LogLevel.ERROR,"allDependencies.each: !unspecified: "+it.name+"\n")
+                                def dependencyNode = dependenciesNode.appendNode('dependency')
+                                dependencyNode.appendNode('groupId', it.group)
+                                dependencyNode.appendNode('artifactId', it.name)
+                                dependencyNode.appendNode('version', it.version)
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        // Define the repository to publish to (in this case, mavenLocal)
+        repositories {
+            maven {
+                name = "GitHubPackages"
+                /** Configure path of your package repository on Github
+                 *  Replace GITHUB_USERID with your/organisation Github userID and REPOSITORY with the repository name on GitHub
+                 */
+                url = uri("https://maven.pkg.github.com/xprojects-K/FastEasyForm_Android")
+
+                credentials {
+                    /**Create github.properties in root project folder file with gpr.usr=GITHUB_USER_ID  & gpr.key=PERSONAL_ACCESS_TOKEN**/
+                    username = 'LordSaac'
+                    password = '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'
+                }
             }
         }
     }
+
 }
+
