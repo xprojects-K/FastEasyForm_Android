@@ -3,8 +3,8 @@
   <groupId>com.form.jigb</groupId>
   <artifactId>formsimple</artifactId>
   <versioning>
-    <latest>v1.1.5</latest>
-    <release>v1.1.5</release>
+    <latest>v1.1.9</latest>
+    <release>v1.1.9</release>
     <versions>
       <version>v0.3.6</version>
       <version>v1.0.1</version>
@@ -20,7 +20,8 @@
       <version>v1.1.3</version>
       <version>v1.1.4</version>
       <version>v1.1.5</version>
+      <version>v1.1.9</version>
     </versions>
-    <lastUpdated>20231220013235</lastUpdated>
+    <lastUpdated>20231220022541</lastUpdated>
   </versioning>
 </metadata>
