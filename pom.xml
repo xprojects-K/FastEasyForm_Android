@@ -4,7 +4,7 @@
     <groupId>com.form.jigb</groupId>
     <artifactId>formsimple</artifactId>
     <version>v1.2.7</version>
-    <packaging>aar</packaging>
+    <packaging>pom</packaging>
     <dependencies>
         <dependency>
             <groupId>androidx.legacy</groupId>
