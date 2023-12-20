@@ -132,8 +132,7 @@ def pomConfig = {
 }
 
 
-afterEvaluate {
-    publishing {
+publishing {
         publications {
             release(MavenPublication) {
 
@@ -189,5 +188,5 @@ afterEvaluate {
         }
     }
 
-}
+
 
