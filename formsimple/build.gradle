@@ -141,7 +141,7 @@ afterEvaluate {
 
                 groupId 'com.form.jigb' // Replace with group ID
                 artifactId 'formsimple'
-                version 'v1.2.2'
+                version 'v1.2.3'
 
                 artifact("$buildDir/outputs/aar/formsimple-release.aar")
 
@@ -151,7 +151,7 @@ afterEvaluate {
                         def root = asNode()
                         root.appendNode('description', 'Create forms easy & fast use this library for Android.')
                         root.appendNode('name', 'simpleformigb')
-                        root.appendNode('url', 'https://github.com/LordSaac/FastEasyForm')
+                        root.appendNode('url', 'https://github.com/xprojects-K/FastEasyForm_Android')
                         root.children().last() + pomConfig
                         // Iterate over the implementation dependencies (we don't want the test ones), adding a <dependency> node for each
                         //android gradle 3.0 use implementation
