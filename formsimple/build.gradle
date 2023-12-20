@@ -141,9 +141,9 @@ afterEvaluate {
 
                 groupId 'com.form.jigb' // Replace with group ID
                 artifactId 'formsimple'
-                version 'v1.2.1'
+                version 'v1.2.2'
 
-                artifact("$buildDir/outputs/aar/${getArtificatId()}-release.aar")
+                artifact("$buildDir/outputs/aar/formsimple-release.aar")
 
                 pom {
                     withXml {
@@ -171,12 +171,11 @@ afterEvaluate {
                 }
             }
         }
-
+        // Define the repository to publish to (in this case, mavenLocal)
+        repositories {
+            mavenLocal()
+        }
     }
 
 }
 
-
-repositories {
-    mavenCentral()
-}
