@@ -141,7 +141,7 @@ afterEvaluate {
 
                 groupId 'com.form.jigb' // Replace with group ID
                 artifactId 'formsimple'
-                version 'v1.2.7'
+                version 'v1.2.9'
 
                 artifact("$buildDir/outputs/aar/formsimple-release.aar")
 
