@@ -3,7 +3,7 @@
   "component": {
     "group": "com.form.jigb",
     "module": "formsimple",
-    "version": "v1.1.9",
+    "version": "v1.2.0",
     "attributes": {
       "org.gradle.status": "release"
     }
@@ -61,8 +61,8 @@
       ],
       "files": [
         {
-          "name": "formsimple-v1.1.9.aar",
-          "url": "formsimple-v1.1.9.aar",
+          "name": "formsimple-v1.2.0.aar",
+          "url": "formsimple-v1.2.0.aar",
           "size": 269809,
           "sha512": "c01aab2e805422e477ad10d2a44967eb36209f37398e6c30c5f2b2498156a835059f2b5a45ab18a112b81462abb412915c47d6742d43843f95a091c87cf5ce58",
           "sha256": "85a704f630c232b5a376d5124619c67478a98a53f00339ad9111e2b472e74b1b",
@@ -232,8 +232,8 @@
       ],
       "files": [
         {
-          "name": "formsimple-v1.1.9.aar",
-          "url": "formsimple-v1.1.9.aar",
+          "name": "formsimple-v1.2.0.aar",
+          "url": "formsimple-v1.2.0.aar",
           "size": 269809,
           "sha512": "c01aab2e805422e477ad10d2a44967eb36209f37398e6c30c5f2b2498156a835059f2b5a45ab18a112b81462abb412915c47d6742d43843f95a091c87cf5ce58",
           "sha256": "85a704f630c232b5a376d5124619c67478a98a53f00339ad9111e2b472e74b1b",
