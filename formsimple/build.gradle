@@ -135,13 +135,13 @@ def pomConfig = {
 afterEvaluate {
     publishing {
         publications {
-            release(MavenPublication) {
+            MyPublication(MavenPublication) {
 
                 artifact sourcesJar
 
                 groupId 'com.form.jigb' // Replace with group ID
                 artifactId 'formsimple'
-                version 'v1.2.3'
+                version 'v1.2.4'
 
                 artifact("$buildDir/outputs/aar/formsimple-release.aar")
 

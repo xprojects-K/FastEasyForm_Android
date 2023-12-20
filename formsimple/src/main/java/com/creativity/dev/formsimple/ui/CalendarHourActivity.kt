@@ -72,7 +72,7 @@ class CalendarActivity : AppCompatActivity() {
     // title: getPutExtra
     // description: recoge los datos enviados desde la actividad que hace llamada.
     // Programmer: jGutierrez.
-    @SuppressLint("SetTextI18n")
+    @SuppressLint("SetTextI18n", "SuspiciousIndentation")
     @RequiresApi(Build.VERSION_CODES.M)
     private fun getBundleData() {
         val extras = intent.getBundleExtra(GeneralHelper.keyBundle())

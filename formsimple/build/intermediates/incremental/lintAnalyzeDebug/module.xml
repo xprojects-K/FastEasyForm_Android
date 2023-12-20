@@ -1,0 +1,19 @@
+<lint-module
+    format="1"
+    dir="/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple"
+    name=":formsimple"
+    type="LIBRARY"
+    maven="FastEasyForm_Android:formsimple:"
+    gradle="7.4.2"
+    buildFolder="build"
+    bootClassPath="/Users/jose/Library/Android/sdk/platforms/android-34/android.jar:/Users/jose/Library/Android/sdk/build-tools/30.0.3/core-lambda-stubs.jar"
+    javaSourceLevel="11"
+    compileTarget="android-34"
+    neverShrinking="true">
+  <lintOptions
+      abortOnError="true"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="debug"/>
+</lint-module>

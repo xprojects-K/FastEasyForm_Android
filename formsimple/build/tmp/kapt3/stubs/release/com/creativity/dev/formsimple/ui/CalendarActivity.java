@@ -84,7 +84,7 @@ public final class CalendarActivity extends androidx.appcompat.app.AppCompatActi
     }
     
     @androidx.annotation.RequiresApi(value = android.os.Build.VERSION_CODES.M)
-    @android.annotation.SuppressLint(value = {"SetTextI18n"})
+    @android.annotation.SuppressLint(value = {"SetTextI18n", "SuspiciousIndentation"})
     private final void getBundleData() {
     }
     

@@ -1,0 +1,592 @@
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/java/com/creativity/dev/formsimple/ui/Calendar_H_Activity.kt:184: Warning: To get local formatting use getDateInstance(), getDateTimeInstance(), or getTimeInstance(), or use new SimpleDateFormat(String template, Locale locale) with for example Locale.US for ASCII dates. [SimpleDateFormat]
+        val ss = SimpleDateFormat("yyyy-MM-dd")
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "SimpleDateFormat":
+   Almost all callers should use getDateInstance(), getDateTimeInstance(), or
+   getTimeInstance() to get a ready-made instance of SimpleDateFormat suitable
+   for the user's locale. The main reason you'd create an instance this class
+   directly is because you need to format/parse a specific machine-readable
+   format, in which case you almost certainly want to explicitly ask for US to
+   ensure that you get ASCII digits (rather than, say, Arabic digits).
+
+   Therefore, you should either use the form of the SimpleDateFormat
+   constructor where you pass in an explicit locale, such as Locale.US, or use
+   one of the get instance methods, or suppress this error if really know what
+   you are doing.
+
+   https://developer.android.com/reference/java/text/SimpleDateFormat.html
+
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/java/com/creativity/dev/formsimple/model/ReferencesView.kt:15: Warning: Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element) [InflateParams]
+            val contentView = inflater.inflate(R.layout.row_check_list, null, false)
+                                                                        ~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/java/com/creativity/dev/formsimple/compose/SupportCompose.kt:24: Warning: Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element) [InflateParams]
+    private val rootView: View = LayoutInflater.from(context).inflate(R.layout.custom_layout_rv, null)
+                                                                                                 ~~~~
+
+   Explanation for issues of type "InflateParams":
+   When inflating a layout, avoid passing in null as the parent view, since
+   otherwise any layout parameters on the root of the inflated layout will be
+   ignored.
+
+   https://www.bignerdranch.com/blog/understanding-androids-layoutinflater-inflate/
+
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/java/com/creativity/dev/formsimple/adapter/forms/DynamicListAdapter.kt:155: Warning: Consider adding a <queries> declaration to your manifest when calling this method; see https://g.co/dev/packagevisibility for details [QueryPermissionsNeeded]
+                val activityExists = intent.resolveActivityInfo(mContext.packageManager, 0) != null
+                                            ~~~~~~~~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/java/com/creativity/dev/formsimple/adapter/forms/DynamicListAdapter.kt:193: Warning: Consider adding a <queries> declaration to your manifest when calling this method; see https://g.co/dev/packagevisibility for details [QueryPermissionsNeeded]
+                val activityExists = intent.resolveActivityInfo(mContext.packageManager, 0) != null
+                                            ~~~~~~~~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/java/com/creativity/dev/formsimple/adapter/forms/DynamicListAdapter.kt:236: Warning: Consider adding a <queries> declaration to your manifest when calling this method; see https://g.co/dev/packagevisibility for details [QueryPermissionsNeeded]
+                val activityExists = intent.resolveActivityInfo(mContext.packageManager, 0) != null
+                                            ~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "QueryPermissionsNeeded":
+   Apps that target Android 11 cannot query or interact with other installed
+   apps by default. If you need to query or interact with other installed
+   apps, you may need to add a <queries> declaration in your manifest.
+
+   As a corollary, the methods PackageManager#getInstalledPackages and
+   PackageManager#getInstalledApplications will no longer return information
+   about all installed apps. To query specific apps or types of apps, you can
+   use methods like PackageManager#getPackageInfo or
+   PackageManager#queryIntentActivities.
+
+   https://g.co/dev/packagevisibility
+
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/drawable/negative.xml:3: Warning: Limit vector icons sizes to 200×200 to keep icon drawing fast; see https://developer.android.com/studio/write/vector-asset-studio#when for more [VectorRaster]
+    android:width="256dp"
+                   ~~~~~
+
+   Explanation for issues of type "VectorRaster":
+   Vector icons require API 21 or API 24 depending on used features, but when
+   minSdkVersion is less than 21 or 24 and Android Gradle plugin 1.4 or higher
+   is used, a vector drawable placed in the drawable folder is automatically
+   moved to drawable-anydpi-v21 or drawable-anydpi-v24 and bitmap images are
+   generated for different screen resolutions for backwards compatibility.
+
+   However, there are some limitations to this raster image generation, and
+   this lint check flags elements and attributes that are not fully supported.
+   You should manually check whether the generated output is acceptable for
+   those older devices.
+
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/build.gradle:67: Warning: A newer version of com.google.android.material:material than 1.10.0 is available: 1.11.0 [GradleDependency]
+    implementation 'com.google.android.material:material:1.10.0'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/build.gradle:68: Warning: A newer version of androidx.lifecycle:lifecycle-runtime-ktx than 2.3.1 is available: 2.6.2 [GradleDependency]
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.3.1'
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/build.gradle:69: Warning: A newer version of androidx.compose:compose-bom than 2022.10.00 is available: 2023.10.01 [GradleDependency]
+    implementation platform('androidx.compose:compose-bom:2022.10.00')
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/build.gradle:76: Warning: A newer version of org.jetbrains.kotlin:kotlin-stdlib-jdk7 than 1.8.22 is available: 1.9.0 [GradleDependency]
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/build.gradle:84: Warning: A newer version of androidx.activity:activity-compose than 1.8.1 is available: 1.8.2 [GradleDependency]
+    implementation "androidx.activity:activity-compose:1.8.1"
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/build.gradle:85: Warning: A newer version of androidx.compose:compose-bom than 2022.10.00 is available: 2023.10.01 [GradleDependency]
+    androidTestImplementation platform('androidx.compose:compose-bom:2022.10.00')
+                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "GradleDependency":
+   This detector looks for usages of libraries where the version you are using
+   is not the current stable release. Using older versions is fine, and there
+   are cases where you deliberately want to stick with an older version.
+   However, you may simply not be aware that a more recent version is
+   available, and that is what this lint check helps find.
+
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout-sw600dp/row_check_list.xml:34: Warning: Invalid layout param in a RelativeLayout: layout_weight [ObsoleteLayoutParam]
+                android:layout_weight="1"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout/row_check_list.xml:34: Warning: Invalid layout param in a RelativeLayout: layout_weight [ObsoleteLayoutParam]
+                    android:layout_weight="1"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout-land/row_check_list.xml:35: Warning: Invalid layout param in a RelativeLayout: layout_weight [ObsoleteLayoutParam]
+                    android:layout_weight="1"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "ObsoleteLayoutParam":
+   The given layout_param is not defined for the given layout, meaning it has
+   no effect. This usually happens when you change the parent layout or move
+   view code around without updating the layout params. This will cause
+   useless attribute processing at runtime, and is misleading for others
+   reading the layout so the parameter should be removed.
+
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/java/com/creativity/dev/formsimple/ui/CalendarHourActivity.kt:76: Warning: Unnecessary; SDK_INT is always >= 23 [ObsoleteSdkInt]
+    @RequiresApi(Build.VERSION_CODES.M)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/java/com/creativity/dev/formsimple/ui/Calendar_H_Activity.kt:63: Warning: Unnecessary; SDK_INT is always >= 23 [ObsoleteSdkInt]
+    @RequiresApi(Build.VERSION_CODES.M)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout-v21: Warning: This folder configuration (v21) is unnecessary; minSdkVersion is 26. Merge all the resources in this folder into layout. [ObsoleteSdkInt]
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/values-v21: Warning: This folder configuration (v21) is unnecessary; minSdkVersion is 26. Merge all the resources in this folder into values. [ObsoleteSdkInt]
+
+   Explanation for issues of type "ObsoleteSdkInt":
+   This check flags version checks that are not necessary, because the
+   minSdkVersion (or surrounding known API level) is already at least as high
+   as the version checked for.
+
+   Similarly, it also looks for resources in -vNN folders, such as values-v14
+   where the version qualifier is less than or equal to the minSdkVersion,
+   where the contents should be merged into the best folder.
+
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/drawable/empty_box.xml:8: Warning: Very long vector path (815 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector. [VectorPath]
+    <path
+                           ~~~~~~~
+
+   Explanation for issues of type "VectorPath":
+   Using long vector paths is bad for performance. There are several ways to
+   make the pathData shorter:
+   * Using less precision
+   * Removing some minor details
+   * Using the Android Studio vector conversion tool
+   * Rasterizing the image (converting to PNG)
+
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout/row_check_list.xml:140: Warning: Use a layout_height of 0dp instead of match_parent for better performance [InefficientWeight]
+            android:layout_height="match_parent"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout-land/row_check_list.xml:141: Warning: Use a layout_height of 0dp instead of 25dp for better performance [InefficientWeight]
+            android:layout_height="25dp"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout/row_select.xml:54: Warning: Use a layout_height of 0dp instead of 22dp for better performance [InefficientWeight]
+                    android:layout_height="22dp"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "InefficientWeight":
+   When only a single widget in a LinearLayout defines a weight, it is more
+   efficient to assign a width/height of 0dp to it since it will absorb all
+   the remaining space anyway. With a declared width/height of 0dp it does not
+   have to measure its own size first.
+
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout/dialog_comment.xml:43: Warning: Nested weights are bad for performance [NestedWeights]
+            android:layout_weight="1"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout/row_select.xml:57: Warning: Nested weights are bad for performance [NestedWeights]
+                    android:layout_weight="1"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "NestedWeights":
+   Layout weights require a widget to be measured twice. When a LinearLayout
+   with non-zero weights is nested inside another LinearLayout with non-zero
+   weights, then the number of measurements increase exponentially.
+
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout-land/row_check_list.xml:10: Warning: Possible overdraw: Root element paints background @android:color/background_light with a theme that also paints a background (inferred theme is @style/AppThemed_FormJIGB) [Overdraw]
+        android:background="@android:color/background_light">
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout-sw600dp/row_check_list.xml:10: Warning: Possible overdraw: Root element paints background @android:color/background_light with a theme that also paints a background (inferred theme is @style/AppThemed_FormJIGB) [Overdraw]
+    android:background="@android:color/background_light">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout/row_check_list.xml:10: Warning: Possible overdraw: Root element paints background @android:color/background_light with a theme that also paints a background (inferred theme is @style/AppThemed_FormJIGB) [Overdraw]
+        android:background="@android:color/background_light">
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout/row_select.xml:8: Warning: Possible overdraw: Root element paints background @color/cardview_light_background with a theme that also paints a background (inferred theme is @style/AppThemed_FormJIGB) [Overdraw]
+    android:background="@color/cardview_light_background"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "Overdraw":
+   If you set a background drawable on a root view, then you should use a
+   custom theme where the theme background is null. Otherwise, the theme
+   background will be painted first, only to have your custom background
+   completely cover it; this is called "overdraw".
+
+   NOTE: This detector relies on figuring out which layouts are associated
+   with which activities based on scanning the Java code, and it's currently
+   doing that using an inexact pattern matching algorithm. Therefore, it can
+   incorrectly conclude which activity the layout is associated with and then
+   wrongly complain that a background-theme is hidden.
+
+   If you want your custom background on multiple pages, then you should
+   consider making a custom theme with your custom background and just using
+   that theme instead of a root element background.
+
+   Of course it's possible that your custom drawable is translucent and you
+   want it to be mixed with the background. However, you will get better
+   performance if you pre-mix the background with your drawable and use that
+   resulting image or color as a custom theme background instead.
+
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/values/colors.xml:9: Warning: The resource R.color.colorGray appears to be unused [UnusedResources]
+    <color name="colorGray">#d4bfa8</color>
+           ~~~~~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/values/colors.xml:10: Warning: The resource R.color.colorBambito appears to be unused [UnusedResources]
+    <color name="colorBambito">#81c243</color>
+           ~~~~~~~~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/values/colors.xml:11: Warning: The resource R.color.transparent_none appears to be unused [UnusedResources]
+    <color name="transparent_none">#00000000</color>
+           ~~~~~~~~~~~~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/values/colors.xml:12: Warning: The resource R.color.transparent_white appears to be unused [UnusedResources]
+    <color name="transparent_white">#ebffffff</color>
+           ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/values/colors.xml:13: Warning: The resource R.color.colorYellow appears to be unused [UnusedResources]
+    <color name="colorYellow">#ffee00</color>
+           ~~~~~~~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/values/colors.xml:14: Warning: The resource R.color.colorOrange appears to be unused [UnusedResources]
+    <color name="colorOrange">#ff6f00</color>
+           ~~~~~~~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/values/colors.xml:15: Warning: The resource R.color.colorBacgroundRecicler appears to be unused [UnusedResources]
+    <color name="colorBacgroundRecicler">#adffedd1</color>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/values/colors.xml:16: Warning: The resource R.color.colorBacgroundReciclerGreen appears to be unused [UnusedResources]
+    <color name="colorBacgroundReciclerGreen">#94ffffff</color>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/values/colors.xml:17: Warning: The resource R.color.colorBacgroundGray appears to be unused [UnusedResources]
+    <color name="colorBacgroundGray">#45bfbfbf</color>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/values/colors.xml:18: Warning: The resource R.color.colorBacgroundGrayLite appears to be unused [UnusedResources]
+    <color name="colorBacgroundGrayLite">#3dededed</color>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/values/colors.xml:21: Warning: The resource R.color.Not_available appears to be unused [UnusedResources]
+    <color name="Not_available">#aeafac</color>
+           ~~~~~~~~~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/drawable/compass.png: Warning: The resource R.drawable.compass appears to be unused [UnusedResources]
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout/content_toolbar.xml:2: Warning: The resource R.layout.content_toolbar appears to be unused [UnusedResources]
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+^
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/anim/item_animation_fall_down.xml:1: Warning: The resource R.anim.item_animation_fall_down appears to be unused [UnusedResources]
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+^
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/anim/layout_animation_fall_down.xml:2: Warning: The resource R.anim.layout_animation_fall_down appears to be unused [UnusedResources]
+<layoutAnimation
+^
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/drawable/negative.xml:2: Warning: The resource R.drawable.negative appears to be unused [UnusedResources]
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+^
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/values/strings.xml:3: Warning: The resource R.string.Error_tag appears to be unused [UnusedResources]
+    <string name="Error_tag">Error</string>
+            ~~~~~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/values/strings.xml:5: Warning: The resource R.string.Error_001 appears to be unused [UnusedResources]
+    <string name="Error_001">View not present windows </string>    <!-- This error is category 1, not affect the performance -->
+            ~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "UnusedResources":
+   Unused resources make applications larger and slow down builds.
+
+
+   The unused resource check can ignore tests. If you want to include
+   resources that are only referenced from tests, consider packaging them in a
+   test source set instead.
+
+   You can include test sources in the unused resource check by setting the
+   system property lint.unused-resources.include-tests =true, and to exclude
+   them (usually for performance reasons), use
+   lint.unused-resources.exclude-tests =true.
+   ,
+
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/drawable/check_2.png: Warning: Found bitmap drawable res/drawable/check_2.png in densityless folder [IconLocation]
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/drawable/compass.png: Warning: Found bitmap drawable res/drawable/compass.png in densityless folder [IconLocation]
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/drawable/sign.png: Warning: Found bitmap drawable res/drawable/sign.png in densityless folder [IconLocation]
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/drawable/stop.png: Warning: Found bitmap drawable res/drawable/stop.png in densityless folder [IconLocation]
+
+   Explanation for issues of type "IconLocation":
+   The res/drawable folder is intended for density-independent graphics such
+   as shapes defined in XML. For bitmaps, move it to drawable-mdpi and
+   consider providing higher and lower resolution versions in drawable-ldpi,
+   drawable-hdpi and drawable-xhdpi. If the icon really is density independent
+   (for example a solid color) you can place it in drawable-nodpi.
+
+   https://developer.android.com/guide/practices/screens_support.html
+
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout/dialog_comment.xml:37: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+        <Button
+         ~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout/dialog_comment.xml:50: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+        <Button
+         ~~~~~~
+
+   Explanation for issues of type "ButtonStyle":
+   Button bars typically use a borderless style for the buttons. Set the
+   style="?android:attr/buttonBarButtonStyle" attribute on each of the
+   buttons, and set style="?android:attr/buttonBarStyle" on the parent layout
+
+   https://material.io/components/dialogs/
+
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout-sw600dp/row_check_list.xml:138: Warning: Avoid using sizes smaller than 11sp: 10sp [SmallSp]
+        android:textSize="10sp"
+        ~~~~~~~~~~~~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout/row_check_list.xml:143: Warning: Avoid using sizes smaller than 11sp: 10sp [SmallSp]
+            android:textSize="10sp"
+            ~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "SmallSp":
+   Avoid using sizes smaller than 11sp.
+
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout/dialog_comment.xml:18: Warning: Missing autofillHints attribute [Autofill]
+    <EditText
+     ~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout-sw600dp/row_check_list.xml:75: Warning: Missing autofillHints attribute [Autofill]
+                <EditText
+                 ~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout/row_check_list.xml:76: Warning: Missing autofillHints attribute [Autofill]
+                <EditText
+                 ~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout-land/row_check_list.xml:77: Warning: Missing autofillHints attribute [Autofill]
+                <EditText
+                 ~~~~~~~~
+
+   Explanation for issues of type "Autofill":
+   Specify an autofillHints attribute when targeting SDK version 26 or higher
+   or explicitly specify that the view is not important for autofill. Your app
+   can help an autofill service classify the data correctly by providing the
+   meaning of each view that could be autofillable, such as views representing
+   usernames, passwords, credit card fields, email addresses, etc.
+
+   The hints can have any value, but it is recommended to use predefined
+   values like 'username' for a username or 'creditCardNumber' for a credit
+   card number. For a list of all predefined autofill hint constants, see the
+   AUTOFILL_HINT_ constants in the View reference at
+   https://developer.android.com/reference/android/view/View.html.
+
+   You can mark a view unimportant for autofill by specifying an
+   importantForAutofill attribute on that view or a parent view. See
+   https://developer.android.com/reference/android/view/View.html#setImportant
+   ForAutofill(int).
+
+   https://developer.android.com/guide/topics/text/autofill.html
+
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout/empty_view.xml:27: Warning: Missing contentDescription attribute on image [ContentDescription]
+        <ImageView
+         ~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout-sw600dp/row_check_list.xml:95: Warning: Missing contentDescription attribute on image [ContentDescription]
+            <ImageView
+             ~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout/row_check_list.xml:97: Warning: Missing contentDescription attribute on image [ContentDescription]
+            <ImageView
+             ~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout-land/row_check_list.xml:98: Warning: Missing contentDescription attribute on image [ContentDescription]
+            <ImageView
+             ~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout-sw600dp/row_check_list.xml:103: Warning: Missing contentDescription attribute on image [ContentDescription]
+            <ImageView
+             ~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout/row_check_list.xml:105: Warning: Missing contentDescription attribute on image [ContentDescription]
+            <ImageView
+             ~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout-land/row_check_list.xml:106: Warning: Missing contentDescription attribute on image [ContentDescription]
+            <ImageView
+             ~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout/row_select.xml:18: Warning: Missing contentDescription attribute on image [ContentDescription]
+        <ImageView
+         ~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout/row_select.xml:51: Warning: Missing contentDescription attribute on image [ContentDescription]
+            <ImageView
+             ~~~~~~~~~
+
+   Explanation for issues of type "ContentDescription":
+   Non-textual widgets like ImageViews and ImageButtons should use the
+   contentDescription attribute to specify a textual description of the widget
+   such that screen readers and other accessibility tools can adequately
+   describe the user interface.
+
+   Note that elements in application screens that are purely decorative and do
+   not provide any content or enable a user action should not have
+   accessibility content descriptions. In this case, just suppress the lint
+   warning with a tools:ignore="ContentDescription" attribute.
+
+   Note that for text fields, you should not set both the hint and the
+   contentDescription attributes since the hint will never be shown. Just set
+   the hint.
+
+   https://developer.android.com/guide/topics/ui/accessibility/apps#special-cases
+
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout-sw600dp/row_check_list.xml:75: Warning: Missing accessibility label: provide either a view with an android:labelFor that references this view or provide an android:hint [LabelFor]
+                <EditText
+                 ~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout/row_check_list.xml:76: Warning: Missing accessibility label: provide either a view with an android:labelFor that references this view or provide an android:hint [LabelFor]
+                <EditText
+                 ~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout-land/row_check_list.xml:77: Warning: Missing accessibility label: provide either a view with an android:labelFor that references this view or provide an android:hint [LabelFor]
+                <EditText
+                 ~~~~~~~~
+
+   Explanation for issues of type "LabelFor":
+   Editable text fields should provide an android:hint or, provided your
+   minSdkVersion is at least 17, they may be referenced by a view with a
+   android:labelFor attribute.
+
+   When using android:labelFor, be sure to provide an android:text or an
+   android:contentDescription.
+
+   If your view is labeled but by a label in a different layout which includes
+   this one, just suppress this warning from lint.
+
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout/dialog_comment.xml:15: Warning: Hardcoded string "Comentarios", should use @string resource [HardcodedText]
+        android:text="Comentarios"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout/dialog_comment.xml:26: Warning: Hardcoded string "Escribir aquí ...", should use @string resource [HardcodedText]
+        android:hint="Escribir aquí ..."
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout/dialog_comment.xml:45: Warning: Hardcoded string "Cancelar", should use @string resource [HardcodedText]
+            android:text="Cancelar"
+            ~~~~~~~~~~~~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout/dialog_comment.xml:56: Warning: Hardcoded string "Aceptar", should use @string resource [HardcodedText]
+            android:text="Aceptar"
+            ~~~~~~~~~~~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout/empty_view.xml:42: Warning: Hardcoded string "Empty", should use @string resource [HardcodedText]
+                android:textSize="16sp" android:text="Empty"/>
+                                        ~~~~~~~~~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout-sw600dp/row_check_list.xml:37: Warning: Hardcoded string "A", should use @string resource [HardcodedText]
+                android:text="A"
+                ~~~~~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout/row_check_list.xml:37: Warning: Hardcoded string "A", should use @string resource [HardcodedText]
+                    android:text="A"
+                    ~~~~~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout-land/row_check_list.xml:38: Warning: Hardcoded string "A", should use @string resource [HardcodedText]
+                    android:text="A"
+                    ~~~~~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout/row_check_list.xml:52: Warning: Hardcoded string "Title", should use @string resource [HardcodedText]
+                    android:text="Title"
+                    ~~~~~~~~~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout-sw600dp/row_check_list.xml:53: Warning: Hardcoded string "Title", should use @string resource [HardcodedText]
+                android:text="Title"
+                ~~~~~~~~~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout-land/row_check_list.xml:54: Warning: Hardcoded string "Title", should use @string resource [HardcodedText]
+                    android:text="Title"
+                    ~~~~~~~~~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout-sw600dp/row_check_list.xml:125: Warning: Hardcoded string "FONT", should use @string resource [HardcodedText]
+            android:text="FONT"
+            ~~~~~~~~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout/row_check_list.xml:129: Warning: Hardcoded string "FONT", should use @string resource [HardcodedText]
+                android:text="FONT"
+                ~~~~~~~~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout-land/row_check_list.xml:130: Warning: Hardcoded string "FONT", should use @string resource [HardcodedText]
+                android:text="FONT"
+                ~~~~~~~~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout-sw600dp/row_check_list.xml:134: Warning: Hardcoded string "Error Messages", should use @string resource [HardcodedText]
+        android:text="Error Messages"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout/row_check_list.xml:138: Warning: Hardcoded string "Error Messages", should use @string resource [HardcodedText]
+            android:text="Error Messages"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout-land/row_check_list.xml:139: Warning: Hardcoded string "Error Messages", should use @string resource [HardcodedText]
+            android:text="Error Messages"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "HardcodedText":
+   Hardcoding text attributes directly in layout files is bad for several
+   reasons:
+
+   * When creating configuration variations (for example for landscape or
+   portrait) you have to repeat the actual text (and keep it up to date when
+   making changes)
+
+   * The application cannot be translated to other languages by just adding
+   new translations for existing string resources.
+
+   There are quickfixes to automatically extract this hardcoded string into a
+   resource lookup.
+
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout/row_check_list.xml:63: Warning: When you define paddingEnd you should probably also define paddingStart for right-to-left symmetry [RtlSymmetry]
+                    android:paddingEnd="5dp"
+                    ~~~~~~~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout-sw600dp/row_check_list.xml:117: Warning: When you define paddingLeft you should probably also define paddingRight for right-to-left symmetry [RtlSymmetry]
+            android:paddingLeft="20dp"
+            ~~~~~~~~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout/row_check_list.xml:120: Warning: When you define paddingLeft you should probably also define paddingRight for right-to-left symmetry [RtlSymmetry]
+                android:paddingLeft="20dp"
+                ~~~~~~~~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout-land/row_check_list.xml:121: Warning: When you define paddingLeft you should probably also define paddingRight for right-to-left symmetry [RtlSymmetry]
+                android:paddingLeft="25dp"
+                ~~~~~~~~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout-sw600dp/row_check_list.xml:139: Warning: When you define paddingLeft you should probably also define paddingRight for right-to-left symmetry [RtlSymmetry]
+        android:paddingLeft="5dp"
+        ~~~~~~~~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout/row_check_list.xml:144: Warning: When you define paddingLeft you should probably also define paddingRight for right-to-left symmetry [RtlSymmetry]
+            android:paddingLeft="5dp"
+            ~~~~~~~~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout-land/row_check_list.xml:145: Warning: When you define paddingLeft you should probably also define paddingRight for right-to-left symmetry [RtlSymmetry]
+            android:paddingLeft="5dp"
+            ~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "RtlSymmetry":
+   If you specify padding or margin on the left side of a layout, you should
+   probably also specify padding on the right side (and vice versa) for
+   right-to-left layout symmetry.
+
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/java/com/creativity/dev/formsimple/model/ListDynamic.kt:111: Warning: Use "Gravity.START" instead of "Gravity.LEFT" to ensure correct behavior in right-to-left locales [RtlHardcoded]
+    var gravityTitle: Int = Gravity.LEFT
+                                    ~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/java/com/creativity/dev/formsimple/model/ListDynamic.kt:190: Warning: Use "Gravity.START" instead of "Gravity.LEFT" to ensure correct behavior in right-to-left locales [RtlHardcoded]
+                this.universalContentGravity = Gravity.LEFT
+                                                       ~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout/dialog_comment.xml:41: Warning: Consider replacing android:layout_marginLeft with android:layout_marginStart="200dp" to better support right-to-left layouts [RtlHardcoded]
+            android:layout_marginLeft="200dp"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout/dialog_comment.xml:42: Warning: Consider replacing android:layout_marginRight with android:layout_marginEnd="5dp" to better support right-to-left layouts [RtlHardcoded]
+            android:layout_marginRight="5dp"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout/row_check_list.xml:94: Warning: Use "end" instead of "right" to ensure correct behavior in right-to-left locales [RtlHardcoded]
+                android:gravity="right|center"
+                                 ~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout-land/row_check_list.xml:95: Warning: Use "end" instead of "right" to ensure correct behavior in right-to-left locales [RtlHardcoded]
+                android:gravity="right|center"
+                                 ~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout-sw600dp/row_check_list.xml:117: Warning: Consider replacing android:paddingLeft with android:paddingStart="20dp" to better support right-to-left layouts [RtlHardcoded]
+            android:paddingLeft="20dp"
+            ~~~~~~~~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout/row_check_list.xml:119: Warning: Use "end" instead of "right" to ensure correct behavior in right-to-left locales [RtlHardcoded]
+                android:gravity="right"
+                                 ~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout/row_check_list.xml:120: Warning: Consider replacing android:paddingLeft with android:paddingStart="20dp" to better support right-to-left layouts [RtlHardcoded]
+                android:paddingLeft="20dp"
+                ~~~~~~~~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout-land/row_check_list.xml:120: Warning: Use "end" instead of "right" to ensure correct behavior in right-to-left locales [RtlHardcoded]
+                android:gravity="right"
+                                 ~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout-land/row_check_list.xml:121: Warning: Consider replacing android:paddingLeft with android:paddingStart="25dp" to better support right-to-left layouts [RtlHardcoded]
+                android:paddingLeft="25dp"
+                ~~~~~~~~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout/row_check_list.xml:128: Warning: Use "end" instead of "right" to ensure correct behavior in right-to-left locales [RtlHardcoded]
+                android:gravity="right|center"
+                                 ~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout-land/row_check_list.xml:129: Warning: Use "end" instead of "right" to ensure correct behavior in right-to-left locales [RtlHardcoded]
+                android:gravity="right|center"
+                                 ~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout-sw600dp/row_check_list.xml:139: Warning: Consider replacing android:paddingLeft with android:paddingStart="5dp" to better support right-to-left layouts [RtlHardcoded]
+        android:paddingLeft="5dp"
+        ~~~~~~~~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout/row_check_list.xml:144: Warning: Consider replacing android:paddingLeft with android:paddingStart="5dp" to better support right-to-left layouts [RtlHardcoded]
+            android:paddingLeft="5dp"
+            ~~~~~~~~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout-land/row_check_list.xml:145: Warning: Consider replacing android:paddingLeft with android:paddingStart="5dp" to better support right-to-left layouts [RtlHardcoded]
+            android:paddingLeft="5dp"
+            ~~~~~~~~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout/row_select.xml:22: Warning: Consider replacing android:layout_marginRight with android:layout_marginEnd="5dp" to better support right-to-left layouts [RtlHardcoded]
+                android:layout_marginRight="5dp"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout/row_select.xml:41: Warning: Use "start" instead of "left" to ensure correct behavior in right-to-left locales [RtlHardcoded]
+            android:gravity="left|center"
+                             ~~~~~~~~~~~
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/res/layout/row_select.xml:48: Warning: Use "end" instead of "right" to ensure correct behavior in right-to-left locales [RtlHardcoded]
+            android:gravity="right"
+                             ~~~~~
+
+   Explanation for issues of type "RtlHardcoded":
+   Using Gravity#LEFT and Gravity#RIGHT can lead to problems when a layout is
+   rendered in locales where text flows from right to left. Use Gravity#START
+   and Gravity#END instead. Similarly, in XML gravity and layout_gravity
+   attributes, use start rather than left.
+
+   For XML attributes such as paddingLeft and layout_marginLeft, use
+   paddingStart and layout_marginStart. NOTE: If your minSdkVersion is less
+   than 17, you should add both the older left/right attributes as well as the
+   new start/end attributes. On older platforms, where RTL is not supported
+   and the start/end attributes are unknown and therefore ignored, you need
+   the older left/right attributes. There is a separate lint check which
+   catches that type of error.
+
+   (Note: For Gravity#LEFT and Gravity#START, you can use these constants even
+   when targeting older platforms, because the start bitmask is a superset of
+   the left bitmask. Therefore, you can use gravity="start" rather than
+   gravity="left|start".)
+
+/Users/jose/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml: Warning: The project references RTL attributes, but does not explicitly enable or disable RTL support with android:supportsRtl in the manifest [RtlEnabled]
+
+   Explanation for issues of type "RtlEnabled":
+   To enable right-to-left support, when running on API 17 and higher, you
+   must set the android:supportsRtl attribute in the manifest <application>
+   element.
+
+   If you have started adding RTL attributes, but have not yet finished the
+   migration, you can set the attribute to false to satisfy this lint check.
+
+0 errors, 116 warnings
