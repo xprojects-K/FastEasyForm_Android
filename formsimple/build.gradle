@@ -135,13 +135,13 @@ def pomConfig = {
 afterEvaluate {
     publishing {
         publications {
-            MyPublication(MavenPublication) {
+            release(MavenPublication) {
 
                 artifact sourcesJar
 
                 groupId 'com.form.jigb' // Replace with group ID
                 artifactId 'formsimple'
-                version 'v1.2.4'
+                version 'v1.2.5'
 
                 artifact("$buildDir/outputs/aar/formsimple-release.aar")
 
@@ -173,7 +173,19 @@ afterEvaluate {
         }
         // Define the repository to publish to (in this case, mavenLocal)
         repositories {
-            mavenLocal()
+            maven {
+                name = "GitHubPackages"
+                /** Configure path of your package repository on Github
+                 *  Replace GITHUB_USERID with your/organisation Github userID and REPOSITORY with the repository name on GitHub
+                 */
+                url = uri("https://maven.pkg.github.com/xprojects-K/FastEasyForm_Android")
+
+                credentials {
+                    /**Create github.properties in root project folder file with gpr.usr=GITHUB_USER_ID  & gpr.key=PERSONAL_ACCESS_TOKEN**/
+                    username = 'LordSaac'
+                    password = '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'
+                }
+            }
         }
     }
 
