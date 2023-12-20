@@ -4,7 +4,7 @@
             "outputFile": "com.creativity.dev.formsimple-merged_res-60:/values-small-v4/values-small-v4.xml",
             "map": [
                 {
-                    "source": "/Users/tropigasdeveloper/.gradle/caches/transforms-3/8183fc709b9b4a671fa3eda614e666ba/transformed/material-1.10.0/res/values-small-v4/values-small-v4.xml",
+                    "source": "/Users/jose/.gradle/caches/transforms-3/8183fc709b9b4a671fa3eda614e666ba/transformed/material-1.10.0/res/values-small-v4/values-small-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -19,7 +19,7 @@
             "outputFile": "com.creativity.dev.formsimple-mergeReleaseResources-58:/values-small-v4/values-small-v4.xml",
             "map": [
                 {
-                    "source": "/Users/tropigasdeveloper/.gradle/caches/transforms-3/8183fc709b9b4a671fa3eda614e666ba/transformed/material-1.10.0/res/values-small-v4/values-small-v4.xml",
+                    "source": "/Users/jose/.gradle/caches/transforms-3/8183fc709b9b4a671fa3eda614e666ba/transformed/material-1.10.0/res/values-small-v4/values-small-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

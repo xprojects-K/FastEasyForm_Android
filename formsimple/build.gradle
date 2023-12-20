@@ -148,7 +148,7 @@ afterEvaluate {
     publishing {
         publications {
             release(MavenPublication) {
-
+                from components.release
                 artifact sourcesJar
 
                 groupId 'com.form.jigb' // Replace with group ID
@@ -200,4 +200,5 @@ afterEvaluate {
             }
         }
     }
+
 }
