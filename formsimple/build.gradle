@@ -147,7 +147,7 @@ def pomConfig = {
 
     publishing {
         publications {
-            maven(MavenPublication) {
+            release(MavenPublication) {
                // from components.release
                 artifact sourcesJar
 
@@ -182,9 +182,6 @@ def pomConfig = {
                     }
                 }
             }
-        }
-        repositories {
-            mavenLocal()
         }
 
     }
