@@ -40,11 +40,11 @@ android {
         enabled = true
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
     }
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = '11'
     }
     composeOptions {
         kotlinCompilerExtensionVersion = "1.4.0"
@@ -94,11 +94,20 @@ def githubProperties = new Properties()
 githubProperties.load(new FileInputStream(rootProject.file("github.properties")))
 
 def getVersionName = { ->
-    return "v1.3.94"  // Replace with version Name
+    return "v1.3.93"  // Replace with version Name
 }
 
 def getArtificatId = { ->
     return "formsimple" // Replace with library name ID
+}
+
+
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.kotlin.srcDirs
+    classifier = 'sources'
+}
+artifacts {
+    archives sourcesJar
 }
 
 def pomConfig = {
