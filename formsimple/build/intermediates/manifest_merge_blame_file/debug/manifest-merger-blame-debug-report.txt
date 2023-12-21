@@ -8,37 +8,37 @@
 7-->/Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml
 8
 9    <application>
-9-->/Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:7:5-26:19
+9-->/Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:7:5-24:19
 10        <activity
-10-->/Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:10:9-14:15
+10-->/Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:8:9-12:15
 11            android:name="com.creativity.dev.formsimple.compose.EaseFormComposeActivity"
-11-->/Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:11:17-64
+11-->/Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:9:17-64
 12            android:exported="false"
-12-->/Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:12:17-41
+12-->/Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:10:17-41
 13            android:label="@string/title_activity_ease_form_compose" />
-13-->/Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:13:17-73
+13-->/Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:11:17-73
 14        <activity
-14-->/Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:15:9-18:45
+14-->/Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:13:9-16:45
 15            android:name="com.creativity.dev.formsimple.ui.SelectActivity"
-15-->/Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:16:13-46
+15-->/Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:14:13-46
 16            android:theme="@style/AppThemed_FormJIGB.NoActionBar"
-16-->/Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:17:13-66
+16-->/Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:15:13-66
 17            tools:ignore="Instantiatable" />
-17-->/Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:18:13-42
+17-->/Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:16:13-42
 18        <activity
-18-->/Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:19:9-22:45
+18-->/Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:17:9-20:45
 19            android:name="com.creativity.dev.formsimple.ui.CalendarActivity"
-19-->/Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:20:13-48
+19-->/Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:18:13-48
 20            android:theme="@style/AppThemed_FormJIGB.NoActionBar"
-20-->/Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:21:13-66
+20-->/Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:19:13-66
 21            tools:ignore="Instantiatable" />
-21-->/Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:22:13-42
+21-->/Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:20:13-42
 22        <activity
-22-->/Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:23:9-25:69
+22-->/Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:21:9-23:69
 23            android:name="com.creativity.dev.formsimple.ui.Calendar_H_Activity"
-23-->/Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:24:13-51
+23-->/Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:22:13-51
 24            android:theme="@style/AppThemed_FormJIGB.NoActionBar" />
-24-->/Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:25:13-66
+24-->/Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:23:13-66
 25    </application>
 26
 27</manifest>

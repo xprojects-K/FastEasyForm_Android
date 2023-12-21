@@ -1,8 +1,8 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:2:1-28:12
-INJECTED from /Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:2:1-28:12
-INJECTED from /Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:2:1-28:12
+ADDED from /Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:2:1-26:12
+INJECTED from /Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:2:1-26:12
+INJECTED from /Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:2:1-26:12
 	package
 		ADDED from /Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:4:9-48
 		INJECTED from /Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml
@@ -14,37 +14,37 @@ INJECTED from /Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/for
 	android:theme
 		ADDED from /Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:5:10-78
 application
-ADDED from /Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:7:5-26:19
+ADDED from /Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:7:5-24:19
 activity#com.creativity.dev.formsimple.compose.EaseFormComposeActivity
-ADDED from /Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:10:9-14:15
+ADDED from /Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:8:9-12:15
 	android:label
-		ADDED from /Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:13:17-73
+		ADDED from /Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:11:17-73
 	android:exported
-		ADDED from /Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:12:17-41
+		ADDED from /Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:10:17-41
 	android:name
-		ADDED from /Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:11:17-64
+		ADDED from /Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:9:17-64
 activity#com.creativity.dev.formsimple.ui.SelectActivity
-ADDED from /Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:15:9-18:45
+ADDED from /Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:13:9-16:45
 	tools:ignore
-		ADDED from /Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:18:13-42
+		ADDED from /Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:16:13-42
 	android:theme
-		ADDED from /Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:17:13-66
+		ADDED from /Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:15:13-66
 	android:name
-		ADDED from /Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:16:13-46
+		ADDED from /Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:14:13-46
 activity#com.creativity.dev.formsimple.ui.CalendarActivity
-ADDED from /Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:19:9-22:45
+ADDED from /Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:17:9-20:45
 	tools:ignore
-		ADDED from /Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:22:13-42
+		ADDED from /Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:20:13-42
 	android:theme
-		ADDED from /Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:21:13-66
+		ADDED from /Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:19:13-66
 	android:name
-		ADDED from /Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:20:13-48
+		ADDED from /Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:18:13-48
 activity#com.creativity.dev.formsimple.ui.Calendar_H_Activity
-ADDED from /Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:23:9-25:69
+ADDED from /Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:21:9-23:69
 	android:theme
-		ADDED from /Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:25:13-66
+		ADDED from /Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:23:13-66
 	android:name
-		ADDED from /Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:24:13-51
+		ADDED from /Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml:22:13-51
 uses-sdk
 INJECTED from /Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/tropigasdeveloper/Documents/GitHub/FastEasyForm_Android/formsimple/src/main/AndroidManifest.xml

@@ -94,20 +94,11 @@ def githubProperties = new Properties()
 githubProperties.load(new FileInputStream(rootProject.file("github.properties")))
 
 def getVersionName = { ->
-    return "v1.3.93"  // Replace with version Name
+    return "v1.3.94"  // Replace with version Name
 }
 
 def getArtificatId = { ->
     return "formsimple" // Replace with library name ID
-}
-
-
-task sourcesJar(type: Jar) {
-    from android.sourceSets.main.kotlin.srcDirs
-    classifier = 'sources'
-}
-artifacts {
-    archives sourcesJar
 }
 
 def pomConfig = {
