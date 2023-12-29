@@ -30,13 +30,21 @@ fun EditText.eventWriten(context: DynamicListAdapter.DynamicListHolder) {
 
         override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {
 
+            // This function is currently empty.
+            // Depending on the context or requirements, logic related to handling
+            // text changes in an EditText might be implemented here.
+            // As of now, it does not contain
+
         }
 
         override fun afterTextChanged(edt: Editable) {
-
+            // This function is currently empty.
+            // Depending on the context or requirements, logic related to handling
+            // text changes in an EditText might be implemented here.
+            // As of now, it does not contain
         }
 
-    })
+        })
 
 //    textEdit.setOnEditorActionListener(object: TextView.OnEditorActionListener {
 //        override fun onEditorAction(v:TextView, actionId:Int, event: KeyEvent?):Boolean {

@@ -20,7 +20,7 @@ class ResponseFormsIGB:Serializable{
     var checked: Boolean = false
     var iconArrow: Int = R.drawable.right_arrow
     var options: ArrayList<Select> = ArrayList()
-    lateinit  var type: ListDynamic.typeRow
+    lateinit  var type: ListDynamic.TypeRow
     //</>
 }
 

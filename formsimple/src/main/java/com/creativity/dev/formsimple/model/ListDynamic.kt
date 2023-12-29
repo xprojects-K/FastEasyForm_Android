@@ -8,7 +8,6 @@ import android.view.View
 import com.creativity.dev.formsimple.BuilderForms
 import com.creativity.dev.formsimple.ui.CalendarActivity
 import com.creativity.dev.formsimple.ui.Calendar_H_Activity
-import com.creativity.dev.formsimple.R
 import com.creativity.dev.formsimple.model.Utils.Alignment
 import com.creativity.dev.formsimple.model.Utils.Animations
 import com.creativity.dev.formsimple.model.Utils.Colors
@@ -26,7 +25,6 @@ import com.creativity.dev.formsimple.ui.SelectActivity
 import com.creativity.dev.formsimple.utils.TimerHelper
 import java.io.Serializable
 import java.util.ArrayList
-import java.util.Date
 
 class ListDynamic:Serializable{
 
@@ -52,7 +50,7 @@ class ListDynamic:Serializable{
     //</>
 
     //<Types>
-    var type: typeRow = typeRow.ROW_BASIC
+    var type: TypeRow = TypeRow.ROW_BASIC
     //</>
 
     //<Setting config>
@@ -136,7 +134,7 @@ class ListDynamic:Serializable{
                  this.setVisibility.check = View.VISIBLE
                  this.setVisibility.imgContentEnable = View.VISIBLE
                  this.setVisibility.imgContentEnable2 = View.GONE
-                 this.type = typeRow.ROW_CHECK
+                 this.type = TypeRow.ROW_CHECK
                  this.setAlignment.description = View.TEXT_ALIGNMENT_TEXT_START
             }
 
@@ -153,7 +151,7 @@ class ListDynamic:Serializable{
                   this.setAlignment.description = View.TEXT_ALIGNMENT_TEXT_END
                   this.isEndableImageSelected = false
                   this.activity = SelectActivity::class.java
-                  this.type = typeRow.ROW_SINGLE_CHECK_LIST
+                  this.type = TypeRow.ROW_SINGLE_CHECK_LIST
 
               }
 
@@ -167,7 +165,7 @@ class ListDynamic:Serializable{
                   this.setAlignment.description = View.TEXT_ALIGNMENT_TEXT_END
                   this.isEndableImageSelected = false
                   this.activity = SelectActivity::class.java
-                  this.type = typeRow.ROW_MULTIPLE_CHECK_LIST
+                  this.type = TypeRow.ROW_MULTIPLE_CHECK_LIST
               }
 
               ROW_CHECK_TITLE -> {
@@ -177,7 +175,7 @@ class ListDynamic:Serializable{
                   this.setEditText.isEditable = false
                 this.setVisibility.description = View.VISIBLE
                 this.setVisibility.check = View.VISIBLE
-                this.type = typeRow.ROW_CHECK_TITLE
+                this.type = TypeRow.ROW_CHECK_TITLE
             }
 
             ROW_TITLE -> {
@@ -194,7 +192,7 @@ class ListDynamic:Serializable{
                this.setPadding.content.rigth = 10
                this.setPadding.content.top = 10
 
-               this.type = typeRow.ROW_TITLE
+               this.type = TypeRow.ROW_TITLE
 
             }
 
@@ -207,7 +205,7 @@ class ListDynamic:Serializable{
                   this.isEndableImageSelected = false
                   this.setEditText.isEditable = false
                   this.activity = CalendarActivity::class.java
-                  this.type = typeRow.ROW_CALENDAR_HOUR
+                  this.type = TypeRow.ROW_CALENDAR_HOUR
 
               }
 
@@ -221,12 +219,12 @@ class ListDynamic:Serializable{
                   this.setEditText.isEditable = false
                   this.setEditText.isEditable = false
                   this.activity = Calendar_H_Activity::class.java
-                  this.type = typeRow.ROW_CALENDAR_DAY
+                  this.type = TypeRow.ROW_CALENDAR_DAY
               }
 
              ROW_EDIT -> {
 
-                this.type = typeRow.ROW_EDIT
+                this.type = TypeRow.ROW_EDIT
                 this.setVisibility.description = View.GONE
                 this.setVisibility.editText = View.VISIBLE
                 this.isAvailable = true
@@ -244,13 +242,13 @@ class ListDynamic:Serializable{
                 this.setVisibility.check = View.VISIBLE
                 this.setImage.selected = this.setImage.arrow
                 this.isEndableImageSelected = false
-                this.type = typeRow.ROW_ACTIVITY
+                this.type = TypeRow.ROW_ACTIVITY
             }
 
 
             ROW_ON_CLICK -> {
 
-                this.type = typeRow.ROW_ON_CLICK
+                this.type = TypeRow.ROW_ON_CLICK
             }
 
 
@@ -260,7 +258,7 @@ class ListDynamic:Serializable{
                 this.setVisibility.title = View.VISIBLE
                 this.setVisibility.description = View.VISIBLE
                   this.setEditText.isEditable = false
-                this.type = typeRow.ROW_COMMENT
+                this.type = TypeRow.ROW_COMMENT
 
             }
 
@@ -269,13 +267,13 @@ class ListDynamic:Serializable{
                 this.setVisibility.icon = View.VISIBLE
                 this.setVisibility.title = View.VISIBLE
                   this.setEditText.isEditable = false
-                this.type = typeRow.ROW_DIALOG_CO
+                this.type = TypeRow.ROW_DIALOG_CO
             }
 
               ROW_INFO ->{
                   this.setEditText.isEditable = false
                   this.setVisibility.description = View.VISIBLE
-                  this.type = typeRow.ROW_INFO
+                  this.type = TypeRow.ROW_INFO
               }
 
 
@@ -286,7 +284,7 @@ class ListDynamic:Serializable{
 
     }
 
-    enum class typeRow {
+    enum class TypeRow {
         ROW_BASIC,
         ROW_TITLE,
         ROW_DESCRIPTION,
@@ -314,7 +312,7 @@ class ListDynamic:Serializable{
 
         BuilderForms.options = ArrayList()
 
-        this.setList.options.forEachIndexed { index, option ->
+        this.setList.options.forEachIndexed { _, option ->
 
             if(option.check){
 

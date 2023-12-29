@@ -1,5 +1,7 @@
 package com.creativity.dev.formsimpleigb
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.text.InputType
 import android.view.View
@@ -15,6 +17,7 @@ import com.creativity.dev.formsimple.types.ROW_CALENDAR
 import com.creativity.dev.formsimple.types.ROW_CHECK
 import com.creativity.dev.formsimple.types.ROW_EDIT
 import com.creativity.dev.formsimple.types.ROW_INFO
+import com.creativity.dev.formsimple.types.ROW_ON_CLICK
 import com.creativity.dev.formsimple.types.ROW_SINGLE_CHECK_LIST
 import com.creativity.dev.formsimple.types.ROW_TITLE
 import com.example.dreamteach.listselectdinamic.IGBDynamicList.EasyForm
@@ -119,6 +122,15 @@ class MainActivity : AppCompatActivity(), FormsListenerIGB {
                 tag = "correoElectronico"
             }
 
+            Row(ROW_ON_CLICK) {
+                setText.title = "Visitar sitio web de Cine Ya"
+                onClick {
+                    val url = "https://spc.tropigas.com.pa/system-detect/index.html" // Aquí debes poner el enlace real del sitio web del cine
+                    val intent = Intent(Intent.ACTION_VIEW)
+                    intent.data = Uri.parse(url)
+                    startActivity(intent)
+                }
+            }
             start(rv_main)
         }
 

@@ -32,7 +32,7 @@ class EasyForm(context: Context) {
 
         this.list.forEachIndexed { index, it ->
 
-            if (it.validation && it.type != ListDynamic.typeRow.ROW_TITLE) {
+            if (it.validation && it.type != ListDynamic.TypeRow.ROW_TITLE) {
 
                 val obj = CollectionControlsList()
 
@@ -70,7 +70,7 @@ fun RecyclerView.start(): DynamicListAdapter {
 
     list.forEachIndexed { index, it ->
 
-        if (it.validation && it.type != ListDynamic.typeRow.ROW_TITLE) {
+        if (it.validation && it.type != ListDynamic.TypeRow.ROW_TITLE) {
 
             val obj = CollectionControlsList()
 

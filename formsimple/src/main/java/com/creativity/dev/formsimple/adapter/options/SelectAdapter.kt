@@ -109,7 +109,7 @@ class SelectAdapter (): RecyclerView.Adapter<SelectAdapter.MyViewHolder>() {
         }
 
         override fun eventChecked(isSelected: Boolean): Int {
-            val position: Int = adapterPosition
+            val position: Int = bindingAdapterPosition
             var imageSelected: Int = 0
             val modelList = list[position]
 
@@ -139,7 +139,7 @@ class SelectAdapter (): RecyclerView.Adapter<SelectAdapter.MyViewHolder>() {
 
         override fun getSelected(): Boolean {
 
-            val position: Int = adapterPosition
+            val position: Int = bindingAdapterPosition
             if(position >= 0)
                 return list.get(position).check
             else
