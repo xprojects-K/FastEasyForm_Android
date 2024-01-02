@@ -108,6 +108,7 @@ class EasyDynamicForm(model: List<ListDynamic>, mContext: Context,recyclerView: 
                             handleErrorMessage(viewHolder, imgError, mContext)
                         }
                         str.isEmpty() -> handleErrorMessage(viewHolder, imgError, mContext)
+
                     }
 
                     response = false
@@ -143,7 +144,6 @@ class EasyDynamicForm(model: List<ListDynamic>, mContext: Context,recyclerView: 
             AnimationTextView.animateVibrationTV(tv, context)
         }
     }
-
 
     override fun getResultByTag(tag: String): ResponseFormsIGB {
 

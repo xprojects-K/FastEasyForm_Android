@@ -19,7 +19,9 @@ class ListObject: Serializable{
      var list: ArrayList<Select> = ArrayList()
 
     companion object {
-           lateinit var eventList  : EventList
+
+        lateinit var eventList  : EventList
+
     }
 
 }

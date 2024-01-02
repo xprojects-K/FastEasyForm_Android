@@ -62,6 +62,7 @@ id lyt_content_obj
 id rl_letter_content
 id rv_main_1
 id rv_selected
+id rv_unit_test
 id simpleTimePicker2
 id style2
 id toolbar
@@ -78,6 +79,7 @@ id tv_title_insp
 layout activity_calendar
 layout activity_calendar__h_
 layout activity_select
+layout activity_unit_test
 layout content_toolbar
 layout custom_layout_rv
 layout dialog_comment

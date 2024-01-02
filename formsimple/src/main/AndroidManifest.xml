@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        package="com.creativity.dev.formsimple"
-         android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.creativity.dev.formsimple">
 
     <application
-        android:usesCleartextTraffic="false"
-        android:backupAgent="com.creativity.dev.formsimple."
-    android:allowBackup="true"
-    android:fullBackupContent="true">
+        android:allowBackup="true"
+        android:backupAgent="."
+        android:fullBackupContent="true"
+        android:usesCleartextTraffic="false">
         <activity
-                android:name=".compose.EaseFormComposeActivity"
-                android:exported="false"
-                android:label="@string/title_activity_ease_form_compose"
-            />
+            android:name="UnitTestActivity"
+            android:theme="@style/AppThemed_FormJIGB.NoActionBar"
+            android:exported="false" />
+        <activity
+            android:name=".compose.EaseFormComposeActivity"
+            android:exported="false"
+            android:label="@string/title_activity_ease_form_compose" />
         <activity
             android:name=".ui.SelectActivity"
             android:theme="@style/AppThemed_FormJIGB.NoActionBar"

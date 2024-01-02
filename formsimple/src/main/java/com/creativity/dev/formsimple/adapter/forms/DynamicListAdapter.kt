@@ -162,12 +162,16 @@ abstract class DynamicListAdapter (model: List<ListDynamic>, mContext: Context,r
                 ListDynamic.TypeRow.ROW_MULTIPLE_CHECK_LIST,
                 ListDynamic.TypeRow.ROW_SINGLE_CHECK_LIST -> {
                     if (activityExists) {
+
+                        ListObject.eventList = this
+
                         val list = generalList.setList.options
                         val title = generalList.setText.title
                         val isSingle = generalList.isSingleList
                         val colorToolbar = generalList.setColor.backgroundToolbar
                         val colorTitleToolbar = generalList.setColor.titleToolbar
                         val background = generalList.setColor.backgroundContent
+
                         val arrayObj = ArrayList<ListObject>().apply {
                             add(ListObject().apply {
                                 this.title = title
@@ -192,6 +196,9 @@ abstract class DynamicListAdapter (model: List<ListDynamic>, mContext: Context,r
                 ListDynamic.TypeRow.ROW_CALENDAR_HOUR,
                 ListDynamic.TypeRow.ROW_CALENDAR_DAY -> {
                     if (activityExists) {
+
+                        ListObject.eventList = this
+
                         val title = generalList.setText.title
                         val colorToolbar = generalList.setColor.backgroundToolbar
                         val colorTitleToolbar = generalList.setColor.titleToolbar
@@ -308,6 +315,7 @@ abstract class DynamicListAdapter (model: List<ListDynamic>, mContext: Context,r
         }
 
         override fun eventSetList(inputList: List<Any>) {
+
             val position: Int = bindingAdapterPosition
             val viewHolder = recyclerView.findViewHolderForAdapterPosition(position)
             val listDynamicItem = list.getOrNull(position)
