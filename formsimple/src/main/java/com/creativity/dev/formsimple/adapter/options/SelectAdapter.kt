@@ -115,10 +115,10 @@ class SelectAdapter (): RecyclerView.Adapter<SelectAdapter.MyViewHolder>() {
 
             list[position].check = isSelected
 
-            if(isSelected)
-                imageSelected = modelList.setImage.selectedIconResId
+            imageSelected = if(isSelected)
+                modelList.setImage.selectedIconResId
             else
-                imageSelected = modelList.setImage.didSelectedIconResId
+                modelList.setImage.didSelectedIconResId
 
             imageCheck = imageSelected
 

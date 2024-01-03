@@ -1,5 +1,6 @@
 package com.creativity.dev.formsimple.adapter.forms
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.widget.*
@@ -138,6 +139,7 @@ abstract class DynamicListAdapter (model: List<ListDynamic>, mContext: Context,r
 
         }
 
+        @SuppressLint("QueryPermissionsNeeded")
         override fun onClick(v: View) {
             val pos = layoutPosition
             val generalList = list[pos]
@@ -229,11 +231,12 @@ abstract class DynamicListAdapter (model: List<ListDynamic>, mContext: Context,r
                         AlertDialogManager.simpleAlerts(mContext, "Alert", "Oops, an error occurred.")
                     }
                 }
+
                 ListDynamic.TypeRow.ROW_ON_CLICK -> generalList.action()
 
                 else -> {
 
-                    // Not use for a momento, but in the future maybe if.
+                    // Default options isn't use in this moment.
 
                 }
             }
@@ -264,7 +267,7 @@ abstract class DynamicListAdapter (model: List<ListDynamic>, mContext: Context,r
 
             list[position].checked = isSelected
 
-             if(isSelected)
+            imageSelected = if(isSelected)
                 list[position].setImage.checkedSelected
             else
                 list[position].setImage.checkedDiselected

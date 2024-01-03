@@ -10,9 +10,11 @@ import androidx.compose.material3.Button
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.creativity.dev.formsimple.Row
+import com.creativity.dev.formsimple.UnitTestActivity
 import com.creativity.dev.formsimple.interfaces.FormsListenerIGB
 import com.creativity.dev.formsimple.model.ResponseFormsIGB
 import com.creativity.dev.formsimple.option
+import com.creativity.dev.formsimple.types.ROW_ACTIVITY
 import com.creativity.dev.formsimple.types.ROW_CALENDAR
 import com.creativity.dev.formsimple.types.ROW_CHECK
 import com.creativity.dev.formsimple.types.ROW_EDIT
@@ -48,6 +50,11 @@ class MainActivity : AppCompatActivity(), FormsListenerIGB {
 
         easyForm.apply {
 
+            Row(ROW_ACTIVITY){ // <-- Here Call Any activity
+                setText.title = "Test"//<-- title .
+                activity = UnitTestActivity::class.java // <-- Add your activity
+            }
+
             Row(ROW_SINGLE_CHECK_LIST) {
                 tag = "FRECUENCIA_VISITA"
                 setText.title = "¿Con qué frecuencia suele visitar el cine Ya?"
@@ -82,6 +89,13 @@ class MainActivity : AppCompatActivity(), FormsListenerIGB {
                 setText.title = "Nombre"
                 setText.edtHint = "Ingrese su nombre"
                 tag = "nombreCliente"
+                validation = true
+            }
+
+            Row(ROW_EDIT) {
+                setText.title = "Apellido"
+                setText.edtHint = "Ingrese su apellido"
+                tag = "apellidoCliente"
                 validation = true
             }
 

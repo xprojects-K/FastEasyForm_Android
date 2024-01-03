@@ -3199,6 +3199,9 @@ id bottom
 id bounce
 id btn_accept_cmt
 id btn_cancel_cmt
+id button2
+id button3
+id button4
 id buttonPanel
 id callMeasure
 id cancel_action

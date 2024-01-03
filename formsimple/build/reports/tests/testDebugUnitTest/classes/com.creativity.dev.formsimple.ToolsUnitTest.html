@@ -23,13 +23,13 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">4</div>
+<div class="counter">5</div>
 <p>tests</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">1</div>
+<div class="counter">0</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">41.813s</div>
+<div class="counter">4.219s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox failures" id="successRate">
-<div class="percent">75%</div>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,52 +61,13 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Failed tests</a>
+<a href="#tab0">Tests</a>
 </li>
 <li>
-<a href="#tab1">Tests</a>
-</li>
-<li>
-<a href="#tab2">Standard error</a>
+<a href="#tab1">Standard error</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
-<h2>Failed tests</h2>
-<div class="test">
-<a name="test_validateByTag_isCorrect"></a>
-<h3 class="failures">test_validateByTag_isCorrect</h3>
-<span class="code">
-<pre>org.junit.ComparisonFailure: expected:&lt;[OK]&gt; but was:&lt;[Error]&gt;
-	at org.junit.Assert.assertEquals(Assert.java:117)
-	at org.junit.Assert.assertEquals(Assert.java:146)
-	at com.creativity.dev.formsimple.ToolsUnitTest.test_validateByTag_isCorrect$lambda$2(ToolsUnitTest.kt:62)
-	at androidx.test.core.app.ActivityScenario.lambda$onActivity$2$androidx-test-core-app-ActivityScenario(ActivityScenario.java:789)
-	at androidx.test.core.app.ActivityScenario$$ExternalSyntheticLambda2.run(D8$$SyntheticClass)
-	at androidx.test.core.app.ActivityScenario.onActivity(ActivityScenario.java:799)
-	at com.creativity.dev.formsimple.ToolsUnitTest.test_validateByTag_isCorrect(ToolsUnitTest.kt:57)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.robolectric.RobolectricTestRunner$HelperTestRunner$1.evaluate(RobolectricTestRunner.java:588)
-	at org.robolectric.internal.SandboxTestRunner$2.lambda$evaluate$2(SandboxTestRunner.java:290)
-	at org.robolectric.internal.bytecode.Sandbox.lambda$runOnMainThread$0(Sandbox.java:101)
-	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.base/java.lang.Thread.run(Unknown Source)
-</pre>
-</span>
-</div>
-</div>
-<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -117,31 +78,142 @@
 </tr>
 </thead>
 <tr>
-<td class="success">addition_isCorrect</td>
-<td class="success">0.030s</td>
+<td class="success">getResultAll_isCorrect</td>
+<td class="success">0.167s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">test_init_isCorrect</td>
-<td class="success">0.719s</td>
+<td class="success">resultByTag_isCorrect</td>
+<td class="success">0.206s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">test_validateAll_isCorrect</td>
-<td class="success">0.047s</td>
+<td class="success">updateRows_isCorrect</td>
+<td class="success">0.422s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="failures">test_validateByTag_isCorrect</td>
-<td class="failures">41.017s</td>
-<td class="failures">failed</td>
+<td class="success">validateAll_isCorrect</td>
+<td class="success">0.367s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">validateByTag_isCorrect</td>
+<td class="success">3.057s</td>
+<td class="success">passed</td>
 </tr>
 </table>
 </div>
-<div id="tab2" class="tab">
+<div id="tab1" class="tab">
 <h2>Standard error</h2>
 <span class="code">
 <pre>No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
 No package ID ff found for ID 0xffffff00.
 No package ID ff found for ID 0xffffff00.
 No package ID ff found for ID 0xffffff00.
@@ -166,7 +238,7 @@ No package ID ff found for ID 0xffffff00.
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.5</a> at Jan 2, 2024, 3:57:47 PM</p>
+<a href="http://www.gradle.org">Gradle 7.5</a> at Jan 3, 2024, 4:05:53 PM</p>
 </div>
 </div>
 </body>

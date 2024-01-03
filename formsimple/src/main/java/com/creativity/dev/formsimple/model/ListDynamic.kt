@@ -129,7 +129,7 @@ class ListDynamic:Serializable{
                  this.setEditText.isEditable = false
                  this.setSize.title = 14.0f
 
-                 this.setVisibility.title = View.GONE
+                 //this.setVisibility.title = View.GONE
                  this.setVisibility.description = View.VISIBLE
                  this.setVisibility.check = View.VISIBLE
                  this.setVisibility.imgContentEnable = View.VISIBLE

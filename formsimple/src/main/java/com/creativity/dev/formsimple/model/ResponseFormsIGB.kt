@@ -19,6 +19,7 @@ class ResponseFormsIGB:Serializable{
     var title: String = ""
     var checked: Boolean = false
     var iconArrow: Int = R.drawable.right_arrow
+    var iconSelected: Int = R.drawable.success
     var options: ArrayList<Select> = ArrayList()
     lateinit  var type: ListDynamic.TypeRow
     //</>
