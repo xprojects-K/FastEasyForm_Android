@@ -1,6 +1,9 @@
 package com.creativity.dev.formsimple.adapter.forms
 
+import android.annotation.SuppressLint
 import android.content.Context
+import android.os.Handler
+import android.os.Looper
 import android.view.View
 import android.view.animation.AnimationUtils
 import android.widget.EditText
@@ -13,7 +16,6 @@ import com.creativity.dev.formsimple.model.CollectionControlsList
 import com.creativity.dev.formsimple.model.ListDynamic
 import com.creativity.dev.formsimple.model.ResponseFormsIGB
 import com.jgb.lordsaac.igb.supportanimation.AnimationTextView
-import java.lang.Exception
 
 
 // You can create a subclass that provides the implementation.
@@ -36,150 +38,177 @@ class EasyDynamicForm(model: List<ListDynamic>, mContext: Context,recyclerView: 
         // related to the received string parameter 'str' can be implemented here.
         // As of now, it does not contain any specific functionality.
     }
-
     override fun validateAll(): Boolean {
+
         var response = true
 
         try {
             positionRow.forEach { position ->
+
                 val row = this.list[position.post]
                 val str = row.setText.text
                 val type = row.type
+                val isValidation = row.validation
                 val imgError = row.setImage.warning
                 val viewHolder = recyclerView.findViewHolderForAdapterPosition(position.post)
+                var isScrollMoved = false
 
-                when {
-                    (type == ListDynamic.TypeRow.ROW_EDIT && (str.isEmpty() || str == row.setText.emptyMessages)) -> {
-                        handleErrorMessage(viewHolder, imgError, mContext)
-                        response = false
-                    }
-                    (type == ListDynamic.TypeRow.ROW_MULTIPLE_CHECK_LIST) && row.setList.options.none { it.check } -> {
-                        handleMultipleCheckError(viewHolder, imgError, mContext)
-                        response = false
-                    }
-
-                }
-
-                if(str.isEmpty()){
-                    handleErrorMessage(viewHolder, imgError, mContext)
-                    response = false
-                }
-
-            }
-
-
-
-            if (positionRow.isEmpty()) {
-                response = false
-            }
-
-        } catch (ex: Exception) {
-            response = false
-        }
-        return response
-    }
-
-
-    override fun validateByTag(tag: String): Boolean {
-        var response = true
-        var isScrollMoved = false
-
-        try {
-            positionRow.find { position ->
-                val row = this.list[position.post]
-                val setTag = row.tag
-
-                if (setTag == tag) {
-                    val str = row.setText.text
-                    val type = row.type
-                    val imgError = row.setImage.warning
-                    val viewHolder = recyclerView.findViewHolderForAdapterPosition(position.post)
+                if(isValidation){
 
                     when {
                         (type == ListDynamic.TypeRow.ROW_EDIT && (str.isEmpty() || str == row.setText.emptyMessages)) -> {
-                            handleErrorMessage(viewHolder, imgError, mContext)
+
+
+                            recyclerView.scrollToPositionWithAnimation(position.post)
+                            handleErrorMessageEditText(viewHolder, imgError, mContext)
+                            response = false
                         }
-                        (type == ListDynamic.TypeRow.ROW_MULTIPLE_CHECK_LIST && row.setList.options.none { it.check }) -> {
-                            row.setImage.selected = imgError
-                            if (!isScrollMoved) {
-                                isScrollMoved = true
-                                recyclerView.scrollToPositionWithAnimation(position.post)
-                            }
-                            handleErrorMessage(viewHolder, imgError, mContext)
+                        ( (type == ListDynamic.TypeRow.ROW_MULTIPLE_CHECK_LIST || type == ListDynamic.TypeRow.ROW_SINGLE_CHECK_LIST))  && row.setList.options.none { it.check } -> {
+
+                            this.list[position.post].setImage.selected = this.list[position.post].setImage.warning
+
+                            recyclerView.scrollToPositionWithAnimation(position.post)
+                            handleMultipleCheckError(viewHolder, imgError, mContext)
+                            response = false
                         }
-                        str.isEmpty() -> handleErrorMessage(viewHolder, imgError, mContext)
+                        ( type == ListDynamic.TypeRow.ROW_CHECK) && !row.checked-> {
+
+                            recyclerView.scrollToPositionWithAnimation(position.post)
+
+                            handleMultipleCheckError(viewHolder, imgError, mContext)
+
+                            response = false
+                        }
+                        (type != ListDynamic.TypeRow.ROW_SINGLE_CHECK_LIST) && type != ListDynamic.TypeRow.ROW_MULTIPLE_CHECK_LIST && type != ListDynamic.TypeRow.ROW_CHECK && str.isEmpty() -> {
+                            recyclerView.scrollToPositionWithAnimation(position.post)
+                            handleMultipleCheckError(viewHolder, imgError, mContext)
+                            response = false
+                        }
+
                     }
 
-                    response = false
-                    return@find true
                 }
-                false
+
             }
 
-            if (positionRow.isEmpty()) response = false
+            if (positionRow.isEmpty()) {
+
+                response = false
+
+            }
+
         } catch (ex: Exception) {
+
             response = false
+
         }
+
         return response
     }
+    @SuppressLint("SuspiciousIndentation")
+    override fun validateByTag(tag: String): Boolean {
 
-    private fun handleErrorMessage( viewHolder: RecyclerView.ViewHolder?, imgError: Int, context: Context) {
+        try {
 
-        viewHolder?.let {
-            val tv: TextView = it.itemView.findViewById(R.id.tv_title_insp)
-            val imageError: ImageView = it.itemView.findViewById(R.id.img_selected2)
+        var scrollMove = false
+        val row = this.list.firstOrNull { m -> m.tag == tag && m.validation }
+        val position = this.list.indexOf(row)
 
-            imageError.setImageResource(imgError)
-            AnimationTextView.animateVibrationTV(tv, context)
-        }
-    }
+                if (row != null ) {
 
-    private fun handleMultipleCheckError(viewHolder: RecyclerView.ViewHolder?, imgError: Int, context: Context) {
+                    val str = row.setText.text
+                    val type = row.type
+                    val imgError = row.setImage.warning
+                    val viewHolder = recyclerView.findViewHolderForAdapterPosition(position)
 
-        viewHolder?.let {
-            val tv: TextView = it.itemView.findViewById(R.id.tv_title_insp)
-            val imageError: ImageView = it.itemView.findViewById(R.id.img_selected2)
-            imageError.setImageResource(imgError)
-            AnimationTextView.animateVibrationTV(tv, context)
-        }
-    }
+                    when {
+                        (type == ListDynamic.TypeRow.ROW_EDIT && (str.isEmpty() || str == row.setText.emptyMessages)) -> {
 
+                            scrollMove = true
+                            handleErrorMessageEditText(viewHolder, imgError, mContext)
 
-    override fun getResultByTag(tag: String): ResponseFormsIGB {
+                        }
+                        ((type == ListDynamic.TypeRow.ROW_MULTIPLE_CHECK_LIST || type == ListDynamic.TypeRow.ROW_SINGLE_CHECK_LIST) && row.setList.options.none { it.check }) -> {
 
-        val obj = ResponseFormsIGB()
+                            scrollMove = true
 
-        list.forEachIndexed { index, listDynamic ->
+                            row.setImage.selected = imgError
 
-            if(listDynamic.type != ListDynamic.TypeRow.ROW_TITLE && listDynamic.tag == tag){
+                            list[position].setImage.selected = this.list[position].setImage.warning
 
-                obj.tag = listDynamic.tag
+                            handleErrorMessage(viewHolder, imgError, mContext)
+                        }
+                        (type == ListDynamic.TypeRow.ROW_CHECK)  && !row.checked-> {
 
-                obj.text = listDynamic.setText.text
+                            handleMultipleCheckError(viewHolder, imgError, mContext)
 
-                obj.position = index
+                            scrollMove = true
+                        }
+                        (type != ListDynamic.TypeRow.ROW_SINGLE_CHECK_LIST) && type != ListDynamic.TypeRow.ROW_MULTIPLE_CHECK_LIST && type != ListDynamic.TypeRow.ROW_CHECK  && str.isEmpty() -> {
 
-                obj.checked = listDynamic.checked
+                            scrollMove = true
 
-                obj.options = listDynamic.setList.options
+                            row.setImage.selected = imgError
 
-                obj.type = listDynamic.type
-
-                obj.title = listDynamic.setText.title
-
-                obj.iconArrow = listDynamic.setImage.selected
-
-                if(obj.type == ListDynamic.TypeRow.ROW_SINGLE_CHECK_LIST || obj.type == ListDynamic.TypeRow.ROW_MULTIPLE_CHECK_LIST){
-
-                    if(obj.options.count { select -> select.check } > 0){
-
-                        obj.checked = true
+                            handleErrorMessage(viewHolder, imgError, mContext)
+                        }
 
                     }
 
+                    if (scrollMove){
+
+                        recyclerView.scrollToPositionWithAnimation(position)
+
+                        return false
+                    }
+
+                    return true
+
+                }else{
+
+                    return false
+
                 }
 
-                return@forEachIndexed
+        } catch (ex: Exception) {
+
+            return false
+
+        }
+
+    }
+    override fun getResultByTag(tag: String): ResponseFormsIGB {
+
+        val obj: ResponseFormsIGB = ResponseFormsIGB()
+
+        val listDynamic = this.list.firstOrNull { m -> m.tag == tag}
+
+        if(listDynamic != null){
+
+            obj.tag = listDynamic.tag
+
+            obj.text = listDynamic.setText.text
+
+            obj.position = this.list.indexOf(listDynamic)
+
+            obj.checked = listDynamic.checked
+
+            obj.options = listDynamic.setList.options
+
+            obj.type = listDynamic.type
+
+            obj.title = listDynamic.setText.title
+
+            obj.iconArrow = listDynamic.setImage.selected
+
+            if(obj.type == ListDynamic.TypeRow.ROW_SINGLE_CHECK_LIST || obj.type == ListDynamic.TypeRow.ROW_MULTIPLE_CHECK_LIST){
+
+                if(obj.options.count { select -> select.check } > 0){
+
+                    obj.checked = true
+
+                }
+
             }
 
         }
@@ -247,20 +276,19 @@ class EasyDynamicForm(model: List<ListDynamic>, mContext: Context,recyclerView: 
     }
     override fun updateRow(tagOrTitle: String,objRespIGB: ResponseFormsIGB): Boolean{
 
-        var view: View
-        var tv: TextView
-        var title: TextView
-        var image: ImageView
-        var editText: EditText
+        val view: View
+        val tv: TextView
+        val title: TextView
+        val image: ImageView
+        val editText: EditText
         var success = false
+        val listDynamic = this.list.firstOrNull { m -> m.tag == tagOrTitle}
 
        try {
 
-           list.forEachIndexed { index, listDynamic ->
+           if(listDynamic != null){
 
-               if(listDynamic.type != ListDynamic.TypeRow.ROW_TITLE && listDynamic.tag == tagOrTitle){
-
-                   list[index].setImage.selected = eventChecked(objRespIGB.checked,index )
+                   val index = this.list.indexOf(listDynamic)
 
                    if (objRespIGB.options.size > 0)
                        list[index].setList.options =  objRespIGB.options
@@ -268,26 +296,33 @@ class EasyDynamicForm(model: List<ListDynamic>, mContext: Context,recyclerView: 
                    if (objRespIGB.text.isNotEmpty())
                        list[index].setText.text = objRespIGB.text
 
-                   view = recyclerView.findViewHolderForAdapterPosition(index)!!.itemView
-                   tv = view.findViewById(R.id.tv_desc_insp)
-                   title = view.findViewById(R.id.tv_title_insp)
-                   image = view.findViewById(R.id.img_selected)
-                   editText = view.findViewById(R.id.edt_text)
-
-
-                   tv.text = list[index].setText.text
-
-                   editText.setText(list[index].setText.text)
-
                    list[index].setText.title = objRespIGB.title
 
                    list[index].setText.text = objRespIGB.text
 
-                   list[index].setImage.selected = objRespIGB.iconArrow
+                   view = recyclerView.findViewHolderForAdapterPosition(index)!!.itemView
+
+                   tv = view.findViewById(R.id.tv_desc_insp)
+
+                   title = view.findViewById(R.id.tv_title_insp)
+
+                   image = view.findViewById(R.id.img_selected)
+
+                   editText = view.findViewById(R.id.edt_text)
+
+                   tv.text = list[index].setText.text
+
+                   title.text = list[index].setText.title
+
+                   editText.setText(list[index].setText.text)
 
                    if(listDynamic.type == ListDynamic.TypeRow.ROW_CHECK){
 
                        val shake = AnimationUtils.loadAnimation(mContext,R.anim.zoom_in)
+
+                       list[index].setImage.selected = eventChecked(objRespIGB.checked,index )
+
+                       list[index].setImage.selected = objRespIGB.iconSelected
 
                        image.setBackgroundResource(list[index].setImage.selected)
 
@@ -295,16 +330,25 @@ class EasyDynamicForm(model: List<ListDynamic>, mContext: Context,recyclerView: 
 
                    }
 
+                   this.recyclerView.scrollToPosition(objRespIGB.position)
+
+                   this.recyclerView.adapter?.notifyItemChanged(objRespIGB.position)
+
+                   this.recyclerView.scrollToPositionWithAnimation(index)
+
                    success = true
 
-                   return@forEachIndexed
-               }
+
+           }else{
+
+               success = false
 
            }
 
-           this.recyclerView.adapter?.notifyItemChanged(objRespIGB.position)
 
-       } catch (_: Exception){
+       } catch (ex: Exception){
+
+           success = false
 
        }
 
@@ -328,6 +372,40 @@ class EasyDynamicForm(model: List<ListDynamic>, mContext: Context,recyclerView: 
 
         return imageSelected
     }
+    private fun handleErrorMessage( viewHolder: RecyclerView.ViewHolder?, imgError: Int, context: Context) {
 
+        viewHolder?.let {
+            val tv: TextView = it.itemView.findViewById(R.id.tv_title_insp)
+            val imageError: ImageView = it.itemView.findViewById(R.id.img_selected2)
+
+            imageError.setImageResource(imgError)
+            AnimationTextView.animateVibrationTV(tv, context)
+        }
+    }
+    private fun handleErrorMessageEditText( viewHolder: RecyclerView.ViewHolder?, imgError: Int, context: Context) {
+
+        viewHolder?.let {
+
+            val errorMessage: TextView = viewHolder.itemView.findViewById(R.id.tv_message_error)
+            val imageError: ImageView = it.itemView.findViewById(R.id.img_selected2)
+
+            errorMessage.text = this.list[it.layoutPosition].setText.emptyMessages
+
+            errorMessage.visibility = View.VISIBLE
+
+            imageError.setImageResource(imgError)
+            AnimationTextView.animateVibrationTV(errorMessage, context)
+
+        }
+    }
+    private fun handleMultipleCheckError(viewHolder: RecyclerView.ViewHolder?, imgError: Int, context: Context) {
+
+        viewHolder?.let {
+            val tv: TextView = it.itemView.findViewById(R.id.tv_title_insp)
+            val imageError: ImageView = it.itemView.findViewById(R.id.img_selected2)
+            imageError.setImageResource(imgError)
+            AnimationTextView.animateVibrationTV(tv, context)
+        }
+    }
 }
 

@@ -78,8 +78,11 @@ class SelectActivity : AppCompatActivity(), EventList {
     }
 
     override fun eventSetList(inputList: List<Any>) {
+
         ListObject.eventList.eventSetList(mAdapter!!.getListReady())
+
         finish()
+
     }
 
     private fun getPutExtraIntent() {

@@ -16,6 +16,9 @@ android {
         vectorDrawables {
             useSupportLibrary true
         }
+        testOptions {
+            unitTests.includeAndroidResources = true
+        }
     }
 
     buildFeatures {
@@ -60,10 +63,8 @@ dependencies {
     implementation 'androidx.compose.material3:material3'
     implementation project(path: ':formsimple')
     //implementation 'com.form.jigb:formsimple:v0.2.1'
-    testImplementation 'junit:junit:4.13.2'
 
-    androidTestImplementation 'androidx.test:runner:1.5.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
 
     implementation 'androidx.recyclerview:recyclerview:1.3.1'
 
@@ -72,5 +73,16 @@ dependencies {
 
     debugImplementation 'androidx.compose.ui:ui-tooling'
     debugImplementation 'androidx.compose.ui:ui-test-manifest'
+
+    // Unit Test Dependency
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test:core:1.5.0'
+    androidTestImplementation 'androidx.test:rules:1.5.0'
+    androidTestImplementation 'androidx.test:runner:1.5.2'
+
+    testImplementation "org.robolectric:robolectric:4.0.2"
+    androidTestImplementation 'androidx.test:runner:1.5.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
 }

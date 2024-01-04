@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.creativity.dev.formsimple.ToolsUnitTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2024-01-03T21:05:49" hostname="Tropigass-MacBook-Pro.local" time="4.219">
+  <properties/>
+  <testcase name="validateByTag_isCorrect" classname="com.creativity.dev.formsimple.ToolsUnitTest" time="3.057"/>
+  <testcase name="updateRows_isCorrect" classname="com.creativity.dev.formsimple.ToolsUnitTest" time="0.422"/>
+  <testcase name="validateAll_isCorrect" classname="com.creativity.dev.formsimple.ToolsUnitTest" time="0.367"/>
+  <testcase name="resultByTag_isCorrect" classname="com.creativity.dev.formsimple.ToolsUnitTest" time="0.206"/>
+  <testcase name="getResultAll_isCorrect" classname="com.creativity.dev.formsimple.ToolsUnitTest" time="0.167"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+No package ID ff found for ID 0xffffff00.
+]]></system-err>
+</testsuite>

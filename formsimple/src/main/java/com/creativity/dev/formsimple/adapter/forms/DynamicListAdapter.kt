@@ -1,5 +1,6 @@
 package com.creativity.dev.formsimple.adapter.forms
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.widget.*
@@ -138,6 +139,7 @@ abstract class DynamicListAdapter (model: List<ListDynamic>, mContext: Context,r
 
         }
 
+        @SuppressLint("QueryPermissionsNeeded")
         override fun onClick(v: View) {
             val pos = layoutPosition
             val generalList = list[pos]
@@ -162,12 +164,16 @@ abstract class DynamicListAdapter (model: List<ListDynamic>, mContext: Context,r
                 ListDynamic.TypeRow.ROW_MULTIPLE_CHECK_LIST,
                 ListDynamic.TypeRow.ROW_SINGLE_CHECK_LIST -> {
                     if (activityExists) {
+
+                        ListObject.eventList = this
+
                         val list = generalList.setList.options
                         val title = generalList.setText.title
                         val isSingle = generalList.isSingleList
                         val colorToolbar = generalList.setColor.backgroundToolbar
                         val colorTitleToolbar = generalList.setColor.titleToolbar
                         val background = generalList.setColor.backgroundContent
+
                         val arrayObj = ArrayList<ListObject>().apply {
                             add(ListObject().apply {
                                 this.title = title
@@ -192,6 +198,9 @@ abstract class DynamicListAdapter (model: List<ListDynamic>, mContext: Context,r
                 ListDynamic.TypeRow.ROW_CALENDAR_HOUR,
                 ListDynamic.TypeRow.ROW_CALENDAR_DAY -> {
                     if (activityExists) {
+
+                        ListObject.eventList = this
+
                         val title = generalList.setText.title
                         val colorToolbar = generalList.setColor.backgroundToolbar
                         val colorTitleToolbar = generalList.setColor.titleToolbar
@@ -222,11 +231,12 @@ abstract class DynamicListAdapter (model: List<ListDynamic>, mContext: Context,r
                         AlertDialogManager.simpleAlerts(mContext, "Alert", "Oops, an error occurred.")
                     }
                 }
+
                 ListDynamic.TypeRow.ROW_ON_CLICK -> generalList.action()
 
                 else -> {
 
-                    // Not use for a momento, but in the future maybe if.
+                    // Default options isn't use in this moment.
 
                 }
             }
@@ -257,7 +267,7 @@ abstract class DynamicListAdapter (model: List<ListDynamic>, mContext: Context,r
 
             list[position].checked = isSelected
 
-             if(isSelected)
+            imageSelected = if(isSelected)
                 list[position].setImage.checkedSelected
             else
                 list[position].setImage.checkedDiselected
@@ -308,6 +318,7 @@ abstract class DynamicListAdapter (model: List<ListDynamic>, mContext: Context,r
         }
 
         override fun eventSetList(inputList: List<Any>) {
+
             val position: Int = bindingAdapterPosition
             val viewHolder = recyclerView.findViewHolderForAdapterPosition(position)
             val listDynamicItem = list.getOrNull(position)

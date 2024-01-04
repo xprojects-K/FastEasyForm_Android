@@ -3199,6 +3199,9 @@ id bottom
 id bounce
 id btn_accept_cmt
 id btn_cancel_cmt
+id button2
+id button3
+id button4
 id buttonPanel
 id callMeasure
 id cancel_action
@@ -3466,6 +3469,7 @@ id rounded
 id row_index_key
 id rv_main_1
 id rv_selected
+id rv_unit_test
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
@@ -3713,6 +3717,7 @@ layout abc_tooltip
 layout activity_calendar
 layout activity_calendar__h_
 layout activity_select
+layout activity_unit_test
 layout content_toolbar
 layout custom_dialog
 layout custom_layout_rv
@@ -4815,6 +4820,8 @@ style Theme_MaterialComponents_Light_NoActionBar
 style Theme_MaterialComponents_Light_NoActionBar_Bridge
 style Theme_MaterialComponents_NoActionBar
 style Theme_MaterialComponents_NoActionBar_Bridge
+style WhiteBackgroundDialogTheme
+style WhiteBackgroundTheme
 style Widget_AppCompat_ActionBar
 style Widget_AppCompat_ActionBar_Solid
 style Widget_AppCompat_ActionBar_TabBar
