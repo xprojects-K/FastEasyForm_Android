@@ -4,7 +4,7 @@
             "outputFile": "com.creativity.dev.formsimple.test.formsimple-mergeDebugUnitTestResources-59:/values-v28/values-v28.xml",
             "map": [
                 {
-                    "source": "/Users/tropigasdeveloper/.gradle/caches/transforms-3/8d9343f569df63b726615d18b45679d4/transformed/appcompat-1.6.1/res/values-v28/values-v28.xml",
+                    "source": "/Users/jose/.gradle/caches/transforms-3/8d9343f569df63b726615d18b45679d4/transformed/appcompat-1.6.1/res/values-v28/values-v28.xml",
                     "from": {
                         "startLines": "2,3,4,8",
                         "startColumns": "4,4,4,4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "/Users/tropigasdeveloper/.gradle/caches/transforms-3/8183fc709b9b4a671fa3eda614e666ba/transformed/material-1.10.0/res/values-v28/values-v28.xml",
+                    "source": "/Users/jose/.gradle/caches/transforms-3/8183fc709b9b4a671fa3eda614e666ba/transformed/material-1.10.0/res/values-v28/values-v28.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -42,7 +42,7 @@
                     }
                 },
                 {
-                    "source": "/Users/tropigasdeveloper/.gradle/caches/transforms-3/7ad9bb9e8d67f8541bbc2d18480c36f7/transformed/jetified-core-1.5.0/res/values-v28/values.xml",
+                    "source": "/Users/jose/.gradle/caches/transforms-3/7ad9bb9e8d67f8541bbc2d18480c36f7/transformed/jetified-core-1.5.0/res/values-v28/values.xml",
                     "from": {
                         "startLines": "4,13",
                         "startColumns": "0,0",

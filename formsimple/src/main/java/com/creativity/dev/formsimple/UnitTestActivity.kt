@@ -1,6 +1,6 @@
 package com.creativity.dev.formsimple
 
-import android.content.Context
+
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
@@ -119,7 +119,6 @@ class UnitTestActivity : AppCompatActivity() {
                     validation = true
                 }
 
-                // Comentario
                 Row(ROW_EDIT) {
                     setText.title = "Comentario"
                     setText.edtHint = "Ingrese su comentario"
@@ -141,131 +140,6 @@ class UnitTestActivity : AppCompatActivity() {
                         intent.data = Uri.parse(url)
                         startActivity(intent)
                     }
-                }
-
-                Row(ROW_EDIT) {
-                    setText.title = "Comentario"
-                    setText.edtHint = "Ingrese su comentario"
-                    tag = "comentario"
-                }
-
-                Row(ROW_EDIT) {
-                    setText.title = "Comentario"
-                    setText.edtHint = "Ingrese su comentario"
-                    tag = "comentario"
-                }
-
-                Row(ROW_EDIT) {
-                    setText.title = "Comentario"
-                    setText.edtHint = "Ingrese su comentario"
-                    tag = "comentario"
-                }
-
-
-                Row(ROW_EDIT) {
-                    setText.title = "Comentario"
-                    setText.edtHint = "Ingrese su comentario"
-                    tag = "comentario"
-                }
-
-                Row(ROW_EDIT) {
-                    setText.title = "Comentario"
-                    setText.edtHint = "Ingrese su comentario"
-                    tag = "comentario"
-                }
-
-                Row(ROW_EDIT) {
-                    setText.title = "Comentario"
-                    setText.edtHint = "Ingrese su comentario"
-                    tag = "comentario"
-                }
-
-
-                Row(ROW_EDIT) {
-                    setText.title = "Comentario"
-                    setText.edtHint = "Ingrese su comentario"
-                    tag = "comentario"
-                }
-
-
-                Row(ROW_EDIT) {
-                    setText.title = "Comentario"
-                    setText.edtHint = "Ingrese su comentario"
-                    tag = "comentario"
-                }
-
-
-                Row(ROW_EDIT) {
-                    setText.title = "Comentario"
-                    setText.edtHint = "Ingrese su comentario"
-                    tag = "comentario"
-                }
-
-
-                Row(ROW_EDIT) {
-                    setText.title = "Comentario"
-                    setText.edtHint = "Ingrese su comentario"
-                    tag = "comentario"
-                }
-
-
-                Row(ROW_EDIT) {
-                    setText.title = "Comentario"
-                    setText.edtHint = "Ingrese su comentario"
-                    tag = "comentario"
-                }
-
-
-                Row(ROW_EDIT) {
-                    setText.title = "Comentario"
-                    setText.edtHint = "Ingrese su comentario"
-                    tag = "comentario"
-                }
-
-
-                Row(ROW_EDIT) {
-                    setText.title = "Comentario"
-                    setText.edtHint = "Ingrese su comentario"
-                    tag = "comentario"
-                }
-
-                Row(ROW_EDIT) {
-                    setText.title = "Comentario"
-                    setText.edtHint = "Ingrese su comentario"
-                    tag = "comentario"
-                }
-
-
-                Row(ROW_EDIT) {
-                    setText.title = "Comentario"
-                    setText.edtHint = "Ingrese su comentario"
-                    tag = "comentario"
-                }
-
-                Row(ROW_EDIT) {
-                    setText.title = "Comentario"
-                    setText.edtHint = "Ingrese su comentario"
-                    tag = "comentario"
-                }
-
-
-                Row(ROW_EDIT) {
-                    setText.title = "Comentario"
-                    setText.edtHint = "Ingrese su comentario"
-                    tag = "comentario"
-                }
-
-
-                Row(ROW_EDIT) {
-                    setText.title = "Comentario"
-                    setText.edtHint = "Ingrese su comentario"
-                    tag = "comentario"
-                }
-
-                Row(ROW_EDIT) {
-                    setText.title = "Comentario"
-                    setText.edtHint = "Ingrese su comentario"
-                    tag = "comentario"
                 }
 
                 Row(ROW_EDIT) {
@@ -317,7 +191,7 @@ class UnitTestActivity : AppCompatActivity() {
 
         return try {
 
-            val isSuccessCero = easyForm.tool.validateByTag("apellidoCliente")
+             easyForm.tool.validateByTag("apellidoCliente")
 
             val isSuccessOne = easyForm.tool.validateByTag("nombreCliente")
 
@@ -379,7 +253,7 @@ class UnitTestActivity : AppCompatActivity() {
 
             val result = easyForm.tool.getResultAll()
 
-            if(result.size > 0){
+            if(result.isNotEmpty()){
 
                 this.success
 
