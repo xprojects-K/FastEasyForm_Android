@@ -17,6 +17,7 @@
     <color name="colorBacgroundGray">#45bfbfbf</color>
     <color name="colorBacgroundGrayLite">#3dededed</color>
     <color name="colorBlack">#f3000000</color>
+    <color name="colorBlack2">#18FFFF</color>
     <color name="cardview_light_background">#FFFFFFFF</color>
     <color name="Not_available">#aeafac</color>
 

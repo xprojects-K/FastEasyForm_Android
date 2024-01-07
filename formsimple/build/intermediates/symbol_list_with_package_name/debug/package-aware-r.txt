@@ -1392,6 +1392,7 @@ color colorBacgroundRecicler
 color colorBacgroundReciclerGreen
 color colorBambito
 color colorBlack
+color colorBlack2
 color colorGray
 color colorOrange
 color colorPrimary_aar
@@ -3557,6 +3558,7 @@ id textinput_suffix_text
 id time
 id title
 id titleDividerNoCustom
+id title_select
 id title_template
 id toolbar
 id toolbar_2

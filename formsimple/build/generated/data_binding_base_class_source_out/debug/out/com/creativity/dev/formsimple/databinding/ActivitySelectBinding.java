@@ -4,6 +4,7 @@ package com.creativity.dev.formsimple.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
@@ -30,15 +31,19 @@ public final class ActivitySelectBinding implements ViewBinding {
   public final RecyclerView rvSelected;
 
   @NonNull
+  public final TextView titleSelect;
+
+  @NonNull
   public final Toolbar toolbar2;
 
   private ActivitySelectBinding(@NonNull ConstraintLayout rootView,
       @NonNull ConstraintLayout contentList, @NonNull EmptyViewBinding include,
-      @NonNull RecyclerView rvSelected, @NonNull Toolbar toolbar2) {
+      @NonNull RecyclerView rvSelected, @NonNull TextView titleSelect, @NonNull Toolbar toolbar2) {
     this.rootView = rootView;
     this.contentList = contentList;
     this.include = include;
     this.rvSelected = rvSelected;
+    this.titleSelect = titleSelect;
     this.toolbar2 = toolbar2;
   }
 
@@ -84,6 +89,12 @@ public final class ActivitySelectBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.title_select;
+      TextView titleSelect = ViewBindings.findChildViewById(rootView, id);
+      if (titleSelect == null) {
+        break missingId;
+      }
+
       id = R.id.toolbar_2;
       Toolbar toolbar2 = ViewBindings.findChildViewById(rootView, id);
       if (toolbar2 == null) {
@@ -91,7 +102,7 @@ public final class ActivitySelectBinding implements ViewBinding {
       }
 
       return new ActivitySelectBinding((ConstraintLayout) rootView, contentList, binding_include,
-          rvSelected, toolbar2);
+          rvSelected, titleSelect, toolbar2);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -118,7 +118,6 @@ fun LinearLayout.eventImageCheckBoxSelect(context: SelectAdapter.MyViewHolder, i
                 else
                     imageSelected = delegate.eventChecked(true)
 
-
                 imageView.setBackgroundResource(imageSelected)
                 val shake = AnimationUtils.loadAnimation(aplicationsContext, R.anim.zoom_in)
                 // imageView.startAnimation(shake)

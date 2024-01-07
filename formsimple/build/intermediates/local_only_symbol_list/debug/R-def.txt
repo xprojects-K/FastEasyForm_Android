@@ -17,6 +17,7 @@ color colorBacgroundRecicler
 color colorBacgroundReciclerGreen
 color colorBambito
 color colorBlack
+color colorBlack2
 color colorGray
 color colorOrange
 color colorPrimary_aar
@@ -68,6 +69,7 @@ id rv_selected
 id rv_unit_test
 id simpleTimePicker2
 id style2
+id title_select
 id toolbar
 id toolbar_2
 id tv_date_1

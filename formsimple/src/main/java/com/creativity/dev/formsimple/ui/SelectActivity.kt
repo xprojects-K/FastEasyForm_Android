@@ -22,7 +22,9 @@ const val INTERNAL_KEY: String = "48537394-a346-4a0f-b915-13c1009f427a"
 
 class SelectActivity : AppCompatActivity(), EventList {
 
-    private var title: String = "Text"
+    private var title: String = ""
+
+    private var titleToolBar: String = ""
 
     private var emptyMessages: String = ""
 
@@ -79,6 +81,8 @@ class SelectActivity : AppCompatActivity(), EventList {
 
     override fun eventSetList(inputList: List<Any>) {
 
+        this.mAdapter!!.notifyDataSetChanged()
+
         ListObject.eventList.eventSetList(mAdapter!!.getListReady())
 
         finish()
@@ -96,10 +100,15 @@ class SelectActivity : AppCompatActivity(), EventList {
             listObject = arrayListObj[0]
 
             title = listObject.title
+            titleToolBar = listObject.titleToolbar
             isSingleCheck = listObject.isSingle
             colorBackgroundToolbar = listObject.colorToolbar
             colorTitleToolbar = listObject.colorTitleToolbar
             emptyMessages = this.getString(R.string.Empty_messages)
+
+            this.binding.titleSelect.text = title
+
+            this.binding.titleSelect.textSize = listObject.titleSize
 
             if(listObject.backgroundContent > 0)
                 binding.contentList.setBackgroundResource(listObject.backgroundContent)
@@ -148,7 +157,8 @@ class SelectActivity : AppCompatActivity(), EventList {
 
         if(!isSingleCheck){
 
-            mToolbar.title = title
+            // mToolbar.title = title
+            mToolbar.title = titleToolBar
             setSupportActionBar(mToolbar)
             mToolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_24dp)
             mToolbar.inflateMenu(R.menu.save_search)
@@ -158,7 +168,7 @@ class SelectActivity : AppCompatActivity(), EventList {
 
         }else{
 
-            GeneralHelper.createToolbar(this,mToolbar,title,colorTitleToolbar,colorBackgroundToolbar)
+            GeneralHelper.createToolbar(this,mToolbar,titleToolBar,colorTitleToolbar,colorBackgroundToolbar)
 
         }
 

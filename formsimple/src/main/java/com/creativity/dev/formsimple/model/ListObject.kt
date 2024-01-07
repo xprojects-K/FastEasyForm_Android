@@ -7,9 +7,12 @@ import java.io.Serializable
 class ListObject: Serializable{
 
      var title: String = ""
-    var emptyMessage: String = ""
+     var titleToolbar = ""
+     var emptyMessage: String = ""
 
      var isSingle: Boolean = false
+
+    var titleSize: Float = 20.0f
 
      var colorToolbar: Int = 0
      var colorTitleToolbar: Int = 0

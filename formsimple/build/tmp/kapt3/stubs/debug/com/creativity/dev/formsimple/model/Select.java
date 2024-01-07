@@ -2,12 +2,13 @@ package com.creativity.dev.formsimple.model;
 
 import java.lang.System;
 
-@kotlin.Metadata(mv = {1, 8, 0}, k = 1, d1 = {"\u0000*\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\n\n\u0002\u0018\u0002\n\u0002\b\n\b\u0007\u0018\u00002\u00020\u0001B\u001f\b\u0016\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0003\u0012\u0006\u0010\u0005\u001a\u00020\u0006\u00a2\u0006\u0002\u0010\u0007B\u001f\b\u0016\u0012\u0006\u0010\u0004\u001a\u00020\u0003\u0012\u0006\u0010\u0005\u001a\u00020\u0006\u0012\u0006\u0010\b\u001a\u00020\t\u00a2\u0006\u0002\u0010\nB\u0017\b\u0016\u0012\u0006\u0010\u0004\u001a\u00020\u0003\u0012\u0006\u0010\b\u001a\u00020\t\u00a2\u0006\u0002\u0010\u000bB\u0017\b\u0016\u0012\u0006\u0010\u0004\u001a\u00020\u0003\u0012\u0006\u0010\u0005\u001a\u00020\u0006\u00a2\u0006\u0002\u0010\fB\u000f\b\u0016\u0012\u0006\u0010\u0004\u001a\u00020\u0003\u00a2\u0006\u0002\u0010\rB\u0007\b\u0016\u00a2\u0006\u0002\u0010\u000eR\u001a\u0010\u0005\u001a\u00020\u0006X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\b\u000f\u0010\u0010\"\u0004\b\u0011\u0010\u0012R\u001a\u0010\u0013\u001a\u00020\u0014X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\b\u0015\u0010\u0016\"\u0004\b\u0017\u0010\u0018R\u001a\u0010\u0002\u001a\u00020\u0003X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\b\u0019\u0010\u001a\"\u0004\b\u001b\u0010\rR\u001a\u0010\u0004\u001a\u00020\u0003X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\b\u001c\u0010\u001a\"\u0004\b\u001d\u0010\r\u00a8\u0006\u001e"}, d2 = {"Lcom/creativity/dev/formsimple/model/Select;", "Ljava/io/Serializable;", "tag", "", "text", "check", "", "(Ljava/lang/String;Ljava/lang/String;Z)V", "icon", "", "(Ljava/lang/String;ZI)V", "(Ljava/lang/String;I)V", "(Ljava/lang/String;Z)V", "(Ljava/lang/String;)V", "()V", "getCheck", "()Z", "setCheck", "(Z)V", "setImage", "Lcom/creativity/dev/formsimple/model/ImageCheck;", "getSetImage", "()Lcom/creativity/dev/formsimple/model/ImageCheck;", "setSetImage", "(Lcom/creativity/dev/formsimple/model/ImageCheck;)V", "getTag", "()Ljava/lang/String;", "setTag", "getText", "setText", "formsimple_debug"})
+@kotlin.Metadata(mv = {1, 8, 0}, k = 1, d1 = {"\u0000*\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u000f\n\u0002\u0018\u0002\n\u0002\b\n\b\u0007\u0018\u00002\u00020\u0001B\u001f\b\u0016\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0003\u0012\u0006\u0010\u0005\u001a\u00020\u0006\u00a2\u0006\u0002\u0010\u0007B\u001f\b\u0016\u0012\u0006\u0010\u0004\u001a\u00020\u0003\u0012\u0006\u0010\u0005\u001a\u00020\u0006\u0012\u0006\u0010\b\u001a\u00020\t\u00a2\u0006\u0002\u0010\nB\u0017\b\u0016\u0012\u0006\u0010\u0004\u001a\u00020\u0003\u0012\u0006\u0010\b\u001a\u00020\t\u00a2\u0006\u0002\u0010\u000bB\u0017\b\u0016\u0012\u0006\u0010\u0004\u001a\u00020\u0003\u0012\u0006\u0010\u0005\u001a\u00020\u0006\u00a2\u0006\u0002\u0010\fB\u000f\b\u0016\u0012\u0006\u0010\u0004\u001a\u00020\u0003\u00a2\u0006\u0002\u0010\rB\u0007\b\u0016\u00a2\u0006\u0002\u0010\u000eR\u001a\u0010\u0005\u001a\u00020\u0006X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\b\u000f\u0010\u0010\"\u0004\b\u0011\u0010\u0012R\u001a\u0010\u0013\u001a\u00020\tX\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\b\u0014\u0010\u0015\"\u0004\b\u0016\u0010\u0017R\u001a\u0010\u0018\u001a\u00020\u0019X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\b\u001a\u0010\u001b\"\u0004\b\u001c\u0010\u001dR\u001a\u0010\u0002\u001a\u00020\u0003X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\b\u001e\u0010\u001f\"\u0004\b \u0010\rR\u001a\u0010\u0004\u001a\u00020\u0003X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\b!\u0010\u001f\"\u0004\b\"\u0010\r\u00a8\u0006#"}, d2 = {"Lcom/creativity/dev/formsimple/model/Select;", "Ljava/io/Serializable;", "tag", "", "text", "check", "", "(Ljava/lang/String;Ljava/lang/String;Z)V", "icon", "", "(Ljava/lang/String;ZI)V", "(Ljava/lang/String;I)V", "(Ljava/lang/String;Z)V", "(Ljava/lang/String;)V", "()V", "getCheck", "()Z", "setCheck", "(Z)V", "color", "getColor", "()I", "setColor", "(I)V", "setImage", "Lcom/creativity/dev/formsimple/model/ImageCheck;", "getSetImage", "()Lcom/creativity/dev/formsimple/model/ImageCheck;", "setSetImage", "(Lcom/creativity/dev/formsimple/model/ImageCheck;)V", "getTag", "()Ljava/lang/String;", "setTag", "getText", "setText", "formsimple_debug"})
 public final class Select implements java.io.Serializable {
     @org.jetbrains.annotations.NotNull
     private java.lang.String tag = "";
     @org.jetbrains.annotations.NotNull
     private java.lang.String text = "";
+    private int color;
     private boolean check = false;
     @org.jetbrains.annotations.NotNull
     private com.creativity.dev.formsimple.model.ImageCheck setImage;
@@ -28,6 +29,13 @@ public final class Select implements java.io.Serializable {
     
     public final void setText(@org.jetbrains.annotations.NotNull
     java.lang.String p0) {
+    }
+    
+    public final int getColor() {
+        return 0;
+    }
+    
+    public final void setColor(int p0) {
     }
     
     public final boolean getCheck() {

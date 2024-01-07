@@ -1391,6 +1391,7 @@ int color colorBacgroundRecicler 0x0
 int color colorBacgroundReciclerGreen 0x0
 int color colorBambito 0x0
 int color colorBlack 0x0
+int color colorBlack2 0x0
 int color colorGray 0x0
 int color colorOrange 0x0
 int color colorPrimary_aar 0x0
@@ -3556,6 +3557,7 @@ int id textinput_suffix_text 0x0
 int id time 0x0
 int id title 0x0
 int id titleDividerNoCustom 0x0
+int id title_select 0x0
 int id title_template 0x0
 int id toolbar 0x0
 int id toolbar_2 0x0

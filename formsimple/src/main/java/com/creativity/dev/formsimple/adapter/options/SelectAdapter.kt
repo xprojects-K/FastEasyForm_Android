@@ -68,6 +68,8 @@ class SelectAdapter (): RecyclerView.Adapter<SelectAdapter.MyViewHolder>() {
 
         holder.icon.layoutParams.width = generalList.setImage.size.iconWidth;
 
+        holder.title.setTextColor(generalList.color)
+
         if(check)
             holder.contentImg.setBackgroundResource(generalList.setImage.selectedIconResId)
         else
@@ -109,6 +111,7 @@ class SelectAdapter (): RecyclerView.Adapter<SelectAdapter.MyViewHolder>() {
         }
 
         override fun eventChecked(isSelected: Boolean): Int {
+
             val position: Int = bindingAdapterPosition
             var imageSelected: Int = 0
             val modelList = list[position]

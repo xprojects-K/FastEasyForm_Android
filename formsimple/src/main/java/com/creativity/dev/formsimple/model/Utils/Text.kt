@@ -3,6 +3,7 @@ package com.creativity.dev.formsimple.model.Utils
 class Text {
 
     var title: String = ""
+    var titleToolbar: String = ""
     var text: String = ""
     var edtHint: String = ""
     var comment: String = ""

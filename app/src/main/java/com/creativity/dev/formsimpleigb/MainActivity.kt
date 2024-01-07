@@ -58,9 +58,10 @@ class MainActivity : AppCompatActivity(), FormsListenerIGB {
             Row(ROW_SINGLE_CHECK_LIST) {
                 tag = "FRECUENCIA_VISITA"
                 setText.title = "¿Con qué frecuencia suele visitar el cine Ya?"
+                setText.titleToolbar = "Atras"
                 setSize.title = 14f
                 checkList {
-                    option { text = "Una vez al mes" }
+                    option { text = "Una vez al mes"}
                     option { text = "Un par de veces al año" }
                     option { text = "Solo ocasionalmente" }
                     option { text = "Primera visita" }
@@ -72,7 +73,7 @@ class MainActivity : AppCompatActivity(), FormsListenerIGB {
             // Calidad de las proyecciones
             Row(ROW_SINGLE_CHECK_LIST) {
                 tag = "CALIDAD_PROYECCIONES"
-                setText.title = "En una escala del 1 al 5, ¿cómo calificaría la calidad de las proyecciones en Cine Ya?"
+                setText.title = "En una escala del 1 al 5, ¿cómo calificaría la calidad de las proyecciones en Cine Ya? En una escala del 1 al 5, ¿cómo calificaría la calidad de las proyecciones en Cine Ya?"
                 setSize.title = 14f
                 checkList {
                     option { text = "1 - Mala calidad" }

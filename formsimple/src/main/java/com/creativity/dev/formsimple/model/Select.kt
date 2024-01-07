@@ -1,5 +1,6 @@
 package com.creativity.dev.formsimple.model
 
+import androidx.compose.ui.graphics.Color
 import com.creativity.dev.formsimple.R
 import java.io.Serializable
 
@@ -8,6 +9,7 @@ class Select : Serializable{
 
     var tag: String   = ""
     var text: String = ""
+    var color: Int = R.color.colorPrimary_aar
     var check: Boolean = false
     var setImage: ImageCheck = ImageCheck()
 

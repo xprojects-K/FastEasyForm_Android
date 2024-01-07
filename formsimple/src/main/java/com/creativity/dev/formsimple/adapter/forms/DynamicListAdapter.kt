@@ -169,6 +169,7 @@ abstract class DynamicListAdapter (model: List<ListDynamic>, mContext: Context,r
 
                         val list = generalList.setList.options
                         val title = generalList.setText.title
+                        val titleTootbars = generalList.setText.titleToolbar
                         val isSingle = generalList.isSingleList
                         val colorToolbar = generalList.setColor.backgroundToolbar
                         val colorTitleToolbar = generalList.setColor.titleToolbar
@@ -177,6 +178,7 @@ abstract class DynamicListAdapter (model: List<ListDynamic>, mContext: Context,r
                         val arrayObj = ArrayList<ListObject>().apply {
                             add(ListObject().apply {
                                 this.title = title
+                                this.titleToolbar = titleTootbars
                                 this.list = list
                                 this.isSingle = isSingle
                                 this.colorTitleToolbar = colorTitleToolbar
@@ -261,22 +263,8 @@ abstract class DynamicListAdapter (model: List<ListDynamic>, mContext: Context,r
         //@Interfaces for listiner edit text user
         override fun eventChecked(isSelected: Boolean):Int {
 
-            val position: Int = layoutPosition
+            return this.actionSelect(layoutPosition, isSelected = isSelected)
 
-            var imageSelected = 0
-
-            list[position].checked = isSelected
-
-            imageSelected = if(isSelected)
-                list[position].setImage.checkedSelected
-            else
-                list[position].setImage.checkedDiselected
-
-            list[position].setImage.selected = imageSelected
-
-            response(position) // <-- Response in the mein activity
-
-            return imageSelected
         }
 
         //@Interfaces Here listener get, the now check
@@ -362,6 +350,26 @@ abstract class DynamicListAdapter (model: List<ListDynamic>, mContext: Context,r
             }
         }
 
+        private fun actionSelect(pos: Int, isSelected: Boolean):Int{
+
+            val position: Int = pos
+
+            var imageSelected = 0
+
+            list[position].checked = isSelected
+
+            imageSelected = if(isSelected)
+                list[position].setImage.checkedSelected
+            else
+                list[position].setImage.checkedDiselected
+
+            list[position].setImage.selected = imageSelected
+
+            response(position) // <-- Response in the mein activity
+
+            return imageSelected
+
+        }
         private fun response(pos: Int) {
             if (mContext is FormsListenerIGB) {
                 val isaac = ResponseFormsIGB().apply {

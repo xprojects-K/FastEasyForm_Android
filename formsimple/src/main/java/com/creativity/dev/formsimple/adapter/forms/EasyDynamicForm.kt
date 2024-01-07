@@ -80,9 +80,11 @@ class EasyDynamicForm(model: List<ListDynamic>, mContext: Context,recyclerView: 
                             response = false
                         }
                         (type != ListDynamic.TypeRow.ROW_SINGLE_CHECK_LIST) && type != ListDynamic.TypeRow.ROW_MULTIPLE_CHECK_LIST && type != ListDynamic.TypeRow.ROW_CHECK && str.isEmpty() -> {
+
                             recyclerView.scrollToPositionWithAnimation(position.post)
                             handleMultipleCheckError(viewHolder, imgError, mContext)
                             response = false
+
                         }
 
                     }

@@ -26,7 +26,7 @@ class LinearLayoutB {
 
             // val height = (holder.content.context as Activity).windowManager.defaultDisplay.height + 80
 
-            // val sizeHeigthLny: Int = (height * generalList.setSize.row.heigth).toInt()
+             // val sizeHeigthLny: Int = (height * generalList.setSize.row.heigth).toInt()
 
             holder.UnvContent.gravity = generalList.universalContentGravity
 
@@ -36,7 +36,7 @@ class LinearLayoutB {
 
             holder.content.setPadding(contentPaddingLeft,contentPaddingTop,contentPaddingRigth,contentPaddingBottom)
 
-            holder.content.layoutParams.height = generalList.setSize.layout.hight
+            // holder.content.layoutParams.height = generalList.setSize.layout.hight
 
         }
 
