@@ -23,31 +23,29 @@ Fast & Easy Form: is a builder forms for your Android project, with this library
 - [Documentation](#documentation)
   - [Functions](#functions)
      - [General parameters](#description-of-general-parameters)
-  - [Build Form](#rows-description)
-     - [Body](#rows-description)
-       - [Section](#rows-description)
-         - [Content](#rows-description)
-           - [Rows](#rows-description)
-              - [TITLE](#row_title)
-              - [ACTIVITY](#row_activity)
-              - [MULTIPLE_CHECK_LIST](#row_multiple_check_list)
-              - [CHECK](#row_check)
-              - [EDIT](#row_edit)
-              - [SINGLE_CHECK_LIST](#row_single_check_list)
-              - [CALENDAR_HOUR](#row_calendar_hour)
-              - [CALENDAR](#row_calendar)
-              - [INFO](#row_info)
-              - [ON_CLICK](#row_on_click)
-              - [ACTION](#row_on_click)
-              - [DATE_PICKER](#row_on_click)
-              - [TIME_PICKER](#row_on_click)
-              - [SWITCH](#row_on_click)
+  - [Forms Structure](#forms-structure)
+     - [Row Descriptions](#row-descriptions)
+          - [TITLE](#title)
+          - [ACTIVITY](#activity)
+          - [MULTIPLE_CHECK_LIST](#multiple_check_list)
+          - [CHECK](#check)
+          - [EDIT](#edit)
+          - [SINGLE_CHECK_LIST](#single_check_list)
+          - [INFO](#info)
+          - [ON_CLICK](#on_click)
+          - [ACTION](#on_click)
+          - [DATE_PICKER](#on_click)
+          - [TIME_PICKER](#on_click)
+          - [SWITCH](#on_click)
   - [Parameters and compatibility per row](#parameters-and-compatibility-per-row)
     - [SetText](#description-of-categorized-parameters-used-for-settext)
     - [Lists](#description-of-categorized-parameters-for-lists)
     - [EditText](#description-of-categorized-parameters-for-edittext)
     - [Animations](#description-of-categorized-parameters-for-animations)
-    - [Colors](#description-of-categorized-parameters-for-colors)
+    - [Colors](#description-of-categorized-parameters-for-set-colors)
+    - [Date Picker](#description-of-categorized-parameters-for-set-date-picker)
+    - [Time Picker](#description-of-categorized-parameters-for-set-time-picker)
+    - [Validation](#description-of-categorized-parameters-for-setvalidation)
     - [Size](#description-of-categorized-parameters-for-size)
     - [Padding](#description-of-categorized-parameters-for-padding)
     - [Margin](#description-of-categorized-parameters-for-margin)
@@ -74,6 +72,7 @@ Fast & Easy Form: is a builder forms for your Android project, with this library
 - [x] Customize icons
 - [x] Change size text
 - [x] Support for Jetpack Compose
+- [x] Support Dark Mode
 - [x] Use Java 11
 
 ## Requirements
@@ -123,19 +122,6 @@ dependencies {
 
 ## Getting Started
 
-###  Imports into class
-
-Copy and paste this imports in the top on the activity class.
-
-```kotlin
-
-import com.creativity.dev.formsimple.Row
-import com.creativity.dev.formsimple.option
-import com.creativity.dev.formsimple.types.*
-import com.example.dreamteach.listselectdinamic.IGBDynamicList.EasyForm
-
-```
-
 ###  Example MainActivity
 
 For classic class activity follow the next code example.
@@ -152,8 +138,6 @@ class MainActivity : AppCompatActivity(), FormsListenerIGB {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        this.easyForm = EasyForm(this)
-
         this.rv_main = findViewById(R.id.rv_main)
 
         this.init()
@@ -162,25 +146,39 @@ class MainActivity : AppCompatActivity(), FormsListenerIGB {
 
     private fun init(){
 
-    /* Build here */
+ this.easyForm = BuildForm(mContext = this) {
 
-        Row(ROW_TITLE) {
+    mode = ThemeMode.DARK 
 
-            setText.title = "Getting started"
+    container = this.rv_main  
 
-            setColor.title = R.color.colorPrimary_aar
+    body { 
+
+        section { 
+
+            title = "My Section Number 1"
+            description = "Here I put my first section."
+
+            content { 
+
+                Row(RowType.TITLE) { 
+                    setText.title = "Getting started"
+                    setColor.title = R.color.colorPrimary_aar 
+                }
+
+                Row(RowType.INFO) { 
+                    setText.title = "Hello world!"
+                    setColor.title = R.color.colorGray 
+                }
+
+            }
+
         }
 
-        Row(ROW_INFO) {
+    }
 
-            setText.title = "Hello word!"
+}
 
-            setColor.title = R.color.colorGray
-
-        }
-
-
-        easyForm.start(rv_main)
 
     }
 
@@ -242,23 +240,69 @@ fun ComposeScreen(context:Context,customForm: EasyForm) {
     EasyFormCompose(
         customForm = customForm,
         modifier = Modifier.fillMaxWidth(),
-        rows = {
+        mode = uiMode.dark,
+        body = {
 
          
-        Row(ROW_TITLE) {
+               Section {
 
-            setText.title = "Getting started"
+                title = "Configuration Settings"
 
-            setColor.title = R.color.colorPrimary_aar
-        }
+                description = "Config your configuration setting"
 
-        Row(ROW_INFO) {
+                Content {
 
-            setText.title = "Hello word!"
+                    Row(RType.ACTION) {
+                        tag = "FRECUENCIA_VISITA"
+                        setText.title = "Sounds & Others"
+                        setText.descriptionBottom = "Configuration your sounds & rintongs settings"
+                        setText.bubble = "1"
+                        setImage.iconLeft = R.drawable.sound_color
+                        setText.titleToolbar = "Atras"
+                        setSize.title = 14f
 
-            setColor.title = R.color.colorGray
+                        onClick {
 
-        }
+
+
+
+                        }
+
+
+                    }
+
+                    Row(RType.ACTION) {
+
+                        tag = "GAME_SETTING"
+                        setText.title = "Game Setting"
+                        setText.descriptionBottom = "Configuration your games settings"
+                        setImage.iconLeft = R.drawable.controler_color
+                        setSize.title = 14f
+
+                        onClick {
+
+
+
+
+                        }
+
+                    }
+
+                    Row(RType.ACTION) {
+                        tag = "FRECUENCIA_VISITA"
+                        setText.title = "Notifications"
+                        setText.descriptionBottom = "Configuration your favorite ringtone settings"
+                        setImage.iconLeft = R.drawable.bell_color
+                        setSize.title = 14f
+
+                        onClick {
+
+                        }
+                    }
+
+                }
+
+            }
    
          
         }
@@ -282,10 +326,50 @@ fun ComposeScreen(context:Context,customForm: EasyForm) {
 | getResult       | Gets the overall result of the form.        |  ``` easyForm.tool.getResultAll()   ```            |
 | updateRow       | Updates a row or section of the form.       |  ``` easyForm.tool.updateRow("Tag Id",ResponseFormsIGB())   ```              |
 | eventChecked    | Handles item verification or selection events. | ``` easyForm.tool.eventChecked(false,0)  ```          |
+| finishProgressView    | close action progress view when execurted a action. | ``` easyForm.tool.finishProgressView("YOUR_TAG_ID")  ```          |
+| startProgressView    | start action progress view for execute an any action. | ``` easyForm.tool.startProgressView("YOUR_TAG_ID")  ```          |
 
-### Rows description
+### Forms Structure
 
-#### ROW_TITLE
+
+This code sets up a form structure with sections and rows. It configures the theme mode, specifies a container, divides the form into sections, and defines the content within those sections. This structure provide a structured way to create forms with different elements and configurations.
+
+```kotlin
+
+
+var easyFastForm = BuildForm(mContext = this) {
+
+    mode = uiMode.dark // Config theme with three options: LIGHT, DARK, & AUTO (System theme selected for the user).
+
+    container = MyRecyclerView // Set your RecyclerView; this option is only used when using classic mode, not JetPack Compose.
+
+    body { // Inside this option, you can set Rows or Sections, depending on your form's structure.
+
+        section { // If you want to divide your form into sections, use this option
+
+            title = "My Section Number 1"
+            description = "Here I put my first section."
+
+            content { // Inside this option, you can set your rows.
+
+                row(RowType.INFO) {
+                    title = "Developer"
+                    text = "JIGB-K"
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+
+```
+#### Row Descriptions
+
+#### TITLE
 
 It is a property to invoke rows within the form to declare the section's title below it. 
 
@@ -293,7 +377,7 @@ It is a property to invoke rows within the form to declare the section's title b
 
 ```kotlin
 
-  Row(ROW_TITLE) { // <--- Add Title
+  Row(RType.TITLE) { // <--- Add Title
 
             setText.title = "Getting started" //<--- add your title name
 
@@ -302,7 +386,7 @@ It is a property to invoke rows within the form to declare the section's title b
 
 ```
 
-#### ROW_ACTIVITY
+#### ACTIVITY
 
 It's a row that functions to make direct calls to other windows within the project. It is fully configurable and easy to use.
 
@@ -310,14 +394,14 @@ It's a row that functions to make direct calls to other windows within the proje
 
 ```kotlin
 
-   Row(ROW_ACTIVITY){ // <-- Here Call Any activity
+   Row(RType.ACTIVITY){ // <-- Here Call Any activity
             title = "Test Activity #1"//<-- title .
             activity = ExampleActivity::class.java // <-- Add your activity
         }
 
 ```
 
-#### ROW_MULTIPLE_CHECK_LIST
+#### MULTIPLE_CHECK_LIST
 
 This functionality allows selecting more than one option, making it great for multiple-choice questionnaires.
 
@@ -326,7 +410,7 @@ This functionality allows selecting more than one option, making it great for mu
 
 ```kotlin
 
-   Row(ROW_MULTIPLE_CHECK_LIST){
+   Row(RType.MULTIPLE_CHECK_LIST){
 
                 tag = "002"
                 setText.title = "Favorite Fruit"
@@ -361,7 +445,7 @@ This functionality allows selecting more than one option, making it great for mu
 
 ```
 
-#### ROW_CHECK
+#### CHECK
 
 Specifically for rows needing quick validation, like accepting terms or specific questions.
 
@@ -369,7 +453,7 @@ Specifically for rows needing quick validation, like accepting terms or specific
 
 ```kotlin
 
-     Row(ROW_CHECK){
+     Row(RType.CHECK){
 
                 setText.text= "Are you like you job?" // Add text for the text
                 tag = "0012" //tag for identification of the row
@@ -379,7 +463,7 @@ Specifically for rows needing quick validation, like accepting terms or specific
 
 ```
 
-#### ROW_EDIT
+#### EDIT
 
 For rows requiring various text editions, such as numbers, phones, emails, etc.
 
@@ -387,7 +471,7 @@ For rows requiring various text editions, such as numbers, phones, emails, etc.
 
 ```kotlin
 
-      Row(ROW_EDIT){
+      Row(EDIT){
 
                 setText.title = "Cell Phone"// title row.
                 inputTypeEditText = InputType.TYPE_CLASS_PHONE //  To choose type EDITTEXT (https://developer.android.com/reference/android/widget/EditText)
@@ -395,7 +479,7 @@ For rows requiring various text editions, such as numbers, phones, emails, etc.
 
 ```
 
-#### ROW_SINGLE_CHECK_LIST
+#### SINGLE_CHECK_LIST
 
 Enables choosing a single option from several available choices.
 
@@ -403,7 +487,7 @@ Enables choosing a single option from several available choices.
 
 ```kotlin
 
-       Row(ROW_SINGLE_CHECK_LIST){
+       Row(RType.SINGLE_CHECK_LIST){
 
                 tag = "007"
                 setText.title = "Favorite Movie"
@@ -437,41 +521,7 @@ Enables choosing a single option from several available choices.
 
 ```
 
-#### ROW_CALENDAR_HOUR
-
-Simplifies time insertion, allowing hour insertions without manual programming.
-
-##### Example code
-
-```kotlin
-
-     Row(ROW_CALENDAR_HOUR){
-
-                setText.title = "Start hour"
-                validation = true
-
-            }
-
-```
-
-#### ROW_CALENDAR
-
-Assists in entering specific dates, like the date of birth. Simplifies custom calendar programming for forms.
-
-##### Example code
-
-```kotlin
-
-         Row(ROW_CALENDAR){
-                
-                setText.title = "Birthday"
-                validation = true
-
-            }
-
-```
-
-#### ROW_ON_CLICK
+#### ON_CLICK
 
 Use this row for a button actions for config any action.
 
@@ -479,7 +529,7 @@ Use this row for a button actions for config any action.
 
 ```kotlin
 
-       Row(ROW_ON_CLICK){
+       Row(RType.ON_CLICK){
 
                 setText.title = "Click me!"
 
@@ -504,7 +554,7 @@ Use this row for a button actions for config any action.
 
 ```
 
-#### ROW_INFO
+#### INFO
 
 Primarily used to display information without offering special functionalities.
 
@@ -512,10 +562,95 @@ Primarily used to display information without offering special functionalities.
 
 ```kotlin
 
-    Row(ROW_INFO){
+    Row(RType.INFO){
             setText.title = "Licence"// title row.
             setText.text= "Copyright 2024 José I. Gutiérrez B."
         }
+
+```
+
+#### ACTION
+
+This row is use for action like jump to another activity or execute fuction in your main activity.
+
+##### Example code
+
+```kotlin
+
+    Row(RType.ACTION) {
+                            tag = "FRECUENCIA_VISITA"
+                            setText.title = "Sounds & Others"
+                            setText.descriptionBottom = "Configuration your sounds & rintongs settings"
+                            setText.bubble = "1"
+                            setImage.iconLeft = R.drawable.sound_color
+                            setText.titleToolbar = "Atras"
+                            setSize.title = 14f
+
+                            onClick {
+
+                                // Your code Here
+
+                            }
+
+                        }
+
+```
+
+#### DATE_PICKER
+
+This row is use for active the date picker native in Android.
+
+##### Example code
+
+```kotlin
+
+   Row(RType.DATE_PICKER) {
+                            tag = "Select Birthday"
+                            setText.title = "Birthday"
+                            setDatePicker.format = "dd/MM/yyyy"
+                            setText.descriptionBottom = "12/01/2024"
+                            setImage.iconLeft = R.drawable.calendar_color
+                            setSize.title = 14f
+                        }
+
+```
+
+
+#### TIME_PICKER
+
+This row is use for active the time picker native in Android.
+
+##### Example code
+
+```kotlin
+
+    Row(RType.TIME_PICKER) {
+                            tag = "Select Time"
+                            setText.title = "Check In"
+                            setTimePicker.format = "hh:mm a"
+                            setTimePicker.is24HourFormat = false
+                            setImage.iconLeft = R.drawable.calendar_timer
+                            setSize.title = 14f
+                        }
+
+```
+
+#### SWITCH
+
+This row is use for active the control swtich, you can personalize the the calor.
+
+##### Example code
+
+```kotlin
+
+      Row(RType.SWITCH) {
+                            setText.title = "Terms & Conditions"
+                            setText.descriptionBottom = "Are you agree with our terms?"
+                            setText.edtHint = "Insert your email"
+                            setImage.iconLeft = R.drawable.contract_file
+                            setSwitch.active = false
+                            tag = "MY_TERMS"
+                        }
 
 ```
 
@@ -527,63 +662,74 @@ Primarily used to display information without offering special functionalities.
 | Parameter         | Row compatibility       | Description                                                         |
 |-------------------|-----------------------|---------------------------------------------------------------------|
 | tag               | ALL                   | Assigns a unique identifier.                                         |
-| Activity          | ROW_ACTIVITY          | Used to invoke the desired activity.                                 |
-| bundleActivity    | ROW_ACTIVITY          | Used to send information between activities.                         |
+| Activity          | ACTIVITY          | Used to invoke the desired activity.                                 |
+| bundleActivity    | ACTIVITY          | Used to send information between activities.                         |
 | checked           | ALL                   | Declares that the field in this row needs validation before processing. |
-| isAvailable       | ROW_EDIT              | Specifies if the displayed data is enabled for editing.             |
-| isSingleList      | ROW_SINGLE_CHECK_LIST | Notifies the list that the selection will be one-to-many.            |
-| setDateFormat     | ROW_CALENDAR, ROW_CALENDAR_HOUR | Sets the desired date format for display.                   |
-| maxLength         | ROW_EDIT              | Sets the maximum number of characters the user can input.           |
-| inputTypedEditText| ROW_EDIT              | Configures the keyboard type for data capture.                      |
-| gravityTitle      | ALL                   | Adjusts the position of the title.                                   |
+| isAvailable       | EDIT              | Specifies if the displayed data is enabled for editing.             |
+| isSingleList      | SINGLE_CHECK_LIST | Notifies the list that the selection will be one-to-many.            |
 | universalContentGravity | ALL              | Adjusts the position of the container confirming the entire row's body. |
-| isEndableImageSelected | ROW_SINGLE_CHECK_LIST | Enables or disables checkboxes.                                   |
+| isEndableImageSelected | SINGLE_CHECK_LIST | Enables or disables checkboxes.                                   |
 | TypeRow           | ALL                   | Assigns the type of row to be built.                                 |
+| onClick           | ACTION                   | Config any action into onclick.                                 |
 
 #### Description of categorized parameters used for SetText
 
 | Parameter         | Row compatibility        | Description                                                         |
 |-------------------|-----------------------|---------------------------------------------------------------------|
 | title             | ALL                   | Assigns text for the title.                                          |
+| titleToolbar             |  SINGLE_CHECK_LIST, MULTIPLE_CHECK_LIST                 | Assigns text for the title toolbar. |
+| bubble             |  ALL | Assign number or text for into bubble text.                                          |
 | text              | ALL                   | Assigns a description below the title.                               |
-| edtHint           | ROW_EDIT              | Displays informative text inside the edit field.                    |
-| comment           | ROW_EDIT              | Adds special comments within the row.                                |
+| descriptionBottom              | ALL                   | Assigns a title bottom below the title.                               |
+| btnFinishSelect             |  MULTIPLE_CHECK_LIST                 | Assigns a title bottom below the options to select.  |
+| edtHint           | EDIT              | Displays informative text inside the edit field.                    |
+| comment           | EDIT              | Adds special comments within the row.                                |
 | icon              | ALL                   | Used to assign icons using Font Awesome codes.                       |
-| emptyMessages     | ALL                   | Displays informative text indicating that this field must be filled.|
+| errorMessages     | ALL                   | Displays informative text indicating that this field must be filled.|
 
 #### Description of categorized parameters for Lists
 
 | Parameter         | Row compatibility               | Description                                                         |
 |-------------------|------------------------------|---------------------------------------------------------------------|
-| options           | ROW_SINGLE_CHECK_LIST, ROW_MULTIPLE_CHECK_LIST | Assigns special lists to choose from one or many options, depending on the list type. |
-| arrayDates        | ROW_CALENDAR                | Assigns a special list of dates to delimit dates between weeks.     |
+| options           | SINGLE_CHECK_LIST, MULTIPLE_CHECK_LIST | Assigns special lists to choose from one or many options, depending on the list type. |
+| arrayDates        | CALENDAR                | Assigns a special list of dates to delimit dates between weeks.     |
+
+#### Description of categorized parameters for setValidation
+
+| Parameter         | Row compatibility               | Description                                                         |
+|-------------------|------------------------------|---------------------------------------------------------------------|
+| validationOn           | SINGLE_CHECK_LIST, MULTIPLE_CHECK_LIST, EDIT | Active validation, when you the parameters is important for your form. This important use this option whit funcions validationByTag or validationAll |
+| rulePattern        | EDIT                | If you need validation special character, you can using regular expression.    |
 
 #### Description of categorized parameters for EditText
 
 | Parameter         | Row compatibility        | Description                                                         |
 |-------------------|-----------------------|---------------------------------------------------------------------|
-| isEditable        | ROW_EDIT              | Sets whether the data can be edited by the user.                    |
+| isEditable        | EDIT              | Sets whether the data can be edited by the user.                    |
+| inputTypeEditText        | EDIT              | Configures the keyboard type for data capture.                  |
+| maxLength        | EDIT              | Sets the maximum number of characters the user can input.                  |
 
 #### Description of categorized parameters for Setting
 
 | Parameter         | Row compatibility        | Description                                                         |
 |-------------------|-----------------------|---------------------------------------------------------------------|
-| rowSingleCheck.activeIconSuccess        | ROW_SINGLE_CHECK_LIST              |  When user selected a options will appear icon success.                    |
-| rowMultipleCheck.activeIconSuccess        | ROW_MULTIPLE_CHECK_LIST              | When user selected a options will appear icon success.                    |
+| rowSingleCheck.activeIconSuccess        | SINGLE_CHECK_LIST              |  When user selected a options will appear icon success.                    |
+| rowMultipleCheck.activeIconSuccess        | MULTIPLE_CHECK_LIST              | When user selected a options will appear icon success.                    |
 
 #### Description of categorized parameters for Animations
 
 | Parameter         | Row compatibility        | Description                                                         |
 |-------------------|-----------------------|---------------------------------------------------------------------|
-| intentEnter       | ROW_ACTIVITY          | Assigns an animation for opening an activity.                       |
-| intentExit        | ROW_ACTIVITY          | Assigns an animation for closing an activity.                       |
+| intentEnter       | ACTIVITY          | Assigns an animation for opening an activity.                       |
+| intentExit        | ACTIVITY          | Assigns an animation for closing an activity.                       |
 
-#### Description of categorized parameters for Colors
+#### Description of categorized parameters for Set Colors
 
 | Parameter         | Row compatibility               | Description                                                         |
 |-------------------|------------------------------|---------------------------------------------------------------------|
 | title             | ALL                          | Sets the color for row titles.                                       |
 | descriptions      | ALL                          | Sets the color for row descriptions.                                 |
+| descriptionBottom      | ALL                          | Sets the color for row descriptions below the title                               |
 | icons             | ALL                          | Sets the color for row icons.                                        |
 | separator         | ALL                          | Sets the color for lines separating rows.                           |
 | circle            | ALL                          | Not enabled at the moment.                                           |
@@ -592,9 +738,26 @@ Primarily used to display information without offering special functionalities.
 | editStyle         | ALL                          | Not enabled at the moment.                                           |
 | titleToolbar      | ALL                          | Sets the color for toolbar component titles.                         |
 | backgroundToolbar | ALL                          | Sets the color for the background of the row container.             |
-| styleContentHour  | ROW_CALENDAR, ROW_CALENDAR_HOUR | Sets the color for the background of the container for date or time assignment activities. |
 | backgroundContent | ALL                          | Sets the color for the background of the row container.             |
 | imageEmpty        | ALL                          | Sets the background color for image containers.                      |
+| progressView        | ALL                          | Sets the background color for progress view.                      |
+| backgroundContentMain        | ALL                          | Change color background of the row.                    |
+| btnFinishSelect        | MULTIPLE_CHECK_LIST                          | Change color background of the button for the list multiple select.                    |
+
+
+#### Description of categorized parameters for Set Time Picker
+
+| Parameter         | Row compatibility        | Description                                                         |
+|-------------------|-----------------------|---------------------------------------------------------------------|
+| is24HourFormat             | TIME_PICKER                   | Set boolean parameter for enable format 24 format for the  time picker row.|
+| format       | TIME_PICKER                   | Set specify format for show the time after selected.                              |
+
+#### Description of categorized parameters for Set Date Picker
+
+| Parameter         | Row compatibility        | Description                                                         |
+|-------------------|-----------------------|---------------------------------------------------------------------|
+| format       | DATE_PICKER                   | Set specify format for show the date after selected.                              |
+
 
 #### Description of categorized parameters for Size
 
@@ -602,9 +765,12 @@ Primarily used to display information without offering special functionalities.
 |-------------------|-----------------------|---------------------------------------------------------------------|
 | title             | ALL                   | Allows assigning the title size.                                    |
 | description       | ALL                   | Allows assigning the description size.                              |
+| description bottom       | ALL                   | Allows assigning the description bottom size.                              |
+| bubble       | ALL                   | Allows assigning the bubble size.                              |
 | letter            | ALL                   | Not enabled at the moment.                                           |
 | edit              | ALL                   | Allows assigning the size of editable texts.                         |
 | icon              | ALL                   | Allows assigning the size of icons.                                  |
+| iconLeft              | ALL                   | Allows assigning the size of icons left.                                  |
 | row               | ALL                   | Allows assigning the general size of the row.                         |
 
 #### Description of categorized parameters for Padding
@@ -639,7 +805,14 @@ Primarily used to display information without offering special functionalities.
 | description       | ALL                   | Controls the visibility of the description (Visible, Invisible, or Gone depending on the context). |
 | icon              | ALL                   | Controls the visibility of the icon (Visible, Invisible, or Gone depending on the context). |
 | check             | ALL                   | Controls the visibility of the checkbox (Visible, Invisible, or Gone depending on the context). |
-| editText          | ALL                   | Controls the visibility of the editable text (Visible, Invisible, or Gone
+| editText          | ALL                   | Controls the visibility of the editable text (Visible, Invisible, or Gone|
+| switch          | SWTICH                   | Controls the visibility of the switch view text (Visible, Invisible, or Gone|
+| descriptionBottom          | ALL                   | Controls the visibility of the descroption bottom view text (Visible, Invisible, or Gone|
+| iconLeft              | ALL                   | Controls the visibility of the icon left (Visible, Invisible, or Gone depending on the context). |
+| btnFinishSelect              | MULTIPLE_CHECK_LIST                   | Controls the visibility of the bottom finish select (Boolean). |
+| activeBtnCheck              | MULTIPLE_CHECK_LIST                   | Controls the visibility of the image check (Boolean). |
+| bubble             | ALL                   | Controls the visibility of the bubble text (Visible, Invisible, or Gone depending on the context). |
+| progressBarRight             | ALL                   | Controls the visibility of the progress view (Visible, Invisible, or Gone depending on the context). |
 
 # Example project
 
